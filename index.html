@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Discord Bot Documentation</title>
+  </head>
+  <body>
+    <nav>
+      <h1>Discord Bot Documentation</h1>
+      <hr />
+      <p><a href="#local">Local Instance</a></p>
+      <p><a href="#local_github">Clone Repository</a></p>
+      <p><a href="#local_software">Install Software</a></p>
+      <hr />
+      <p><a href="#bot">Create a Discord Bot</a></p>
+      <p><a href="#bot_connect">Connect this code to your Bot</a></p>
+      <p><a href="#bot_config">Adjust the Settings</a></p>
+      <p><a href="#bot_run">Run the Bot</a></p>
+      <p><a href="#bot_live">Host the Bot</a></p>
+      <hr />
+      <p><a href="#cmd">Bot Features</a></p>
+      <p><a href="#cmd_auto">Automatic Messages</a></p>
+      <p><a href="#cmd_man">Manual Commands</a></p>
+      <hr />
+      <p><a href="#trouble">Troubleshooting</a></p>
+      <hr />
+      <p><a href="https://www.nhcarrigan.com">&copy; Nicholas Carrigan</a></p>
+    </nav>
+
+    <main>
+      <section id="welcome">
+        <h1>Welcome!</h1>
+        <p>
+          This is the documentation for our
+          <a href="" target="_blank">Discord Bot</a>. Here you will find
+          instructions for setting up a local version of the bot, contributing
+          to the bot's development, adding the bot to your Discord server, and
+          using the bot's commands.
+        </p>
+        <p>
+          As the bot is always considered a work in progress, these documents
+          will be updated alongside new versions of the bot. Should there be a
+          discrepancy between the two, feel free to let us know with an issue
+          request on GitHub!
+        </p>
+      </section>
+      <section id="local">
+        <h1>Set up a Local Instance</h1>
+        <p>
+          There are a few steps you will need in order to set up a local
+          instance of the bot. You will need some knowledge of JavaScript, node,
+          and git. If you are not comfortable with doing this, you can
+          <a href="sectionlinkhere">use our live bot</a>.
+        </p>
+      </section>
+      <section id="local_github">
+        <h2>Clone the GitHub Repository</h2>
+        <p>
+          The very first step is to ensure you have a GitHub account. If you do
+          not have one, we recommend signing up (it's free!).
+        </p>
+        <p>
+          Once you have signed in to GitHub, navigate to our
+          <a href="https://github.com/nhcarrigan/discord-bot" target="_blank"
+            >Discord Bot repository</a
+          >
+          and either fork the repository into your own account or download the
+          files to your computer.
+        </p>
+      </section>
+      <section id="local_software">
+        <h2>Install the Necessary Software</h2>
+        <p>
+          Using your preferred development environment (if you do not have one,
+          we recommend <a href="https://atom.io/" target="_blank">Atom</a>),
+          load the directory containing your copy of the bot files.
+        </p>
+        <p>
+          Open the terminal - you will now need to install some packages using
+          <code>npm</code>. If you do not have Node.js installed, you can do so
+          from the
+          <a href="https://nodejs.org/en/docs/" target="_blank"
+            >Node.js website</a
+          >. Enter the following commands into the terminal to perform the
+          installations:
+        </p>
+        <ul>
+          <li>
+            <code>npm install discord.js</code> - This installs
+            <a href="https://discord.js.org/" target="_blank">Discord.js</a>,
+            the library that runs the bot.
+          </li>
+          <li>
+            <code>npm install dotenv</code> - This installs
+            <a href="https://www.npmjs.com/package/dotenv" target="_blank"
+              >DotEnv</a
+            >, the library that allows the .env file to function.
+          </li>
+          <li>
+            <code>npm install mtgsdk</code> - This installs
+            <a href="https://docs.magicthegathering.io/" target="_blank"
+              >the MTG SDK</a
+            >, which connects to the Magic: The Gathering API.
+          </li>
+          <li>
+            <code>npm install node-fetch</code> - This installs
+            <a href="https://www.npmjs.com/package/node-fetch" target="_blank"
+              >Node-Fetch</a
+            >, which adds a fetch function for the Pokemon API commands.
+          </li>
+        </ul>
+
+        <p>
+          Congratulations! You are now ready to run the code locally - the start
+          command is <code>npm ./commands/main.js</code>. To connect the code to
+          your Discord Bot application, continue reading below.
+        </p>
+      </section>
+      <section id="bot">
+        <h1>
+          Creating Your Bot Application and Connecting it to Your Instance
+        </h1>
+        <p>
+          Now that you are able to run the code, you need to connect the code to
+          a Discord Bot application. If you have not created a Discord Bot
+          application, you will need to follow these steps:
+        </p>
+        <ul>
+          <li>
+            Log in to the
+            <a
+              href="https://discord.com/developers/applications"
+              target="_blank"
+              >Discord Developer site</a
+            >
+          </li>
+          <li>
+            Create a new application by clicking on the "New Application"
+            button.
+          </li>
+          <li>On the left, select "Bot", then create a new bot.</li>
+        </ul>
+      </section>
+      <section id="bot_connect">
+        <h2>Link your Bot to the Code</h2>
+        <p>
+          Now that you have a bot, you'll need to create a file called
+          <code>.env</code>. This file will contain a single variable:
+          `DISCORD_TOKEN`. The value of this variable will be your Bot Token
+          from the Discord developer page. It is VERY important that you keep
+          this token a secret - do not upload it to GitHub or share it
+          publically, as this will allow anyone to access your discord bot.
+        </p>
+      </section>
+      <section id="bot_config">
+        <h2>Configure your Bot</h2>
+        <p>
+          The code contains a <code>config.json</code> file which is used to
+          modify the bot's options. The first option, <code>prefix</code>,
+          determines what symbol the bot looks for to trigger a command. The
+          default is the pipe symbol <code>|</code>, but you may change this to
+          whatever you wish.
+        </p>
+        <p>
+          The next option is the <code>log_channel</code> option, which
+          determines the name of the channel where the bot should log things
+          like deleted messages, and kick/ban instances.
+        </p>
+        <p>
+          The <code>join_leave_channel</code> option allows you to set the name
+          of the channel for user welcome/depart messages.
+        </p>
+        <p>
+          The <code>silence_role</code> option sets the name of the Discord role
+          your server uses to restrict a user's ability to send messages.
+        </p>
+      </section>
+      <section id="bot_run">
+        <h2>Try to Run the Bot</h2>
+        <p>
+          The next step is to invite your bot application to your server. You
+          can use the Discord Developer portal to generate an invitation link,
+          or you can use the Client ID from your bot's application page to
+          create a link yourself. If you wish to manually create the link, the
+          format is
+          <code
+            >https://discord.com/oauth2/authorize?client_id=CLIENTIDHERE&scope=bot</code
+          >. Regardless of which method you choose, the link will open a new
+          window allowing you to choose which server you'd like to add your bot
+          to.
+        </p>
+        <p>
+          Once you have added the bot to your server, switch back to your
+          terminal and run the command <code>node ./commands/main.js</code>. You
+          should see the text <code>Activate the Omega!</code> in your terminal,
+          indicating your bot is online! Now you can try some of the commands to
+          see if the bot is functioning correctly.
+        </p>
+      </section>
+      <section id="bot_live">
+        <h2>Host a Live Version of the Bot</h2>
+        <p>
+          By now you should have a successfully running local instance of the
+          bot. However, keeping this alive means you cannot shut down your
+          computer. As an alternative, you might want to use a hosting service
+          to run a live instance of your bot. We use Heroku for our version, but
+          there are other options. Be sure to read the documentation for your
+          chosen platform! Heroku, for example, uses a separate setting for the
+          bot token instead of a <code>.env</code> file.
+        </p>
+        <p>
+          If you would like to add our live bot to your server, you are welcome
+          to
+          <a href="https://contact.nhcarrigan.com" target="_blank">contact us</a
+          >, but we are not able to fulfill every request as the hosting
+          platform will only allow so much server load.
+        </p>
+      </section>
+      <section id="cmd">
+        <h1>Bot Features</h1>
+        <p>
+          The bot has multiple features on offer. Some of them are automatic,
+          but most of them require the user to send a command word. The command
+          words are listed below, but must be prefaced with the
+          <code>prefix</code> symbol set in the
+          <code>config.json</code> settings.
+        </p>
+      </section>
+      <section id="cmd_auto">
+        <h2>Automatic Commands</h2>
+        <p>
+          There are a few messages that the bot will automatically send when
+          certain conditions are met.
+        </p>
+        <ul>
+          <li>
+            <code>Welcome Messages</code> - The bot will send a welcome message
+            directly to a new user in the form of an embed. This message details
+            how to use the bot's command and what the command prefix is.
+            Additionally, if a valid channel is provided for the
+            <code>join_leave_channel</code> setting, the bot will send a message
+            to the channel inviting the user to introduce themselves.
+          </li>
+          <li>
+            <code>Depart Messages</code> - If a valid channel is provided for
+            the <code>join_leave_channel</code> setting, the bot will send a
+            message to that channel notifying the server when a user has left.
+          </li>
+          <li>
+            <code>Deleted Message Log</code> - If a valid channel is provided
+            for the <code>log_channel</code> setting, the bot will send an embed
+            message to that channel when someone deletes a message. The embed
+            will contain the deleted message's author and content.
+          </li>
+        </ul>
+      </section>
+      <section id="cmd_man">
+        <h2>Manual Commands</h2>
+        <p>
+          These commands are run manually by sending the prefix and the
+          associated command keyword (listed below) and arguments.
+        </p>
+        <ul>
+          <li>
+            <code>about</code> - This command generates an embed message that
+            provides a link to the bot source code, the date the bot was
+            created, the number of commands the bot can perform, and the bot's
+            favourite colour. The embed is sent to the channel the command
+            message came from.
+          </li>
+          <li>
+            <code>ban `@username` `reason(optional)`</code> - This command
+            requires that the user sending it has the "Ban Members" permission.
+            If the permission is missing, the bot responds with a notice that
+            the user lacks permission. Otherwise, the command bans `@username`
+            from the server. If the <code>log_channel</code> option is set, the
+            bot will send an embed to that channel. The embed will contain the
+            name of the user performing the ban, the name of the banned user,
+            and the reason provided. If no reason was provided, the embed will
+            state that. Because of the permanent nature of bans, the bot will
+            require confirmation before taking action.
+          </li>
+          <li>
+            <code>fortune</code> - This command will send a message to the
+            channel the command came from. The message will contain a random
+            fortune cookie quote from the list provided in the bot code.
+          </li>
+          <li>
+            <code>help</code> - This command sends an embed to the user. The
+            embed contains a list of the bot's available commands and what each
+            command does. Additionally, the bot will send a message to the
+            channel the command came from, to confirm the embed was sent to the
+            user.
+          </li>
+          <li>
+            <code>kick `@username` `reason(optional)`</code> - This command
+            requires that the user sending it has the "Kick Members" permission.
+            If the permission is missing, the bot responds with a notice that
+            the user lacks permission. Otherwise, the command kicks `@username`
+            from the server. If the <code>log_channel</code> option is set, the
+            bot will send an embed to that channel. The embed will contain the
+            name of the user performing the kick, the name of the kicked user,
+            and the reason provided. If no reason was provided, the embed will
+            state that.
+          </li>
+          <li>
+            <code>kirby</code> - This command sends a message to the channel the
+            command came from. The message contains Kirby doing a little dance.
+          </li>
+          <li>
+            <code>magic `cardname`</code> - This command querys the Magic: The
+            Gathering API for cards that match `cardname`. The bot will send a
+            message to the channel the message contains to confirm the command
+            was received and the search was started. For each card it finds, the
+            bot sends an embed containing the card information. The bot sends a
+            notification after 30 seconds, when the search is complete. NOTE:
+            The API can be slow to respond so this command may take some time.
+          </li>
+          <li>
+            <code>ping</code> - This command will generate the latency for the
+            bot. The bot will send a response back with the communication time
+            in milliseconds.
+          </li>
+          <li>
+            <code>pokename `name`</code> - This command querys the Pokemon API.
+            If the bot finds a Pokemon that matches the name provided, it will
+            send an embed containing the Pokemon's name, number, and image. If
+            the bot cannot find a Pokemon, it will send a message notice.
+          </li>
+          <li>
+            <code>pokenum `number`</code> - This command querys the Pokemon API.
+            If the bot finds a Pokemon that matches the number provided, it will
+            send an embed containing the Pokemon's name, number, and image. If
+            no Pokemon is found, the bot will send a message notice. As an
+            alternative, sending "random" instead of a number will cause the bot
+            to return a random Pokemon.
+          </li>
+          <li>
+            <code>profile `website` `username`</code> - This command will return
+            a message embed containing a link to the profile for `username` on
+            the `website`. Currently supported websites are: Steam, Facebook,
+            Github, Twitter, LinkedIn, and Instagram. If an invalid website is
+            sent, the bot will send a message notification stating the website
+            is not available.
+          </li>
+          <li>
+            <code>purge `number`</code> - This command will delete `number`
+            messages from the channel the command is sent to. The bot will send
+            a message to confirm deletion, then delete that message as well. If
+            the user tries to delete more than 100 messages at once, the bot
+            will refuse as Discord limitations currently prevent bots from
+            deleting more than 100 messages at a time.
+          </li>
+          <li>
+            <code>restrict `@username` `reason(optional)`</code> This command
+            requires that the user sending it has the "Kick Members" permission.
+            If the permission is missing, the bot responds with a notice that
+            the user lacks permission. Otherwise, the command will set the
+            `@username`'s role provided in the <code>silence_role</code> option,
+            and remove all other roles. If the role option is not set, the bot
+            will send a message to notify the user. If the
+            <code>log_channel</code> option is set, the bot will send an embed
+            to that channel. The embed will contain the name of the user
+            performing the command, the name of the restricted user, and the
+            reason provided. If no reason was provided, the embed will state
+            that.
+          </li>
+          <li>
+            <code>roll d`number`</code> - This command returns a random number
+            between 1 and `number`, as if it was a dice roll.
+          </li>
+          <li>
+            <code>search `query`</code> - This command returns a URL to the
+            Google search results page for the given `query` word or words.
+          </li>
+          <li>
+            <code>star `@username` `reason(optional)`</code> - This command
+            sends a message embed to the `@username`'s direct messages. The
+            embed contains the command author's name, the `reason` if provided,
+            and a shiny gold star!
+          </li>
+          <li>
+            <code>status</code> - This command returns a message embed
+            containing information about the current server. The information
+            includes the server name, creation date, the user's join date, the
+            server owner, and the member count.
+          </li>
+          <li>
+            <code>unrestrict `@username` `reason(optional)`</code> - This
+            command requires that the user sending it has the "Kick Members"
+            permission. If the permission is missing, the bot responds with a
+            notice that the user lacks permission. Otherwise, the command will
+            remove the `@username`'s role provided in the
+            <code>silence_role</code> option. If the role option is not set, the
+            bot will send a message to notify the user. If the
+            <code>log_channel</code> option is set, the bot will send an embed
+            to that channel. The embed will contain the name of the user
+            performing the command, the name of the unrestricted user, and the
+            reason provided. If no reason was provided, the embed will state
+            that.
+          </li>
+          <li>
+            <code>user `@username`</code> - This command returns a message embed
+            about `@username`. The embed contains their nickname, full username,
+            account creation date, online status, date they joined the server,
+            roles they have, and their avatar.
+          </li>
+          <li>
+            <code>warn `@username` `reason(optional)`</code> - This command
+            requires that the user sending it has the "Kick Members" permission.
+            If the permission is missing, the bot responds with a notice that
+            the user lacks permission. Otherwise, the command will send a direct
+            message to `@username` informing them that the command author has
+            warned them, and providing the reason if given. If the
+            <code>log_channel</code> option is set, the bot will send an embed
+            to that channel. The embed will contain the name of the user
+            performing the warning, the name of the warned user, and the reason
+            provided. If no reason was provided, the embed will state that.
+          </li>
+          <li>
+            <code>wiki `query`</code> - This command returns a link to the
+            wikipedia article for `query`. If the article is not found, it
+            returns the search page instead.
+          </li>
+        </ul>
+      </section>
+      <section id="trouble">
+        <h1>Troubleshooting</h1>
+        <h2>My bot won't connect!</h2>
+        <p>
+          Make sure you have properly set up the <code>.env</code> file to
+          contain a <code>DISCORD_TOKEN</code> variable set to your bot's token.
+        </p>
+        <h2>I can't get my bot in my server</h2>
+        <p>
+          Make sure you are generating the invite link correctly, and that you
+          have "Manage Server" permissions for the server you are trying to add
+          the bot to.
+        </p>
+        <h2>My bot isn't doing a certain command!</h2>
+        <p>
+          Make sure your bot has the appropriate permissions in the server. For
+          best results, set the bot to an Administrator.
+        </p>
+        <h2>Other Issues?</h2>
+        <p>
+          If you are having another issue, you can create a
+          <a href="https://github.com/nhcarrigan/discord-bot" target="_blank"
+            >bug report</a
+          >
+          or
+          <a href="https://contact.nhcarrigan.com" target="_blank"
+            >contact me directly</a
+          >.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+body {
+  margin: 0 0 0 0;
+  background-color: #240533;
+  color: #aea8d3;
+}
+
+nav {
+  width: 10vw;
+  position: fixed;
+  border-right: 5px solid #aea8d3;
+  padding-left: 10px;
+  height: 100vh;
+}
+
+main {
+  margin-left: 10vw;
+  padding-left: 20px;
+  width: 80vw;
+}
+
+hr {
+  color: #aea8d3;
+}
+
+code {
+  background-color: #000000;
+}
+
+h1 {
+  text-decoration: underline;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+li {
+  margin-bottom: 0.2em;
+}
+
+@media (orientation: portrait) {
+  nav {
+    display: none;
+  }
+}
