@@ -10,6 +10,7 @@ nav {
   border-right: 5px solid #aea8d3;
   padding-left: 10px;
   height: 100vh;
+  word-wrap: break-word;
 }
 
 main {
