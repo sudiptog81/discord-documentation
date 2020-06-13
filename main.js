@@ -4,31 +4,63 @@
 let cl = c => console.log(c);
 
 // Element manipulations
-let getElement = el => document.querySelector(el);
-let getMulti = (parent, el) => parent.querySelectorAll(el);
-let createEl = el => document.createElement(el);
+let getElement = document.querySelector.bind(document);
+let queryAll = document.querySelectorAll.bind(document);
+let createEl = document.createElement.bind(document);
+
+// Run JavaScript on start
+window.onload = () => {
+	generateLink();
+	anchors();
+	codePrefix();
+};
 
 // Javascript
-
 let main = getElement("main");
-let sections = getMulti(main, "section");
+let sections = queryAll("main section");
 
-// Section Title Anchors
-function anchors() {
-  sections.forEach(section => {
-    let tagId = section.id;
-    let anchorTag = createEl("a");
-    anchorTag.setAttribute("class", "section-anchor");
-    anchorTag.setAttribute("href", `#${tagId}`);
+/**
+ * Link Generation
+ */
+// This will generate an id for the anchor links according to the content inside the <h1> or <h2> tags of each section
+function generateLink() {
+	sections.forEach(section => {
+		let h1 = section.querySelector("h1");
+		let h2 = section.querySelector("h2");
 
-    let h1 = section.querySelector("h1");
-    if (h1 !== null) {
-      h1.append(anchorTag);
-    }
-    if (h1 == null) {
-      let h2 = section.querySelector("h2");
-      h2.append(anchorTag);
-    }
-  });
+		if (h1 !== null) {
+			let text = h1.innerHTML;
+			let link = text.split(/\W+/).filter(obj => obj !== "").join("-").toLowerCase();
+			section.setAttribute("id", link);
+		}
+
+		if (h1 == null) {
+			let text = h2.innerHTML;
+			let link = text.split(/\W+/).filter(obj => obj !== "").join("-").toLowerCase();
+			section.setAttribute("id", link);
+		}
+	});
 }
-anchors();
+
+/**
+ * Section Title Anchor
+ */
+// Function creates an anchor beside the <h1> or <h2> tags to provide a link to the specific section
+function anchors() {
+	sections.forEach(section => {
+		let tagId = section.id;
+		let anchorTag = createEl("a");
+		anchorTag.setAttribute("class", "section-anchor");
+		anchorTag.setAttribute("href", `#${tagId}`);
+
+		let h1 = section.querySelector("h1");
+
+		if (h1 !== null) {
+			h1.prepend(anchorTag);
+		}
+		if (h1 == null) {
+			let h2 = section.querySelector("h2");
+			h2.prepend(anchorTag);
+		}
+	});
+}
