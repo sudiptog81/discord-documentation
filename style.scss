@@ -1,0 +1,162 @@
+// Variables
+$main-bg: #240533;
+$main-text: #aea8d3;
+
+* {
+	scroll-behavior: smooth;
+}
+
+main p {
+	font-size: 16px;	
+}
+
+body {
+	margin: 0;
+	background-color: $main-bg;
+	color: $main-text;
+}
+
+nav {
+	width: 15vw;
+	position: fixed;
+	top: 0;
+	left: 0;
+	border-right: 5px solid $main-text;
+	//padding-left: 10px;
+	height: 100vh;
+	word-wrap: break-word;
+
+	p,
+	h1 {
+		margin-left: 10px;
+	}
+
+	a {
+		transition: filter .4s ease;
+
+		&:hover {
+			filter: brightness(200%);
+		}
+	}
+}
+
+main {
+	margin-left: 16vw;
+	margin-right: 50px;
+	padding-left: 20px;
+}
+
+hr {
+	color: $main-text;
+}
+
+code {
+	background-color: #000000;
+	padding: 2px 3px;
+	border-radius: 5px;
+}
+
+// For chunks of codes
+pre {
+  background-color: #000000;
+  padding: 10px 15px;
+  border-radius: 5px;
+  padding-left: 10px;  
+  width: fit-content;
+  
+  code {
+    padding-left: 0;
+  }
+}
+
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+main section a:not(.section-anchor) {
+	position: relative;
+	font-weight: bold;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 104%;
+		height: 2px;
+		background-color: $main-text;
+		opacity: 75%;
+		right: -2%;
+		bottom: 0;
+		transition: height .4s ease;
+		z-index: -1;
+		border-radius: 2px;
+	}
+
+  &:hover {
+		color: black;
+		transition: color .4s ease;
+	  
+ 		&::after {
+			height: 100%;
+			
+	  	transition: height .4s ease;
+  	}
+	}
+}
+
+// List style || You can change it, remember to always include the whitespace after the list type.
+ul {
+  list-style-type: "👉 ";
+}
+
+li {
+	margin-bottom: 0.2em;
+}
+
+@media (orientation: portrait) {
+	nav {
+		display: none;
+	}
+
+	main {
+		margin-left: 25px;
+	}
+}
+
+// For Section Anchors
+
+h1:hover .section-anchor::after {
+	opacity: 50%;
+	transition: opacity .2s ease;
+}
+
+h2:hover .section-anchor::after {
+	opacity: 50%;
+	transition: opacity .2s ease;
+}
+
+.section-anchor {
+	z-index: 5;
+  margin-left: -17.58px;
+  text-decoration: none !important; 
+
+	&:hover::after {
+		opacity: 100% !important;
+	}
+
+	&::after {
+		content: '# ';
+		opacity: 0;
+		position: relative;
+		transition: opacity .5s ease;
+	}
+}
+
+.trouble-container {
+	margin-left: 50px;
+
+	h2 {
+		font-size: 1.45em;
+	}
+}

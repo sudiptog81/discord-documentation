@@ -4,7 +4,7 @@
 let cl = c => console.log(c);
 
 // Element manipulations
-let getElement = document.querySelector.bind(document);
+let $ = document.querySelector.bind(document);
 let queryAll = document.querySelectorAll.bind(document);
 let createEl = document.createElement.bind(document);
 
@@ -16,12 +16,10 @@ window.onload = () => {
 };
 
 // Javascript
-let main = getElement("main");
+let main = $("main");
 let sections = queryAll("main section");
 
-/**
- * Link Generation
- */
+// Link generation
 // This will generate an id for the anchor links according to the content inside the <h1> or <h2> tags of each section
 function generateLink() {
 	sections.forEach(section => {
@@ -41,10 +39,7 @@ function generateLink() {
 		}
 	});
 }
-
-/**
- * Section Title Anchor
- */
+// Section Title Anchors
 // Function creates an anchor beside the <h1> or <h2> tags to provide a link to the specific section
 function anchors() {
 	sections.forEach(section => {
@@ -64,3 +59,18 @@ function anchors() {
 		}
 	});
 }
+
+// Find the prefix for code
+function codePrefix() {
+	let prefix = "`";
+	let regex = /`.+?`/gi;
+	
+	let element = main.innerHTML.match(regex);
+	
+	element.forEach(letters => {
+		let words = letters.match(/[^`]+/);
+		main.innerHTML = main.innerHTML.replace(letters, `<code>${words}</code>`);
+		cl(main.innerHTML.replace(letters), `<code>${words}</code>`)
+	});
+}
+
