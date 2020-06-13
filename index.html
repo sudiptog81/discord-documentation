@@ -8,23 +8,24 @@
 	<body>
 
 		<nav>
-			<h1>Discord Bot Documentation</h1>
+			<h1><a href="#welcome">Discord Bot Documentation</a></h1>
 			<hr />
-			<p><a href="#local">Local Instance</a></p>
-			<p><a href="#local_github">Clone Repository</a></p>
-			<p><a href="#local_software">Install Software</a></p>
+			
+			<p><a href="#set-up-a-local-instance">Local Instance</a></p>
+			<p><a href="#clone-the-github-repository">Clone Repository</a></p>
+			<p><a href="#install-the-necessary-software">Install Software</a></p>
 			<hr />
-			<p><a href="#bot">Create a Discord Bot</a></p>
-			<p><a href="#bot_connect">Connect this code to your Bot</a></p>
-			<p><a href="#bot_config">Adjust the Settings</a></p>
-			<p><a href="#bot_run">Run the Bot</a></p>
-			<p><a href="#bot_live">Host the Bot</a></p>
+			<p><a href="#creating-your-bot-application-and-connecting-it-to-your-instance">Create a Discord Bot</a></p>
+			<p><a href="#link-your-bot-to-the-code">Connect this code to your Bot</a></p>
+			<p><a href="#configure-your-bot">Adjust the Settings</a></p>
+			<p><a href="#try-to-run-the-bot">Run the Bot</a></p>
+			<p><a href="#host-a-live-version-of-the-bot">Host the Bot</a></p>
 			<hr />
-			<p><a href="#cmd">Bot Features</a></p>
-			<p><a href="#cmd_auto">Automatic Messages</a></p>
-			<p><a href="#cmd_man">Manual Commands</a></p>
+			<p><a href="#bot-features">Bot Features</a></p>
+			<p><a href="#automatic-commands">Automatic Messages</a></p>
+			<p><a href="#manual-commands">Manual Commands</a></p>
 			<hr />
-			<p><a href="#trouble">Troubleshooting</a></p>
+			<p><a href="#known-issues">Known Issues</a></p>
 			<hr />
 			<p><a href="https://www.nhcarrigan.com">&copy; Nicholas Carrigan</a></p>
 		</nav>
@@ -64,8 +65,7 @@
 		<section id="local_github">
 			<h2>Clone the GitHub Repository</h2>
 			<p>
-			The very first step is to ensure you have a GitHub account. If you do
-			not have one, we recommend signing up (it's free!).
+			Before doing anything else, you have to make sure you have a GitHub Account. If you do not have one, we recommend signing up for free <a href="https://github.com/join">here</a>.
 			</p>
 			<p>
 			Once you have signed in to GitHub, navigate to our
@@ -84,7 +84,9 @@
 			we recommend <a href="https://atom.io/" target="_blank">Atom</a>),
 			load the directory containing your copy of the bot files.
 			</p>
+			
 			<p>
+			Before we do anything else, make sure that Node.js and npm is installed. If you do not have Node.js and <code>npm</code> installed, you can do so from the 
 			Open the terminal - you will now need to install some packages using
 			<code>npm</code>. If you do not have Node.js installed, you can do so
 			from the
@@ -196,9 +198,9 @@
 			or you can use the Client ID from your bot's application page to
 			create a link yourself. If you wish to manually create the link, the
 			format is
-			<code
+			<pre><code
 				>https://discord.com/oauth2/authorize?client_id=CLIENTIDHERE&scope=bot</code
-			>. Regardless of which method you choose, the link will open a new
+			></pre>Regardless of which method you choose, the link will open a new
 			window allowing you to choose which server you'd like to add your bot
 			to.
 			</p>
@@ -443,7 +445,10 @@
 		</section>
 
 		<section id="trouble">
-			<h1>Troubleshooting</h1>
+		
+			<h1>Known Issues</h1>
+
+		<div class="trouble-container">
 			<h2>My bot won't connect!</h2>
 			<p>
 			Make sure you have properly set up the <code>.env</code> file to
@@ -471,6 +476,7 @@
 				>contact me directly</a
 			>.
 			</p>
+		</div>
 		</section>
 		
 		</main>
