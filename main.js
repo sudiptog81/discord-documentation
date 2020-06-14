@@ -1,10 +1,10 @@
 /**
  * Basic JavaScript Declarations
  */
-let cl = c => console.log(c); // Shorten Console.log function
-
+// Shorten Console.log function || Does accept multiple arguments
+let cl = (...args) => args.forEach(c => console.log(c));
 // Element DOM manipulations
-let getEl = document.querySelector.bind(document); 
+let getEl = document.querySelector.bind(document);
 let queryAll = document.querySelectorAll.bind(document);
 let createEl = document.createElement.bind(document);
 
@@ -26,14 +26,8 @@ let sections = queryAll("main section"); // Sections
  * content inside the <h1> or <h2> tags of each section
  */
 function generateLink() {
-	
 	// takes el param, then convert it into url-slugs
-	let generate = el => el
-	.innerHTML
-	.split(/\W+/)
-	.filter(obj => obj !== "")
-	.join("-")
-	.toLowerCase();
+	let generate = el => el.innerHTML.split(/\W+/).filter(obj => obj !== "").join("-").toLowerCase();
 
 	// for every section heading, it will give an id of the urlSlugs generated
 	sections.forEach(section => {
@@ -43,7 +37,6 @@ function generateLink() {
 		if (h1 !== null) section.setAttribute("id", generate(h1));
 
 		if (h1 == null && h2 !== null) section.setAttribute("id", generate(h2));
-		
 	});
 }
 
@@ -62,23 +55,29 @@ function anchors() {
 
 		let h1 = section.querySelector("h1");
 		let h2 = section.querySelector("h2");
-		
+
 		if (h1 !== null) h1.prepend(anchorTag);
-		
+
 		if (h1 == null) h2.prepend(anchorTag);
-		
 	});
 }
 
 // Find the prefix for code
 function codePrefix() {
+	/**  
+	 * The prefix can to be anything JUST REMEMBER RegEx have syntaxes to be escaped like "$".
+	 * In that case you have to double escape it, here's an example:
+	 * Ex: \\$ in order to grab the prefix "$"
+	 */
+
 	let prefix = "`";
 	let regex = new RegExp(`${prefix}.+?${prefix}`, "gi");
 
 	let element = main.innerHTML.match(regex);
 
 	element.forEach(letters => {
-		let words = letters.match(/[^`]+/);
+		let r = new RegExp(`[^${prefix}]+`);
+		let words = letters.match(r);
 		main.innerHTML = main.innerHTML.replace(letters, `<code>${words}</code>`);
 	});
 }
