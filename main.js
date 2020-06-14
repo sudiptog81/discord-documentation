@@ -62,15 +62,12 @@ function anchors() {
 
 // Find the prefix for code
 function codePrefix() {
-	let prefix = "`";
 	let regex = /`.+?`/gi;
-	
+
 	let element = main.innerHTML.match(regex);
-	
+
 	element.forEach(letters => {
 		let words = letters.match(/[^`]+/);
 		main.innerHTML = main.innerHTML.replace(letters, `<code>${words}</code>`);
-		cl(main.innerHTML.replace(letters), `<code>${words}</code>`)
 	});
 }
-
