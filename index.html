@@ -126,6 +126,16 @@
               >Node-Fetch</a
             >, which adds a fetch function for the Pokemon API commands.
           </li>
+          <li>
+            `npm install mongodb` - This installs
+            <a href="https://www.mongodb.com/" target="_blank">MongoDB</a>, the
+            database platform for the levelling system.
+          </li>
+          <li>
+            `npm install mongoose` - This installs
+            <a href="https://mongoosejs.com/docs/" target="_blank">Mongoose</a>,
+            which manages the database entries.
+          </li>
         </ul>
 
         <p>
@@ -165,12 +175,21 @@
         <h2>Link your Bot to the Code</h2>
         <p>
           Now that you have a bot, you'll need to create a file called `.env`.
-          This file will contain a single variable: `DISCORD_TOKEN`. The value
-          of this variable will be your Bot Token from the Discord developer
-          page. It is VERY important that you keep this token a secret - do not
-          upload it to GitHub or share it publically, as this will allow anyone
-          to access your discord bot.
+          This file will contain two variables:
         </p>
+        <ul>
+          <li>
+            `DISCORD_TOKEN` - The value of this variable will be your Bot Token
+            from the Discord developer page. It is VERY important that you keep
+            this token a secret - do not upload it to GitHub or share it
+            publically, as this will allow anyone to access your discord bot.
+          </li>
+          <li>
+            `MONGO_URI` - The value of this variable will be your MongoDB
+            authentication URI. Like the bot token, this needs to be kept secret
+            to prevent unauthorised access to and modification of your database.
+          </li>
+        </ul>
       </section>
 
       <section id="bot_config">
@@ -214,10 +233,12 @@
         </p>
         <p>
           Once you have added the bot to your server, switch back to your
-          terminal and run the command `node ./commands/main.js`. You should see
-          the text `Activate the Omega!` in your terminal, indicating your bot
-          is online! Now you can try some of the commands to see if the bot is
-          functioning correctly.
+          terminal and run the command `node ./commands/main.js`. If you have
+          set the `join_leave_channel` in your `config.json` appropriately, the
+          bot should send a message indicating it is online. Otherwise, you
+          should see the text `Activate the Omega!` in your terminal, indicating
+          your bot is online! Now you can try some of the commands to see if the
+          bot is functioning correctly.
         </p>
       </section>
 
