@@ -277,6 +277,12 @@
             channel when someone deletes a message. The embed will contain the
             deleted message's author and content.
           </li>
+          <li>
+            `Levelling System` - The bot listens to each message and gives
+            experience points to the message author. The values are stored in a
+            MongoDB database, and the bot sends a level up message at every
+            100xp increment.
+          </li>
         </ul>
       </section>
 
@@ -331,6 +337,10 @@
           <li>
             `kirby` - This command sends a message to the channel the command
             came from. The message contains Kirby doing a little dance.
+          </li>
+          <li>
+            `level` - This command sends an embed containing the user's
+            experience points and current level.
           </li>
           <li>
             `magic [cardname]` - This command querys the Magic: The Gathering
