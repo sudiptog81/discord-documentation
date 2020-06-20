@@ -55,6 +55,7 @@
           discrepancy between the two, feel free to let us know with an issue
           request on GitHub!
         </p>
+        <p>The bot's current version is 1.25.0</p>
       </section>
 
       <section id="local">
@@ -219,6 +220,10 @@
           The `silence_role` option sets the name of the Discord role your
           server uses to restrict a user's ability to send messages.
         </p>
+        <p>
+          The `silence_category` option sets the name of the channel category
+          where the bot should create suspended user channels.
+        </p>
       </section>
 
       <section id="bot_run">
@@ -340,6 +345,17 @@
             confirmation before taking action.
           </li>
           <li>
+            `cat` - This command sends a random string of letters of a random
+            length, to simulate a cat walking across your keyboard.
+          </li>
+          <li>
+            `close` - This command requires the user to have the "Kick Members"
+            permission. If the permission is missing, the bot responds with a
+            notice that the user lacks permission to use this command.
+            Otherwise, the bot deletes the channel this command is used in, and
+            logs the deletion to the `log_channel` option.
+          </li>
+          <li>
             `fortune` - This command will send a message to the channel the
             command came from. The message will contain a random fortune cookie
             quote from the list provided in the bot code.
@@ -420,11 +436,15 @@
             lacks permission. Otherwise, the command will set the [@username]'s
             role provided in the `silence_role` option, and remove all other
             roles. If the role option is not set, the bot will send a message to
-            notify the user. If the `log_channel` option is set, the bot will
-            send an embed to that channel. The embed will contain the name of
-            the user performing the command, the name of the restricted user,
-            and the reason provided. If no reason was provided, the embed will
-            state that.
+            notify the user. If the `log_channel` option is not set, the bot
+            will send a message to notify the user. Otherwise, the bot will send
+            an embed to the log channel. The embed will contain the name of the
+            user performing the command, the name of the restricted user, and
+            the reason provided. If no reason was provided, the embed will state
+            that. The bot will then create a channel under the
+            `silence_category` category (if `silence_category` is not set, the
+            bot will send a message to notify the user), which only the channel
+            moderators and the restricted user can access.
           </li>
           <li>
             `roll d[number]` - This command returns a random number between 1
