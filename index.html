@@ -55,7 +55,7 @@
           discrepancy between the two, feel free to let us know with an issue
           request on GitHub!
         </p>
-        <p>The bot's current version is 1.25.0</p>
+        <p>The bot's current version is 1.26.1</p>
       </section>
 
       <section id="local">
@@ -314,6 +314,11 @@
             MongoDB database, and the bot sends a level up message at every
             100xp increment.
           </li>
+          <li>
+            `Command Usage Tracking` - The bot logs each command that is called
+            and keeps a record of the number of calls for each command. The
+            values are stored in a MongoDB database.
+          </li>
         </ul>
       </section>
 
@@ -477,6 +482,11 @@
             performing the command, the name of the unrestricted user, and the
             reason provided. If no reason was provided, the embed will state
             that.
+          </li>
+          <li>
+            `usage [command]` - This command returns a message embed for the
+            [command]. The embed will contain the number of times the command is
+            called.
           </li>
           <li>
             `user [@username]` - This command returns a message embed about
