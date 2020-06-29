@@ -227,6 +227,10 @@
           The `silence_category` option sets the name of the channel category
           where the bot should create suspended user channels.
         </p>
+        <p>
+          The `love` option sets the ID values for the Discord users whose
+          messages the bot should automatically heart react.
+        </p>
       </section>
 
       <section id="bot_run">
@@ -322,6 +326,11 @@
             `Command Usage Tracking` - The bot logs each command that is called
             and keeps a record of the number of calls for each command. The
             values are stored in a MongoDB database.
+          </li>
+          <li>
+            `Heart reactions` - The bot will check the ID of each message's
+            author. If the ID is in the array provided in the `love` config
+            setting, the bot will add a random heart react to the message.
           </li>
         </ul>
       </section>
