@@ -33,7 +33,14 @@
       <hr />
       <p><a href="#known-issues">Known Issues</a></p>
       <hr />
-      <p><a href="https://www.nhcarrigan.com" target="_blank" rel="noopener noreferrer">&copy; Nicholas Carrigan</a></p>
+      <p>
+        <a
+          href="https://www.nhcarrigan.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          >&copy; Nicholas Carrigan</a
+        >
+      </p>
     </nav>
 
     <main>
@@ -42,7 +49,10 @@
         <p>
           This is the documentation for our Discord Bot. A live version of the
           bot can be found in our
-          <a href="https://discord.gg/PHqDbkg" target="_blank" rel="noopener noreferrer"
+          <a
+            href="https://discord.gg/PHqDbkg"
+            target="_blank"
+            rel="noopener noreferrer"
             >Discord Server</a
           >
           Here you will find instructions for setting up a local version of the
@@ -55,15 +65,16 @@
           discrepancy between the two, feel free to let us know with an issue
           request on GitHub!
         </p>
-        <p>The bot's current version is 1.26.1</p>
+        <p>The bot's current version is 2.0.0</p>
       </section>
 
       <section id="local">
         <h1>Set up a Local Instance</h1>
         <p>
           There are a few steps you will need in order to set up a local
-          instance of the bot. You will need some knowledge of JavaScript, node,
-          and git. If you are not comfortable with doing this, you can
+          instance of the bot. You will need some knowledge of JavaScript,
+          TypeScript, node, and git. If you are not comfortable with doing this,
+          you can
           <a href="#host-a-live-version-of-the-bot">use our live bot</a>.
         </p>
       </section>
@@ -77,7 +88,10 @@
         </p>
         <p>
           Once you have signed in to GitHub, navigate to our
-          <a href="https://github.com/nhcarrigan/discord-bot" target="_blank" rel="noopener noreferrer"
+          <a
+            href="https://github.com/nhcarrigan/discord-bot"
+            target="_blank"
+            rel="noopener noreferrer"
             >Discord Bot repository</a
           >
           and either fork the repository into your own account or download the
@@ -93,65 +107,41 @@
           <a href="https://code.visualstudio.com/"
             >Visual Studio Code (VSCode)</a
           >
-          or <a href="https://atom.io/" target="_blank" rel="noopener noreferrer">Atom</a>), load the
-          directory containing your copy of the bot files.
+          or
+          <a href="https://atom.io/" target="_blank" rel="noopener noreferrer"
+            >Atom</a
+          >), load the directory containing your copy of the bot files.
         </p>
 
         <p>
           Before you do anything else, make sure that Node.js and npm is
           installed. If you do not have Node.js and `npm` installed, you can do
           so from the
-          <a href="https://nodejs.org/en/docs/" target="_blank" rel="noopener noreferrer"
+          <a
+            href="https://nodejs.org/en/docs/"
+            target="_blank"
+            rel="noopener noreferrer"
             >Node.js website</a
           >. Open the terminal - you will now need to install some packages
           using `npm`. Enter the following commands into the terminal to perform
           the installations:
         </p>
-        <ul>
-          <li>
-            `npm install discord.js` - This installs
-            <a href="https://discord.js.org/" target="_blank" rel="noopener noreferrer">Discord.js</a>,
-            the library that runs the bot.
-          </li>
-          <li>
-            `npm install dotenv` - This installs
-            <a href="https://www.npmjs.com/package/dotenv" target="_blank" rel="noopener noreferrer"
-              >DotEnv</a
-            >, the library that allows the .env file to function.
-          </li>
-          <li>
-            `npm install mtgsdk` - This installs
-            <a href="https://docs.magicthegathering.io/" target="_blank" rel="noopener noreferrer"
-              >the MTG SDK</a
-            >, which connects to the Magic: The Gathering API.
-          </li>
-          <li>
-            `npm install node-fetch` - This installs
-            <a href="https://www.npmjs.com/package/node-fetch" target="_blank" rel="noopener noreferrer"
-              >Node-Fetch</a
-            >, which adds a fetch function for the Pokemon API commands.
-          </li>
-          <li>
-            `npm install mongodb` - This installs
-            <a href="https://www.mongodb.com/" target="_blank" rel="noopener noreferrer">MongoDB</a>, the
-            database platform for the levelling system.
-          </li>
-          <li>
-            `npm install mongoose` - This installs
-            <a href="https://mongoosejs.com/docs/" target="_blank" rel="noopener noreferrer">Mongoose</a>,
-            which manages the database entries.
-          </li>
-        </ul>
         <p>
           <em>
-            (Alternatively, you can run `npm install` from the code directory to
-            install all dependencies listed in the `package.json` file.)
+            `npm install` - This will install all of the dependencies found in
+            the `package.json` file automatically. If this does not work, you
+            will need to go through each item listed in that file and run `npm
+            install [packagename]`
           </em>
         </p>
         <p>
+          `npm run build` - This will build the TypeScript files into runnable
+          JavaScript files.
+        </p>
+        <p>
           Congratulations! You are now ready to run the code locally - the start
-          command is `npm ./commands/main.js`. To connect the code to your
-          Discord Bot application, continue reading below.
+          command is `npm run start`. To connect the code to your Discord Bot
+          application, continue reading below.
         </p>
       </section>
 
@@ -169,7 +159,8 @@
             Log in to the
             <a
               href="https://discord.com/developers/applications"
-              target="_blank" rel="noopener noreferrer"
+              target="_blank"
+              rel="noopener noreferrer"
               >Discord Developer site</a
             >
           </li>
@@ -231,6 +222,10 @@
           The `love` option sets the ID values for the Discord users whose
           messages the bot should automatically heart react.
         </p>
+        <p>
+          The `bot_role` option sets the name of the bot's role, to allow it to
+          be added to the suspended user channels.
+        </p>
       </section>
 
       <section id="bot_run">
@@ -274,8 +269,12 @@
         <p>
           If you would like to add our live bot to your server, you are welcome
           to
-          <a href="https://contact.nhcarrigan.com" target="_blank" rel="noopener noreferrer">contact us</a
-          >, but we are not able to fulfill every request as the hosting
+          <a
+            href="https://contact.nhcarrigan.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            >contact us</a
+          >, but we are not able to fulfil every request as the hosting
           platform will only allow so much server load.
         </p>
       </section>
@@ -550,11 +549,17 @@
           <h2>Other Issues?</h2>
           <p>
             If you are having another issue, you can create a
-            <a href="https://github.com/nhcarrigan/discord-bot" target="_blank" rel="noopener noreferrer"
+            <a
+              href="https://github.com/nhcarrigan/discord-bot"
+              target="_blank"
+              rel="noopener noreferrer"
               >bug report</a
             >
             or
-            <a href="https://contact.nhcarrigan.com" target="_blank" rel="noopener noreferrer"
+            <a
+              href="https://contact.nhcarrigan.com"
+              target="_blank"
+              rel="noopener noreferrer"
               >contact me directly</a
             >.
           </p>
