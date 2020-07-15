@@ -2,6 +2,8 @@
 
 This repository contains the files for the documentation website for my Discord Bot.
 
-## Feedback and Other Issues
+## Feedback, Bugs, and Contributions
 
-For feedback on _the website_, you can create a GitHub issue for this repository or [contact me directly](https://contact.nhcarrigan.com). For issues with the bot itself, please refer to the bot repository.
+If you have feedback or a bug report, you can create a GitHub issue or [contact me directly](https://contact.nhcarrigan.com).
+
+If you would like to contribute to the project, you may create a Pull Request containing your proposed changes and I will review it as soon as I am able!
