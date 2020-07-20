@@ -31,6 +31,7 @@
       <p><a href="#automatic-commands">Automatic Messages</a></p>
       <p><a href="#manual-commands">Manual Commands</a></p>
       <hr />
+      <p><a href="#contributing-to-the-bot">Contributing to the Bot</a></p>
       <p><a href="#known-issues">Known Issues</a></p>
       <hr />
       <p>
@@ -65,7 +66,7 @@
           discrepancy between the two, feel free to let us know with an issue
           request on GitHub!
         </p>
-        <p>The bot's current version is 2.2.0</p>
+        <p>The bot's current version is 3.1.0</p>
       </section>
 
       <section id="local">
@@ -411,9 +412,12 @@
             slow to respond so this command may take some time.
           </li>
           <li>
-            `math [expression]` - This command takes the [expression] and
-            evaluates it, returning the calculated result. If the expression is
-            invalid, the bot will return an error.
+            `math [calculate|solve] [expression]` - This command takes the
+            [expression] and evaluates it, returning the calculated result. If
+            the expression is invalid, the bot will return an error. The user
+            can select between `calculate` and `solve`. `calculate` will
+            evaluate an expression, while `solve` will provide the steps for
+            solving the equation.
           </li>
           <li>
             `ping` - This command will generate the latency for the bot. The bot
@@ -530,7 +534,36 @@
           </li>
         </ul>
       </section>
-
+      <section id="contributing">
+        <h1>Contributing to the Bot</h1>
+        <h2>Creating a PR</h2>
+        <p>
+          If you have an idea for a new feature or fix, you are more than
+          welcome to create a pull request on the GitHub repository. The GitHub
+          repository runs a couple of checks on all code submissions:
+        </p>
+        <ul>
+          <li>
+            `Travis CI` - Travis will check for linting issues on the code, and
+            will run any test files associated with the code.
+          </li>
+          <li>
+            `LGTM` - LGTM will verify that there are no errors or security
+            concerns with the code.
+          </li>
+          <li>
+            `Codecov` - Codecov will verify that the tests adequately cover the
+            codebase (in terms of line count).
+          </li>
+        </ul>
+        <p>
+          Additionally, the `husky` package will run the lint and tests prior to
+          each `git commit` command, which will help catch errors prior to the
+          opening of a PR. To run these checks manually, the `npm run lint`
+          command will lint the code, and the `npm run test` command will run
+          the tests.
+        </p>
+      </section>
       <section id="trouble">
         <h1>Known Issues</h1>
 
