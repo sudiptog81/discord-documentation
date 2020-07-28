@@ -66,7 +66,7 @@
           discrepancy between the two, feel free to let us know with an issue
           request on GitHub!
         </p>
-        <p>The bot's current version is 3.1.0</p>
+        <p>The bot's current version is 3.2.0</p>
       </section>
 
       <section id="local">
@@ -373,16 +373,42 @@
             logs the deletion to the `log_channel` option.
           </li>
           <li>
+            `dnd` - This command generates an embed containing the currently
+            available Dungeons and Dragons commands.
+          </li>
+          <li>
+            `dndclass [class]` - This command generates an embed containing
+            information about the Dungeons and Dragons [class].
+          </li>
+          <li>
+            `dndmon [monster]` - This command generates an embed containing
+            information about the Dungeons and Dragons [monster].
+          </li>
+          <li>
+            `dndrace [race]` - This command generates an embed containing
+            information about the Dungeons and Dragons [race].
+          </li>
+          <li>
+            `dndschool [school]` - This command generates an embed containing
+            information about the Dungeons and Dragons [school] of magic.
+          </li>
+          <li>
+            `dndspell [spell]` - This command generates an embed containing
+            information about the Dungeons and Dragons [spell].
+          </li>
+          <li>
             `fortune` - This command will send a message to the channel the
             command came from. The message will contain a random fortune cookie
             quote from the list provided in the bot code.
           </li>
           <li>
-            `help` - This command sends an embed to the user. The embed contains
-            a few selected commands, and a link to this documentation for the
-            full list of commands. Additionally, the bot will send a message to
-            the channel the command came from, to confirm the embed was sent to
-            the user.
+            `help [command?]` - This command sends an embed to the user. The
+            embed contains a few selected commands, and a link to this
+            documentation for the full list of commands. Additionally, the bot
+            will send a message to the channel the command came from, to confirm
+            the embed was sent to the user. If the optional [command] parameter
+            is passed, the bot will return the description for that command (or
+            an error, if that command does not exist).
           </li>
           <li>
             `kick [@username] [reason(optional)]` - This command requires that
@@ -544,16 +570,16 @@
         </p>
         <ul>
           <li>
-            `Travis CI` - Travis will check for linting issues on the code, and
-            will run any test files associated with the code.
+            `Travis CI` - Travis will check for linting issues on the code.
           </li>
           <li>
             `LGTM` - LGTM will verify that there are no errors or security
             concerns with the code.
           </li>
           <li>
-            `Codecov` - Codecov will verify that the tests adequately cover the
-            codebase (in terms of line count).
+            `FOSSA` - FOSSA will verify that the GPL-3.0 license (under which
+            this bot is written) is compatible with all dependencies and
+            external packages.
           </li>
         </ul>
         <p>
