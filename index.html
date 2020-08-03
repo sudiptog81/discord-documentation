@@ -66,7 +66,7 @@
           discrepancy between the two, feel free to let us know with an issue
           request on GitHub!
         </p>
-        <p>The bot's current version is 3.3.0</p>
+        <p>The bot's current version is 3.4.0</p>
       </section>
 
       <section id="local">
@@ -171,13 +171,20 @@
           </li>
           <li>On the left, select "Bot", then create a new bot.</li>
         </ul>
+        <h2>Create a Webhook</h2>
+        <p>
+          The bot is configured to send an online notice, and updates on servers
+          it leaves or joins, through a Discord Webhook. In your server, create
+          a new Webhook and copy the URL. You will need the ID and Token from
+          that URL for the next step.
+        </p>
       </section>
 
       <section id="bot_connect">
         <h2>Link your Bot to the Code</h2>
         <p>
           Now that you have a bot, you'll need to create a file called `.env`.
-          This file will contain two variables:
+          This file will contain the following variables:
         </p>
         <ul>
           <li>
@@ -190,6 +197,12 @@
             `MONGO_URI` - The value of this variable will be your MongoDB
             authentication URI. Like the bot token, this needs to be kept secret
             to prevent unauthorised access to and modification of your database.
+          </li>
+          <li>`WH_ID` - This is the ID for the Discord webhook.</li>
+          <li>`WH_TOKEN` - This is the token for the Discord webhook.</li>
+          <li>
+            `PRODDEV` - This tells the bot whether it is in a development state
+            or production state - the webhook message includes this value.
           </li>
         </ul>
       </section>
