@@ -66,7 +66,7 @@
           discrepancy between the two, feel free to let us know with an issue
           request on GitHub!
         </p>
-        <p>The bot's current version is 3.4.0</p>
+        <p>The bot's current version is 4.0.0</p>
       </section>
 
       <section id="local">
@@ -363,16 +363,16 @@
             from.
           </li>
           <li>
-            `ban [@username] [reason(optional)]` - This command requires that
-            the user sending it has the "Ban Members" permission. If the
-            permission is missing, the bot responds with a notice that the user
-            lacks permission. Otherwise, the command bans [@username] from the
-            server. If the `log_channel` option is set, the bot will send an
-            embed to that channel. The embed will contain the name of the user
-            performing the ban, the name of the banned user, and the reason
-            provided. If no reason was provided, the embed will state that.
-            Because of the permanent nature of bans, the bot will require
-            confirmation before taking action.
+            `ban [@username] [reason?]` - This command requires that the user
+            sending it has the "Ban Members" permission. If the permission is
+            missing, the bot responds with a notice that the user lacks
+            permission. Otherwise, the command bans [@username] from the server.
+            If the `log_channel` option is set, the bot will send an embed to
+            that channel. The embed will contain the name of the user performing
+            the ban, the name of the banned user, and the reason provided. If no
+            reason was provided, the embed will state that. Because of the
+            permanent nature of bans, the bot will require confirmation before
+            taking action.
           </li>
           <li>
             `cat` - This command sends a random string of letters of a random
@@ -384,6 +384,10 @@
             notice that the user lacks permission to use this command.
             Otherwise, the bot deletes the channel this command is used in, and
             logs the deletion to the `log_channel` option.
+          </li>
+          <li>
+            `compliment` - Provides a little compliment to cheer you up.
+            Compliments obtained from freeCodeCamp.
           </li>
           <li>
             `dnd` - This command generates an embed containing the currently
@@ -430,10 +434,15 @@
             an error, if that command does not exist).
           </li>
           <li>
-            `kick [@username] [reason(optional)]` - This command requires that
-            the user sending it has the "Kick Members" permission. If the
-            permission is missing, the bot responds with a notice that the user
-            lacks permission. Otherwise, the command kicks [@username] from the
+            `jobs [location?]` - This command generates a LinkedIn job search
+            URL - the optional [location] parameter narrows down the search by
+            the given location.
+          </li>
+          <li>
+            `kick [@username] [reason?]` - This command requires that the user
+            sending it has the "Kick Members" permission. If the permission is
+            missing, the bot responds with a notice that the user lacks
+            permission. Otherwise, the command kicks [@username] from the
             server. If the `log_channel` option is set, the bot will send an
             embed to that channel. The embed will contain the name of the user
             performing the kick, the name of the kicked user, and the reason
@@ -444,8 +453,19 @@
             came from. The message contains Kirby doing a little dance.
           </li>
           <li>
+            `leave [server?]` - This command has a hard-coded restriction to
+            only respond to my account (if you configure your own instance, you
+            can change this). The command returns a list of servers the bot is a
+            member of, and the server IDs. If you pass the ID as the parameter,
+            the bot will leave that server.
+          </li>
+          <li>
             `level` - This command sends an embed containing the user's
             experience points and current level.
+          </li>
+          <li>
+            `listen` - This command returns an embed containing information on
+            the various `listener` type features the bot offers.
           </li>
           <li>
             `magic [cardname]` - This command querys the Magic: The Gathering
@@ -457,12 +477,16 @@
             slow to respond so this command may take some time.
           </li>
           <li>
-            `math [calculate|solve] [expression]` - This command takes the
+            `maths [calculate|solve] [expression]` - This command takes the
             [expression] and evaluates it, returning the calculated result. If
             the expression is invalid, the bot will return an error. The user
             can select between `calculate` and `solve`. `calculate` will
             evaluate an expression, while `solve` will provide the steps for
             solving the equation.
+          </li>
+          <li>
+            `motivate` - This command returns a motivational quote to raise your
+            spirits. Quotes are obtained from freeCodeCamp.
           </li>
           <li>
             `ping` - This command will generate the latency for the bot. The bot
@@ -500,7 +524,7 @@
             than 100 messages at a time.
           </li>
           <li>
-            `restrict [@username] [reason(optional)]` This command requires that
+            `restrict [@username] [reason?]` This command requires that
             the user sending it has the "Kick Members" permission. If the
             permission is missing, the bot responds with a notice that the user
             lacks permission. Otherwise, the command will set the [@username]'s
@@ -525,7 +549,7 @@
             results page for the given [query] word or words.
           </li>
           <li>
-            `star [@username] [reason(optional)]` - This command sends a message
+            `star [@username] [reason?]` - This command sends a message
             embed to the [@username]'s direct messages. The embed contains the
             command author's name, the [reason] if provided, and a shiny gold
             star!
@@ -537,7 +561,7 @@
             and the member count.
           </li>
           <li>
-            `unrestrict [@username] [reason(optional)]` - This command requires
+            `unrestrict [@username] [reason?]` - This command requires
             that the user sending it has the "Kick Members" permission. If the
             permission is missing, the bot responds with a notice that the user
             lacks permission. Otherwise, the command will remove the
@@ -561,7 +585,7 @@
             roles they have, and their avatar.
           </li>
           <li>
-            `warn [@username] [reason(optional)]` - This command requires that
+            `warn [@username] [reason?]` - This command requires that
             the user sending it has the "Kick Members" permission. If the
             permission is missing, the bot responds with a notice that the user
             lacks permission. Otherwise, the command will send a direct message
