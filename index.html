@@ -66,7 +66,7 @@
           discrepancy between the two, feel free to let us know with an issue
           request on GitHub!
         </p>
-        <p>The bot's current version is 4.0.0</p>
+        <p>The bot's current version is 4.3.1</p>
       </section>
 
       <section id="local">
@@ -204,6 +204,7 @@
             `PRODDEV` - This tells the bot whether it is in a development state
             or production state - the webhook message includes this value.
           </li>
+          <li>`NASA_API` - This is the API key for the NASA API.</li>
         </ul>
       </section>
 
@@ -439,6 +440,10 @@
             the given location.
           </li>
           <li>
+            `http [status]` - This command accesses the HTTP Cat API and returns
+            a cat photo for the given [status].
+          </li>
+          <li>
             `kick [@username] [reason?]` - This command requires that the user
             sending it has the "Kick Members" permission. If the permission is
             missing, the bot responds with a notice that the user lacks
@@ -524,17 +529,17 @@
             than 100 messages at a time.
           </li>
           <li>
-            `restrict [@username] [reason?]` This command requires that
-            the user sending it has the "Kick Members" permission. If the
-            permission is missing, the bot responds with a notice that the user
-            lacks permission. Otherwise, the command will set the [@username]'s
-            role provided in the `silence_role` option, and remove all other
-            roles. If the role option is not set, the bot will send a message to
-            notify the user. If the `log_channel` option is not set, the bot
-            will send a message to notify the user. Otherwise, the bot will send
-            an embed to the log channel. The embed will contain the name of the
-            user performing the command, the name of the restricted user, and
-            the reason provided. If no reason was provided, the embed will state
+            `restrict [@username] [reason?]` This command requires that the user
+            sending it has the "Kick Members" permission. If the permission is
+            missing, the bot responds with a notice that the user lacks
+            permission. Otherwise, the command will set the [@username]'s role
+            provided in the `silence_role` option, and remove all other roles.
+            If the role option is not set, the bot will send a message to notify
+            the user. If the `log_channel` option is not set, the bot will send
+            a message to notify the user. Otherwise, the bot will send an embed
+            to the log channel. The embed will contain the name of the user
+            performing the command, the name of the restricted user, and the
+            reason provided. If no reason was provided, the embed will state
             that. The bot will then create a channel under the
             `silence_category` category (if `silence_category` is not set, the
             bot will send a message to notify the user), which only the channel
@@ -548,11 +553,11 @@
             `search [query]` - This command returns a URL to the Google search
             results page for the given [query] word or words.
           </li>
+          <li>`space` - This command gets NASA's Space Photo of the day.</li>
           <li>
-            `star [@username] [reason?]` - This command sends a message
-            embed to the [@username]'s direct messages. The embed contains the
-            command author's name, the [reason] if provided, and a shiny gold
-            star!
+            `star [@username] [reason?]` - This command sends a message embed to
+            the [@username]'s direct messages. The embed contains the command
+            author's name, the [reason] if provided, and a shiny gold star!
           </li>
           <li>
             `status` - This command returns a message embed containing
@@ -561,17 +566,16 @@
             and the member count.
           </li>
           <li>
-            `unrestrict [@username] [reason?]` - This command requires
-            that the user sending it has the "Kick Members" permission. If the
-            permission is missing, the bot responds with a notice that the user
-            lacks permission. Otherwise, the command will remove the
-            [@username]'s role provided in the `silence_role` option. If the
-            role option is not set, the bot will send a message to notify the
-            user. If the `log_channel` option is set, the bot will send an embed
-            to that channel. The embed will contain the name of the user
-            performing the command, the name of the unrestricted user, and the
-            reason provided. If no reason was provided, the embed will state
-            that.
+            `unrestrict [@username] [reason?]` - This command requires that the
+            user sending it has the "Kick Members" permission. If the permission
+            is missing, the bot responds with a notice that the user lacks
+            permission. Otherwise, the command will remove the [@username]'s
+            role provided in the `silence_role` option. If the role option is
+            not set, the bot will send a message to notify the user. If the
+            `log_channel` option is set, the bot will send an embed to that
+            channel. The embed will contain the name of the user performing the
+            command, the name of the unrestricted user, and the reason provided.
+            If no reason was provided, the embed will state that.
           </li>
           <li>
             `usage [command]` - This command returns a message embed for the
@@ -585,13 +589,13 @@
             roles they have, and their avatar.
           </li>
           <li>
-            `warn [@username] [reason?]` - This command requires that
-            the user sending it has the "Kick Members" permission. If the
-            permission is missing, the bot responds with a notice that the user
-            lacks permission. Otherwise, the command will send a direct message
-            to [@username] informing them that the command author has warned
-            them, and providing the reason if given. If the `log_channel` option
-            is set, the bot will send an embed to that channel. The embed will
+            `warn [@username] [reason?]` - This command requires that the user
+            sending it has the "Kick Members" permission. If the permission is
+            missing, the bot responds with a notice that the user lacks
+            permission. Otherwise, the command will send a direct message to
+            [@username] informing them that the command author has warned them,
+            and providing the reason if given. If the `log_channel` option is
+            set, the bot will send an embed to that channel. The embed will
             contain the name of the user performing the warning, the name of the
             warned user, and the reason provided. If no reason was provided, the
             embed will state that.
