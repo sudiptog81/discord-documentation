@@ -66,7 +66,7 @@
           discrepancy between the two, feel free to let us know with an issue
           request on GitHub!
         </p>
-        <p>The bot's current version is 4.3.1</p>
+        <p>The bot's current version is 4.6.0</p>
       </section>
 
       <section id="local">
@@ -194,20 +194,36 @@
             publically, as this will allow anyone to access your discord bot.
           </li>
           <li>
+            `HP_KEY` - This is the API key for the
+            <a
+              href="https://www.potterapi.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Harry Potter API.</a
+            >
+          </li>
+          <li>
             `MONGO_URI` - The value of this variable will be your MongoDB
             authentication URI. Like the bot token, this needs to be kept secret
             to prevent unauthorised access to and modification of your database.
           </li>
-          <li>`WH_ID` - This is the ID for the Discord webhook.</li>
-          <li>`WH_TOKEN` - This is the token for the Discord webhook.</li>
+          <li>
+            `NASA_API` - This is the API key for the
+            <a
+              href="https://api.nasa.gov/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >NASA API.</a
+            >
+          </li>
           <li>
             `PRODDEV` - This tells the bot whether it is in a development state
             or production state - the webhook message includes this value.
           </li>
-          <li>`NASA_API` - This is the API key for the NASA API.</li>
+          <li>`WH_ID` - This is the ID for the Discord webhook.</li>
+          <li>`WH_TOKEN` - This is the token for the Discord webhook.</li>
         </ul>
       </section>
-
       <section id="bot_config">
         <h2>Configure your Bot</h2>
         <p>
@@ -426,23 +442,34 @@
             the closest guess.
           </li>
           <li>
-            `help [command?]` - This command sends an embed to the user. The
-            embed contains a few selected commands, and a link to this
-            documentation for the full list of commands. Additionally, the bot
-            will send a message to the channel the command came from, to confirm
-            the embed was sent to the user. If the optional [command] parameter
-            is passed, the bot will return the description for that command (or
-            an error, if that command does not exist).
+            `help [command?]` - This command returns an embed containing a list
+            of available commands. If the optional [command] parameter is
+            passed, the bot will return the description for that command (or an
+            error, if that command does not exist).
+          </li>
+          <li>
+            `hpchar [name]` - This command returns an embed containing
+            information on the [name] Harry Potter character.
+          </li>
+          <li>
+            `hpsort` - This command randomly sorts you into a Hogwarts house and
+            returns an embed containing information on that house.
+          </li>
+          <li>
+            `hpspell [name]` - This command returns an embed containing
+            informationn on the [name] Harry Potter spell. Alternatively, pass
+            "random" as the value for [name] to get a random spell.
+          </li>
+          <li>
+            `http [status]` - This command accesses the HTTP Cat API and returns
+            a cat photo for the given [status].
           </li>
           <li>
             `jobs [location?]` - This command generates a LinkedIn job search
             URL - the optional [location] parameter narrows down the search by
             the given location.
           </li>
-          <li>
-            `http [status]` - This command accesses the HTTP Cat API and returns
-            a cat photo for the given [status].
-          </li>
+          <li>`joke` - This command tells you a silly joke!</li>
           <li>
             `kick [@username] [reason?]` - This command requires that the user
             sending it has the "Kick Members" permission. If the permission is
@@ -578,6 +605,10 @@
             If no reason was provided, the embed will state that.
           </li>
           <li>
+            `uptime` - This command returns the amount of time the bot has
+            currently been awake.
+          </li>
+          <li>
             `usage [command]` - This command returns a message embed for the
             [command]. The embed will contain the number of times the command is
             called.
@@ -604,6 +635,11 @@
             `wiki [query]` - This command returns a link to the wikipedia
             article for [query]. If the article is not found, it returns the
             search page instead.
+          </li>
+          <li>
+            `xkcd [?number]` - This command returns an embed containing today's
+            XKCD comic. Optionally pass a comic [number] to get that specific
+            comic instead.
           </li>
         </ul>
       </section>
