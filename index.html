@@ -66,7 +66,7 @@
           discrepancy between the two, feel free to let us know with an issue
           request on GitHub!
         </p>
-        <p>The bot's current version is 4.11.0</p>
+        <p>The bot's current version is 4.16.0</p>
       </section>
 
       <section id="local">
@@ -425,6 +425,10 @@
             Compliments obtained from freeCodeCamp.
           </li>
           <li>
+            `config` - This command lists the current bot configuration, for
+            logging channels etc.
+          </li>
+          <li>
             `dnd` - This command generates an embed containing the currently
             available Dungeons and Dragons commands.
           </li>
@@ -522,8 +526,9 @@
             the bot will leave that server.
           </li>
           <li>
-            `level` - This command sends an embed containing the user's
-            experience points and current level.
+            `level [user?]` - This command sends an embed containing the
+            [user]'s experience points and current level. If no parameter is
+            passed, it will return the message author's level.
           </li>
           <li>
             `listen` - This command returns an embed containing information on
@@ -568,6 +573,10 @@
             Pokemon is found, the bot will send a message notice. As an
             alternative, sending "random" instead of a number will cause the bot
             to return a random Pokemon.
+          </li>
+          <li>
+            `privacy` - This command provides information on the bot's privacy
+            policy.
           </li>
           <li>
             `profile [website] [username]` - This command will return a message
@@ -650,8 +659,8 @@
             called.
           </li>
           <li>
-            `user [@username]` - This command returns a message embed about
-            [@username]. The embed contains their nickname, full username,
+            `user` - This command returns a message embed about
+            the message author. The embed contains their nickname, full username,
             account creation date, online status, date they joined the server,
             roles they have, and their avatar.
           </li>
@@ -689,7 +698,8 @@
         </p>
         <ul>
           <li>
-            `Travis CI` - Travis will check for linting issues on the code.
+            `Node CI` - A GitHub action will check for linter errors in the
+            code.
           </li>
           <li>
             `LGTM` - LGTM will verify that there are no errors or security
