@@ -66,7 +66,7 @@
           discrepancy between the two, feel free to let us know with an issue
           request on GitHub!
         </p>
-        <p>The bot's current version is 4.16.0</p>
+        <p>The bot's current version is 4.21.0</p>
       </section>
 
       <section id="local">
@@ -319,12 +319,11 @@
           If you would like to add our live bot to your server, you are welcome
           to
           <a
-            href="https://contact.nhcarrigan.com"
+            href="https://discord.com/oauth2/authorize?client_id=716707753090875473&scope=bot&permissions=268495990"
             target="_blank"
             rel="noopener noreferrer"
-            >contact us</a
-          >, but we are not able to fulfil every request as the hosting platform
-          will only allow so much server load.
+            >invite the bot to your server</a
+          >.
         </p>
       </section>
 
@@ -398,6 +397,15 @@
             from.
           </li>
           <li>
+            `adventure [function] [room?] [direction?]` - This command will
+            generate a text based adventure dungeon. To begin a new dungeon,
+            pass `start` as the [function]. The dungeon take you room by room,
+            with each room having a [room] id value and directions to move. Move
+            to the next room by passing `move` as the [function], the [room] id
+            provided, and the cardinal [direction] you want to move. Each room
+            embed includes a prefilled move command to copy-paste.
+          </li>
+          <li>
             `ban [@username] [reason?]` - This command requires that the user
             sending it has the "Ban Members" permission. If the permission is
             missing, the bot responds with a notice that the user lacks
@@ -412,6 +420,17 @@
           <li>
             `cat` - This command sends a random string of letters of a random
             length, to simulate a cat walking across your keyboard.
+          </li>
+          <li>
+            `challenge [function] [id?] [answer?]` - This command walks the user
+            through a series of programming based challenge questions. To begin
+            a new challenge, pass `start` as the [function]. The bot will return
+            a challenge embed, which includes the question and challenge id. To
+            solve the challenge, pass `solve` as the [function], with the
+            challenge [id] and the [answer]. The bot will respond with either
+            correct or incorrect, and an explanation. If correct, the bot
+            provides the [id] for the next challenge. To get that challenge,
+            pass `request` as the [function] with the new [id].
           </li>
           <li>
             `close` - This command requires the user to have the "Kick Members"
@@ -552,6 +571,16 @@
             solving the equation.
           </li>
           <li>
+            `maze [function] [id?] [direction?]` - This command walks the user
+            through a series of programming based challenge questions. To get a
+            maze, pass `request` as the [function]. The bot will return a maze
+            embed, which includes information about the maze and its id. To
+            solve the maze, pass `solve` as the [function], with the maze [id]
+            and the [answer]. The [answer] should be a null-space string of
+            cardinal directions ("NEEESSWN"). The bot will respond with either
+            correct or incorrect, and an explanation.
+          </li>
+          <li>
             `motivate` - This command returns a motivational quote to raise your
             spirits. Quotes are obtained from freeCodeCamp.
           </li>
@@ -612,6 +641,17 @@
             moderators and the restricted user can access.
           </li>
           <li>
+            `riddle [function] [id?] [answer?]` - This command walks the user
+            through a series of programming based challenge questions. To begin
+            a new challenge, pass `start` as the [function]. The bot will return
+            a riddle embed, which includes the question and riddle id. To solve
+            the riddle, pass `solve` as the [function], with the riddle [id] and
+            the [answer]. The bot will respond with either correct or incorrect,
+            and an explanation. If correct, the bot provides the [id] for the
+            next riddle. To get that challenge, pass `request` as the [function]
+            with the new [id].
+          </li>
+          <li>
             `roll d[number]` - This command returns a random number between 1
             and [number], as if it was a dice roll.
           </li>
@@ -630,6 +670,10 @@
             `star [@username] [reason?]` - This command sends a message embed to
             the [@username]'s direct messages. The embed contains the command
             author's name, the [reason] if provided, and a shiny gold star!
+          </li>
+          <li>
+            `title` - This command will generate a random and often funny title
+            for the user who calls it.
           </li>
           <li>
             `trivia` - This command fetches a trivia question and returns an
@@ -659,10 +703,10 @@
             called.
           </li>
           <li>
-            `user` - This command returns a message embed about
-            the message author. The embed contains their nickname, full username,
-            account creation date, online status, date they joined the server,
-            roles they have, and their avatar.
+            `user` - This command returns a message embed about the message
+            author. The embed contains their nickname, full username, account
+            creation date, online status, date they joined the server, roles
+            they have, and their avatar.
           </li>
           <li>
             `warn [@username] [reason?]` - This command requires that the user
