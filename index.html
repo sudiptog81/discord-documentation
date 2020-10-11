@@ -32,6 +32,7 @@
       <p><a href="#manual-commands">Manual Commands</a></p>
       <hr />
       <p><a href="#contributing-to-the-bot">Contributing to the Bot</a></p>
+      <p><a href="#how-to-create-new-commands">How to create new commands</a></p>
       <p><a href="#known-issues">Known Issues</a></p>
       <hr />
       <p>
@@ -767,6 +768,79 @@
           command will lint the code, and the `npm run test` command will run
           the tests.
         </p>
+      </section>
+      <section id="how-to-create-new-commands">
+        <h1>How to create new commands</h1>
+        <h2>Structure</h2>
+        <p>Every command uses the `CommandInt` interface on this you can find the properties below:</p>
+        <ul>
+          <li>`name` - This property is used to set the name of the command. If you are using `names` don't use this.</li>
+          <li>`names` - This property is used to set multiple names to the command. If you are using `name` don't use this.</li>
+          <li>
+            `description` - This property is used to set the description of the command; in other words,
+            to describe what the command will do when its called. This will show into the `help` command.
+          </li>
+          <li>
+            `parameters` - (Optional) - This property is used to define the available parameters of the command,
+            this will show into the `help` command. To define an optional parameter use: `&lt;?name-of-parameter&gt;`,
+            or use `&lt;name-of-parameter&gt;` if the parameter is required; when a parameter only has some specific
+            values use `&lt;action (action-1/action-2)&gt;`.
+          </li>
+          <li>
+            `run` - This property is the actioner of the command, in this you set what the command will do when its called.
+          </li>
+        </ul>
+        <h2>Creating a message repeater command</h2>
+        <ul>
+          <li>
+            First, go to `./src/commands/general/` and create a new file called `messageRepeater.ts` or as you wish.
+          </li>
+          <li>
+            Then, add the basic structure of our command:<br>
+            <pre><code style="white-space: normal;">
+              import CommandInt from "@Interfaces/CommandInt";<br><br>
+              const messageRepeater: CommandInt = {<br>
+                name: "messageRepeater",<br>
+                description: "Send a message to the current channel using the bot.",<br>
+                parameters: ["&lt;message&gt;: Message to send."],<br>
+                run: async (message) => {<br>
+                  console.log("Message repeater command called!");<br>
+                },<br>
+              };<br><br>
+              export default messageRepeater;
+            </code></pre>
+            Save the file, start the bot (You can use `npm run dev` instead of `npm run build && npm start`) and then
+            in the chat write `{prefix}messageRepeater` and in the console you will see `Message repeater command called!`.            
+          </li>
+          <li>
+            So, to this moment you have created a simple command that shows you a message in the console, but it does not
+            do what we want.<br><br>
+            First, add `const { channel, commandArguments } = message;` instead of the `console.log`, with this new line you will get 
+            the arguments of the command; in other words, the content of the message split by whitespaces and ignoring the
+            first element (The first element is the command name); and the channel of the message.<br><br>
+            Now, add `const msg = commandArguments.join(" ");` to join the arguments with whitespaces to get the
+            parameter that we require (Message).
+          </li>
+          <li>
+            After of get the message, you need send it again to the current channel, to do this you need add this line:
+            `await channel.send(msg);`; now, you can test the command, if you write `{prefix}messageRepeater Hello` the bot
+            will send `Hello` again to the current channel. But what happen if you write `{prefix}messageRepeater`? You will
+            get an error in the console because the bot cannot send an empty message, and how I fix it?.<br><br>
+            It is easier, you need verify if the command arguments have a length before send the message, you must add the
+            lines below before the `await channel.send(msg);`:
+            <pre><code style="white-space: normal;">
+              if (!msg.length) {<br>
+                await message.reply('Sorry, but you must enter a valid message.');<br>
+                return;<br>
+              }
+            </code></pre>
+            Now, when you call the command with an empty message you receive a message saying you need enter a message.
+          </li>
+          <li>
+            Congratulations! You have done your first command for the bot. We hope you are motivating to contribute to
+            the project with more commands or fixes.
+          </li>
+        </ul>
       </section>
       <section id="trouble">
         <h1>Known Issues</h1>
