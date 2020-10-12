@@ -828,10 +828,10 @@
             get an error in the console because the bot cannot send an empty message. So howdo you fix it?
             You need to verify the command arguments have a length before sending the message. Add these
             lines below before the `await channel.send(msg);`:
-            <pre><code style="white-space: normal;">
-              if (!msg.length) {<br>
-                await message.reply('Sorry, but you must enter a valid message.');<br>
-                return;<br>
+            <pre><code style="white-space: pre-wrap;">
+              if (!msg.length) {
+                await message.reply('Sorry, but you must enter a valid message.');
+                return;
               }
             </code></pre>
             Now when you call the command with an empty message the bot will respond with a message saying you need to enter a message.
