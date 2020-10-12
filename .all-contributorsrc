@@ -13,6 +13,15 @@
       "contributions": [
         "projectManagement"
       ]
+    },
+    {
+      "login": "JoshuaPelealu",
+      "name": "Joshua Pelealu",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/45566099?v=4",
+      "profile": "http://catalactics.now.sh",
+      "contributions": [
+        "design"
+      ]
     }
   ],
   "contributorsPerLine": 7,
