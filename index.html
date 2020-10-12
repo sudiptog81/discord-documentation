@@ -797,16 +797,16 @@
           </li>
           <li>
             Then, add the basic structure of our command:<br>
-            <pre><code style="white-space: normal;">
-              import CommandInt from "@Interfaces/CommandInt";<br><br>
-              const messageRepeater: CommandInt = {<br>
-                name: "messageRepeater",<br>
-                description: "Send a message to the current channel using the bot.",<br>
-                parameters: ["&lt;message&gt;: Message to send."],<br>
-                run: async (message) => {<br>
-                  console.log("Message repeater command called!");<br>
-                },<br>
-              };<br><br>
+            <pre><code style="white-space: pre-wrap;">
+              import CommandInt from "@Interfaces/CommandInt";
+              const messageRepeater: CommandInt = {
+                name: "messageRepeater",
+                description: "Send a message to the current channel using the bot.",
+                parameters: ["&lt;message&gt;: Message to send."],
+                run: async (message) => {
+                  console.log("Message repeater command called!");
+                },
+              };
               export default messageRepeater;
             </code></pre>
             Save the file, start the bot (You can use `npm run dev` instead of `npm run build && npm start`) and then
