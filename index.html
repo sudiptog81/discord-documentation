@@ -822,11 +822,11 @@
             parameter that we require (Message).
           </li>
           <li>
-            After of get the message, you need send it again to the current channel, to do this you need add this line:
-            `await channel.send(msg);`; now, you can test the command, if you write `{prefix}messageRepeater Hello` the bot
-            will send `Hello` again to the current channel. But what happen if you write `{prefix}messageRepeater`? You will
-            get an error in the console because the bot cannot send an empty message, and how I fix it?.<br><br>
-            It is easier, you need verify if the command arguments have a length before send the message, you must add the
+            After you get the message, you need to send it back to the current channel. To do this, add this line:
+            `await channel.send(msg);`. Now you can test the command! If you write `{prefix}messageRepeater Hello` in the channel, the bot
+            will send `Hello` back to the current channel. But what will happen if you send `{prefix}messageRepeater`? You will
+            get an error in the console because the bot cannot send an empty message. So howdo you fix it?
+            You need to verify the command arguments have a length before sending the message. Add these
             lines below before the `await channel.send(msg);`:
             <pre><code style="white-space: normal;">
               if (!msg.length) {<br>
