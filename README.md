@@ -1,6 +1,6 @@
 # Discord Bot Documentation
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 This repository contains the files for the documentation website for my Discord Bot.
@@ -27,6 +27,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://www.nhcarrigan.com"><img src="https://avatars1.githubusercontent.com/u/63889819?v=4" width="100px;" alt=""/><br /><sub><b>Nicholas Carrigan (he/him)</b></sub></a><br /><a href="#projectManagement-nhcarrigan" title="Project Management">📆</a></td>
     <td align="center"><a href="http://catalactics.now.sh"><img src="https://avatars1.githubusercontent.com/u/45566099?v=4" width="100px;" alt=""/><br /><sub><b>Joshua Pelealu</b></sub></a><br /><a href="#design-JoshuaPelealu" title="Design">🎨</a></td>
     <td align="center"><a href="https://www.danielsolartech.com/"><img src="https://avatars2.githubusercontent.com/u/66956234?v=4" width="100px;" alt=""/><br /><sub><b>Daniel Solarte</b></sub></a><br /><a href="https://github.com/nhcarrigan/discord-bot-documentation/commits?author=danielsolartech" title="Code">💻</a></td>
+    <td align="center"><a href="http://landonlloyd.github.io"><img src="https://avatars0.githubusercontent.com/u/65516863?v=4" width="100px;" alt=""/><br /><sub><b>Landon Lloyd</b></sub></a><br /><a href="https://github.com/nhcarrigan/discord-bot-documentation/commits?author=LandonLloyd" title="Code">💻</a></td>
   </tr>
 </table>
 
