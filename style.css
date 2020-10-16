@@ -9,8 +9,23 @@ main p {
 
 body {
   margin: 0;
-  background-color: #240533;
+  background-color: rgba(0, 0, 0, 0.999); 
   color: #aea8d3;
+}
+
+body::before {
+  content: "";
+  background: url(Moonlight.png);
+  background-size: cover;
+  opacity: 0.25;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;   
 }
 
 nav {
@@ -72,7 +87,6 @@ pre code {
 
 a {
   color: inherit;
-  text-decoration: none;
 }
 
 main section a:not(.section-anchor) {
@@ -139,7 +153,6 @@ h2:hover .section-anchor::after {
 .section-anchor {
   z-index: 5;
   margin-left: -17.58px;
-  text-decoration: none !important;
 }
 
 .section-anchor:hover::after {
@@ -161,4 +174,3 @@ h2:hover .section-anchor::after {
 .trouble-container h2 {
   font-size: 1.45em;
 }
-/*# sourceMappingURL=style.css.map */
