@@ -1,13 +1,13 @@
-# Discord Bot Documentation
+# BeccaBot Documentation
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-This repository contains the files for the documentation website for my Discord Bot.
+This repository contains the files for the documentation website for BeccaBot.
 
 ## Live Version
 
-This page is currently deployed. [View the live website.](https://www.nhcarrigan.com/discord-bot-documentation)
+This page is currently deployed. [View the live website.](https://www.nhcarrigan.com/BeccaBot-documentation)
 
 ## Feedback, Bugs, and Contributions
 
