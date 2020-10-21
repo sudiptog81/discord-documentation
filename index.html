@@ -78,7 +78,7 @@
           discrepancy between the two, feel free to let us know with an issue
           request on GitHub!
         </p>
-        <p>The bot's current version is 5.1.2</p>
+        <p>The bot's current version is 6.0.0</p>
       </section>
 
       <section id="local">
@@ -128,7 +128,7 @@
 
         <p>
           Before you do anything else, make sure that Node.js and npm is
-          installed. If you do not have Node.js and `npm` installed, you can do
+          installed. If you do not have Node.js and <code>npm</code> installed, you can do
           so from the
           <a
             href="https://nodejs.org/en/docs/"
@@ -136,24 +136,24 @@
             rel="noopener noreferrer"
             >Node.js website</a
           >. Open the terminal - you will now need to install some packages
-          using `npm`. Enter the following commands into the terminal to perform
+          using <code>npm</code>. Enter the following commands into the terminal to perform
           the installations:
         </p>
         <p>
           <em>
-            `npm install` - This will install all of the dependencies found in
-            the `package.json` file automatically. If this does not work, you
-            will need to go through each item listed in that file and run `npm
-            install [packagename]`
+            <code>npm install</code> - This will install all of the dependencies found in
+            the <code>package.json</code> file automatically. If this does not work, you
+            will need to go through each item listed in that file and run <code>npm
+            install [packagename]</code>
           </em>
         </p>
         <p>
-          `npm run build` - This will build the TypeScript files into runnable
+          <code>npm run build</code> - This will build the TypeScript files into runnable
           JavaScript files.
         </p>
         <p>
           Congratulations! You are now ready to run the code locally - the start
-          command is `npm run start`. To connect the code to your Discord Bot
+          command is <code>npm run start</code>. To connect the code to your Discord Bot
           application, continue reading below.
         </p>
       </section>
@@ -195,19 +195,19 @@
       <section id="bot_connect">
         <h2>Link your Bot to the Code</h2>
         <p>
-          Now that you have a bot, you'll need to create a file called `.env`.
+          Now that you have a bot, you'll need to create a file called <code>.env</code>.
           This file will contain the following variables:
         </p>
         <ul>
           <li>
-            `DISCORD_TOKEN` - (Required) - The value of this variable will be
+            <code>DISCORD_TOKEN</code> - (Required) - The value of this variable will be
             your Bot Token from the Discord developer page. It is VERY important
             that you keep this token a secret - do not upload it to GitHub or
             share it publically, as this will allow anyone to access your
             discord bot.
           </li>
           <li>
-            `HABITICA_KEY` - (Optional for habitica command) - This is your API
+            <code>HABITICA_KEY</code> - (Optional for habitica command) - This is your API
             key for
             <a
               href="https://habitica.com"
@@ -217,7 +217,7 @@
             >.
           </li>
           <li>
-            `HP_KEY` - (Optional for hp commands) - This is the API key for the
+            <code>HP_KEY</code> - (Optional for hp commands) - This is the API key for the
             <a
               href="https://www.potterapi.com/"
               target="_blank"
@@ -226,13 +226,13 @@
             >
           </li>
           <li>
-            `MONGODB` - (Required) - The value of this variable will be your
+            <code>MONGODB</code> - (Required) - The value of this variable will be your
             MongoDB authentication URI. Like the bot token, this needs to be
             kept secret to prevent unauthorised access to and modification of
             your database.
           </li>
           <li>
-            `NASA_API` - (Optional for space command) - This is the API key for
+            <code>NASA_API</code> - (Optional for space command) - This is the API key for
             the
             <a
               href="https://api.nasa.gov/"
@@ -242,58 +242,61 @@
             >
           </li>
           <li>
-            `PRODDEV` - (Optional) - This tells the bot whether it is in a
+            <code>PRODDEV</code> - (Optional) - This tells the bot whether it is in a
             development state or production state - the webhook message includes
             this value.
           </li>
           <li>
-            `WH_ID` - (Optional) - This is the ID for the Discord webhook.
+            <code>WH_ID</code> - (Optional) - This is the ID for the Discord webhook.
           </li>
           <li>
-            `WH_TOKEN` - (Optional) - This is the token for the Discord webhook.
+            <code>WH_TOKEN</code> - (Optional) - This is the token for the Discord webhook.
           </li>
         </ul>
       </section>
       <section id="bot_config">
         <h2>Configure your Bot</h2>
+        <p>You need to configure the bot using the <code>|config</code> command:</p>
         <p>
-          You need to configure the bot using the `|config` command:
-        </p>
-        <p>
-          `|config set prefix [prefix]`, this command determines what symbol the
+          <code>|config set prefix [prefix]</code>, this command determines what symbol the
           bot looks for to trigger a command. The default is the pipe symbol
-          `|`, but you may change this to whatever you wish.
+          <code>|</code>, but you may change this to whatever you wish.
         </p>
         <p>
-          `|config set channel logs [#channel]`, this command determines the
+          <code>|config set channel logs [#channel]</code>, this command determines the
           name of the channel where the bot should log things like deleted
           messages, and kick/ban instances.
         </p>
         <p>
-          `|config set channel welcomes [#channel]`, this command allows you to
+          <code>|config set channel welcomes [#channel]</code>, this command allows you to
           set the name of the channel for user welcome/depart messages.
         </p>
         <p>
-          `|config set role restricted [@role]`, this command sets the name of
+          <code>|config set role restricted [@role]</code>, this command sets the name of
           the Discord role your server uses to restrict a user's ability to send
           messages.
         </p>
         <p>
-          `|config set role moderator [@role]`, this command sets the name of
+          <code>|config set role moderator [@role]</code>, this command sets the name of
           your server's moderation role. This should be your lowest moderation
           level, as all moderators will need this role to see the suspended
           channels.
         </p>
         <p>
-          `|config add hearts [@user]`, this command adds the id of the user
+          <code>|config add hearts [@user]</code>, this command adds the id of the user
           mentioned to the hearts list, in other words, the bot automatically
           add a heart react to the messages of that user.
         </p>
         <p>
-          `|config remove hearts [@user]`, this command removes the id of the
+          <code>|config remove hearts [@user]</code>, this command removes the id of the
           user mentioned from the hearts list.
         </p>
-        <p>NOTE: Config settings are set on a per-server basis. Only moderators with the "Manage Server" permission can change the settings. Additionally, nhcarrigan has full access specifically for development and debugging purposes.</p>
+        <p>
+          NOTE: Config settings are set on a per-server basis. Only moderators
+          with the "Manage Server" permission can change the settings.
+          Additionally, nhcarrigan has full access specifically for development
+          and debugging purposes.
+        </p>
       </section>
 
       <section id="bot_run">
@@ -314,10 +317,10 @@
         </p>
         <p>
           Once you have added the bot to your server, switch back to your
-          terminal and run the command `npm start`. If you have set the `WH_ID`
-          and `WH_TOKEN` in your environment appropriately, the bot should send
+          terminal and run the command <code>npm start</code>. If you have set the <code>WH_ID</code>
+          and <code>WH_TOKEN</code> in your environment appropriately, the bot should send
           a message indicating it is online. Otherwise, you should see the text
-          `Activate the Omega!` in your terminal, indicating your bot is online!
+          <code>Activate the Omega!</code> in your terminal, indicating your bot is online!
           Now you can try some of the commands to see if the bot is functioning
           correctly.
         </p>
@@ -332,7 +335,7 @@
           instance of your bot. We use Heroku for our version, but there are
           other options. Be sure to read the documentation for your chosen
           platform! Heroku, for example, uses a separate setting for the bot
-          token instead of a `.env` file.
+          token instead of a <code>.env</code> file.
         </p>
         <p>
           If you would like to add our live bot to your server, you are welcome
@@ -351,8 +354,8 @@
         <p>
           The bot has multiple features on offer. Some of them are automatic,
           but most of them require the user to send a command word. The command
-          words are listed below, but must be prefaced with the `prefix` symbol
-          set with `|config set prefix [prefix]` (By default is `|`).
+          words are listed below, but must be prefaced with the <code>prefix</code> symbol
+          set with <code>|config set prefix [prefix]</code> (By default is <code>|</code>).
         </p>
       </section>
 
@@ -364,39 +367,39 @@
         </p>
         <ul>
           <li>
-            `Welcome Messages` - The bot will send a welcome message directly to
+            <code>Welcome Messages</code> - The bot will send a welcome message directly to
             a new user in the form of an embed. This message details how to use
             the bot's command and what the command prefix is. Additionally, if a
-            valid channel is provided for the `|config set channel welcomes
-            [#channel]` setting, the bot will send a message to the channel
+            valid channel is provided for the <code>|config set channel welcomes
+            [#channel]</code> setting, the bot will send a message to the channel
             inviting the user to introduce themselves.
           </li>
           <li>
-            `Depart Messages` - If a valid channel is provided for the `|config
-            set channel welcomes [#channel]` setting, the bot will send a
+            <code>Depart Messages</code> - If a valid channel is provided for the <code>|config
+            set channel welcomes [#channel]</code> setting, the bot will send a
             message to that channel notifying the server when a user has left.
           </li>
           <li>
-            `Deleted Message Log` - If a valid channel is provided for the
-            `|config set channel logs [#channel]` setting, the bot will send an
+            <code>Deleted Message Log</code> - If a valid channel is provided for the
+            <code>|config set channel logs [#channel]</code> setting, the bot will send an
             embed message to that channel when someone deletes a message. The
             embed will contain the deleted message's author and content.
           </li>
           <li>
-            `Levelling System` - The bot listens to each message and gives
+            <code>Levelling System</code> - The bot listens to each message and gives
             experience points to the message author. The values are stored in a
             MongoDB database, and the bot sends a level up message at every
             100xp increment.
           </li>
           <li>
-            `Command Usage Tracking` - The bot logs each command that is called
+            <code>Command Usage Tracking</code> - The bot logs each command that is called
             and keeps a record of the number of calls for each command. The
             values are stored in a MongoDB database.
           </li>
           <li>
-            `Heart reactions` - The bot will check the ID of each message's
-            author. If the ID is in the array provided in the `|config
-            add/remove hearts [@user]` config setting, the bot will add a random
+            <code>Heart reactions</code> - The bot will check the ID of each message's
+            author. If the ID is in the array provided in the <code>|config
+            add/remove hearts [@user]</code> config setting, the bot will add a random
             heart react to the message.
           </li>
         </ul>
@@ -410,31 +413,31 @@
         </p>
         <ul>
           <li>
-            `about` - This command generates an embed message that provides a
+            <code>about</code> - This command generates an embed message that provides a
             link to the bot source code, the date the bot was created, the
             number of commands the bot can perform, and the bot's favourite
             colour. The embed is sent to the channel the command message came
             from.
           </li>
           <li>
-            `adventure [action (start/move)] [?room] [?direction]` - This
+            <code>adventure [action (start/move)] [?room] [?direction]</code> - This
             command will generate a text based adventure dungeon. To begin a new
-            dungeon, pass `start` as the [action]. The dungeon take you room by
+            dungeon, pass <code>start</code> as the [action]. The dungeon take you room by
             room, with each room having a [room] id value and directions to
-            move. Move to the next room by passing `move` as the [action], the
+            move. Move to the next room by passing <code>move</code> as the [action], the
             [room] id provided, and the cardinal [direction] you want to move.
             Each room embed includes a prefilled move command to copy-paste.
           </li>
           <li>
-            `art` - This command returns an embed containing a Becca art! Many
+            <code>art</code> - This command returns an embed containing a Becca art! Many
             thanks to our wonderful artist contributors.
           </li>
           <li>
-            `ban [@username] [?reason]` - This command requires that the user
+            <code>ban [@username] [?reason]</code> - This command requires that the user
             sending it has the "Ban Members" permission. If the permission is
             missing, the bot responds with a notice that the user lacks
             permission. Otherwise, the command bans [@username] from the server.
-            If the `|config set channel logs [#channel]` option is set, the bot
+            If the <code>|config set channel logs [#channel]</code> option is set, the bot
             will send an embed to that channel. The embed will contain the name
             of the user performing the ban, the name of the banned user, and the
             reason provided. If no reason was provided, the embed will state
@@ -442,154 +445,159 @@
             confirmation before taking action.
           </li>
           <li>
-            `cat` - This command sends a random string of letters of a random
+            <code>cat</code> - This command sends a random string of letters of a random
             length, to simulate a cat walking across your keyboard.
           </li>
           <li>
-            `challenge [action (start/request/solve)] [?id] [?answer]` - This
+            <code>challenge [action (start/request/solve)] [?id] [?answer]</code> - This
             command walks the user through a series of programming based
-            challenge questions. To begin a new challenge, pass `start` as the
+            challenge questions. To begin a new challenge, pass <code>start</code> as the
             [action]. The bot will return a challenge embed, which includes the
-            question and challenge id. To solve the challenge, pass `solve` as
+            question and challenge id. To solve the challenge, pass <code>solve</code> as
             the [action], with the challenge [id] and the [answer]. The bot will
             respond with either correct or incorrect, and an explanation. If
             correct, the bot provides the [id] for the next challenge. To get
-            that challenge, pass `request` as the [action] with the new [id].
+            that challenge, pass <code>request</code> as the [action] with the new [id].
           </li>
           <li>
-            `close/close-channel` - This command requires the user to have the
+            <code>close/close-channel</code> - This command requires the user to have the
             "Kick Members" permission. If the permission is missing, the bot
             responds with a notice that the user lacks permission to use this
             command. Otherwise, the bot deletes the channel this command is used
-            in, and logs the deletion to the `|config set channel logs
-            [#channel]` option.
+            in, and logs the deletion to the <code>|config set channel logs
+            [#channel]</code> option.
           </li>
           <li>
-            `compliment` - Provides a little compliment to cheer you up.
+            <code>compliment</code> - Provides a little compliment to cheer you up.
             Compliments obtained from freeCodeCamp.
           </li>
           <li>
-            `config` - This command lists the current bot configuration, for
+            <code>config</code> - This command lists the current bot configuration, for
             logging channels etc.
           </li>
           <li>
-            `contributors/contribs` - This command returns an embed with a list
+            <code>contributors/contribs</code> - This command returns an embed with a list
             of recongised contributors to the bot code. Thank you all for your
             efforts to make BeccaBot great!
           </li>
           <li>
-            `dnd` - This command generates an embed containing the currently
+            <code>dnd</code> - This command generates an embed containing the currently
             available Dungeons and Dragons commands.
           </li>
           <li>
-            `dndclass [class]` - This command generates an embed containing
+            <code>dndclass [class]</code> - This command generates an embed containing
             information about the Dungeons and Dragons [class].
           </li>
           <li>
-            `dndmon/dndmonster [monster]` - This command generates an embed
+            <code>dndmon/dndmonster [monster]</code> - This command generates an embed
             containing information about the Dungeons and Dragons [monster].
           </li>
           <li>
-            `dndrace [race]` - This command generates an embed containing
+            <code>dndrace [race]</code> - This command generates an embed containing
             information about the Dungeons and Dragons [race].
           </li>
           <li>
-            `dndschool [school]` - This command generates an embed containing
+            <code>dndschool [school]</code> - This command generates an embed containing
             information about the Dungeons and Dragons [school] of magic.
           </li>
           <li>
-            `dndspell [spell]` - This command generates an embed containing
+            <code>dndspell [spell]</code> - This command generates an embed containing
             information about the Dungeons and Dragons [spell].
           </li>
           <li>
-            `fact` - This command generates an embed containing a fun fact!
+            <code>fact</code> - This command generates an embed containing a fun fact!
           </li>
           <li>
-            `fortune` - This command will send a message to the channel the
+            <code>fortune</code> - This command will send a message to the channel the
             command came from. The message will contain a random fortune cookie
             quote from the list provided in the bot code.
           </li>
           <li>
-            `github/gh [user]` - This command returns an embed containing
+            <code>github/gh [user]</code> - This command returns an embed containing
             profile information for the provided GitHub [user].
           </li>
           <li>
-            `guess` - This command starts a game of Guess the Number. The bot
+            <code>guess</code> - This command starts a game of Guess the Number. The bot
             will generate a number between 1 and 1000. Players have ten seconds
             to submit guesses, then the bot will announce the winner based on
             the closest guess.
           </li>
           <li>
-            `habitica [id]` - This command returns an embed containing profile
+            <code>habitica [id]</code> - This command returns an embed containing profile
             information for the provided Habitica user. [id] is the userID,
             *not* the user name.
           </li>
           <li>
-            `help [?command]` - This command returns an embed containing a list
+            <code>help [?command]</code> - This command returns an embed containing a list
             of available commands. If the optional [command] parameter is
             passed, the bot will return the description for that command (or an
             error, if that command does not exist).
           </li>
           <li>
-            `hpchar [name]` - This command returns an embed containing
+            <code>hpchar [name]</code> - This command returns an embed containing
             information on the [name] Harry Potter character.
           </li>
           <li>
-            `hpsort` - This command randomly sorts you into a Hogwarts house and
+            <code>hpsort</code> - This command randomly sorts you into a Hogwarts house and
             returns an embed containing information on that house.
           </li>
           <li>
-            `hpspell [name]` - This command returns an embed containing
+            <code>hpspell [name]</code> - This command returns an embed containing
             information on the [name] Harry Potter spell. Alternatively, pass
             "random" as the value for [name] to get a random spell.
           </li>
           <li>
-            `http [status]` - This command accesses the HTTP Cat API and returns
+            <code>http [status]</code> - This command accesses the HTTP Cat API and returns
             a cat photo for the given [status].
           </li>
           <li>
-            `invite` - This command returns an embed containing the invitation
+            <code>inulove</code> - This command returns a random pairing of InuYasha
+            characters to discuss.
+          </li>
+          <li><code>inuquote</code> - This command returns a random InuYasha quote.</li>
+          <li>
+            <code>invite</code> - This command returns an embed containing the invitation
             of the bot.
           </li>
           <li>
-            `jobs [?location]` - This command generates a LinkedIn job search
+            <code>jobs [?location]</code> - This command generates a LinkedIn job search
             URL - the optional [location] parameter narrows down the search by
             the given location.
           </li>
-          <li>`joke` - This command tells you a silly joke!</li>
+          <li><code>joke</code> - This command tells you a silly joke!</li>
           <li>
-            `kick [@username] [?reason]` - This command requires that the user
+            <code>kick [@username] [?reason]</code> - This command requires that the user
             sending it has the "Kick Members" permission. If the permission is
             missing, the bot responds with a notice that the user lacks
             permission. Otherwise, the command kicks [@username] from the
-            server. If the `|config set channel logs [#channel]` option is set,
+            server. If the <code>|config set channel logs [#channel]</code> option is set,
             the bot will send an embed to that channel. The embed will contain
             the name of the user performing the kick, the name of the kicked
             user, and the reason provided. If no reason was provided, the embed
             will state that.
           </li>
           <li>
-            `kirby` - This command sends a message to the channel the command
+            <code>kirby</code> - This command sends a message to the channel the command
             came from. The message contains Kirby doing a little dance.
           </li>
           <li>
-            `leave [?server]` - This command has a hard-coded restriction to
+            <code>leave [?server]</code> - This command has a hard-coded restriction to
             only respond to my account (if you configure your own instance, you
             can change this). The command returns a list of servers the bot is a
             member of, and the server IDs. If you pass the ID as the parameter,
             the bot will leave that server.
           </li>
           <li>
-            `level [?user]` - This command sends an embed containing the
+            <code>level [?user]</code> - This command sends an embed containing the
             [user]'s experience points and current level. If no parameter is
             passed, it will return the message author's level.
           </li>
           <li>
-            `listen/listeners` - This command returns an embed containing
-            information on the various `listener` type features the bot offers.
+            <code>listen/listeners</code> - This command returns an embed containing
+            information on the various <code>listener</code> type features the bot offers.
           </li>
           <li>
-            `magic [cardname]` - This command querys the Magic: The Gathering
+            <code>magic [cardname]</code> - This command querys the Magic: The Gathering
             API for cards that match [cardname]. The bot will send a message to
             the channel the message contains to confirm the command was received
             and the search was started. For each card it finds, the bot sends an
@@ -598,43 +606,43 @@
             slow to respond so this command may take some time.
           </li>
           <li>
-            `maths [problem]` - This command takes the [problem] and evaluates
+            <code>maths [problem]</code> - This command takes the [problem] and evaluates
             it, returning the calculated result. If the expression is invalid,
             the bot will return an error.
           </li>
           <li>
-            `maze [action (request/solve] [?id] [?direction]` - This command
+            <code>maze [action request/solve] [?id] [?direction]</code> - This command
             walks the user through a series of programming based challenge
-            questions. To get a maze, pass `request` as the [action]. The bot
+            questions. To get a maze, pass <code>request</code> as the [action]. The bot
             will return a maze embed, which includes information about the maze
-            and its id. To solve the maze, pass `solve` as the [action], with
+            and its id. To solve the maze, pass <code>solve</code> as the [action], with
             the maze [id] and the [answer]. The [answer] should be a null-space
             string of cardinal directions ("NEEESSWN"). The bot will respond
             with either correct or incorrect, and an explanation.
           </li>
           <li>
-            `motivation` - This command returns a motivational quote to raise
+            <code>motivation</code> - This command returns a motivational quote to raise
             your spirits. Quotes are obtained from freeCodeCamp.
           </li>
           <li>
-            `optout [action (add/remove/status)]` - This command shows your
-            status when the bot collects information of the users (`|optout
-            status`). You can disable (`|optout remove`) or enable it (`|optout
-            add`).
+            <code>optout [action (add/remove/status)]</code> - This command shows your
+            status when the bot collects information of the users (<code>|optout
+            status</code>). You can disable (<code>|optout remove</code>) or enable it (<code>|optout
+            add</code>).
           </li>
           <li>
-            `ping` - This command will generate the latency for the bot. The bot
+            <code>ping</code> - This command will generate the latency for the bot. The bot
             will send a response back with the communication time in
             milliseconds.
           </li>
           <li>
-            `pokename/pokemonname [name]` - This command querys the Pokemon API.
+            <code>pokename/pokemonname [name]</code> - This command querys the Pokemon API.
             If the bot finds a Pokemon that matches the name provided, it will
             send an embed containing the Pokemon's name, number, and image. If
             the bot cannot find a Pokemon, it will send a message notice.
           </li>
           <li>
-            `pokenum/pokemonnum [number]` - This command querys the Pokemon API.
+            <code>pokenum/pokemonnum [number]</code> - This command querys the Pokemon API.
             If the bot finds a Pokemon that matches the number provided, it will
             send an embed containing the Pokemon's name, number, and image. If
             no Pokemon is found, the bot will send a message notice. As an
@@ -642,11 +650,11 @@
             to return a random Pokemon.
           </li>
           <li>
-            `privacy` - This command provides information on the bot's privacy
+            <code>privacy</code> - This command provides information on the bot's privacy
             policy.
           </li>
           <li>
-            `profile [website] [username]` - This command will return a message
+            <code>profile [website] [username]</code> - This command will return a message
             embed containing a link to the profile for [username] on the
             [website]. Currently supported websites are: Steam, Facebook,
             Github, Twitter, LinkedIn, and Instagram. If an invalid website is
@@ -654,7 +662,7 @@
             is not available.
           </li>
           <li>
-            `purge/clear/clearmessages [number]` - This command will delete
+            <code>purge/clear/clearmessages [number]</code> - This command will delete
             [number] messages from the channel the command is sent to. The bot
             will send a message to confirm deletion, then delete that message as
             well. If the user tries to delete more than 100 messages at once,
@@ -662,119 +670,119 @@
             from deleting more than 100 messages at a time.
           </li>
           <li>
-            `restrict/mute [@username] [?reason]` This command requires that the
+            <code>restrict/mute [@username] [?reason]</code> This command requires that the
             user sending it has the "Kick Members" permission. If the permission
             is missing, the bot responds with a notice that the user lacks
             permission. Otherwise, the command will set the [@username]'s role
-            provided in the `|config set role restricted [@role]` option, and
+            provided in the <code>|config set role restricted [@role]</code> option, and
             remove all other roles. If the role option is not set, the bot will
-            send a message to notify the user. If the `|config set channel logs
-            [#channel]` option is not set, the bot will send a message to notify
+            send a message to notify the user. If the <code>|config set channel logs
+            [#channel]</code> option is not set, the bot will send a message to notify
             the user. Otherwise, the bot will send an embed to the log channel.
             The embed will contain the name of the user performing the command,
             the name of the restricted user, and the reason provided. If no
             reason was provided, the embed will state that. The bot will then
-            create a channel under the `Appeals` category (if `Appeals` category
+            create a channel under the <code>Appeals</code> category (if <code>Appeals</code> category
             does not exists, the bot will create one with the correct
             permissions), which only the channel moderators and the restricted
             user can access.
           </li>
           <li>
-            `riddle [action (start/request/solve)] [?id] [?answer]` - This
+            <code>riddle [action (start/request/solve)] [?id] [?answer]</code> - This
             command walks the user through a series of programming based
-            challenge questions. To begin a new challenge, pass `start` as the
+            challenge questions. To begin a new challenge, pass <code>start</code> as the
             [action]. The bot will return a riddle embed, which includes the
-            question and riddle id. To solve the riddle, pass `solve` as the
+            question and riddle id. To solve the riddle, pass <code>solve</code> as the
             [action], with the riddle [id] and the [answer]. The bot will
             respond with either correct or incorrect, and an explanation. If
             correct, the bot provides the [id] for the next riddle. To get that
-            challenge, pass `request` as the [action] with the new [id].
+            challenge, pass <code>request</code> as the [action] with the new [id].
           </li>
           <li>
-            `roll d[number]` - This command returns a random number between 1
+            <code>roll d[number]</code> - This command returns a random number between 1
             and [number], as if it was a dice roll.
           </li>
           <li>
-            `search [query]` - This command returns a URL to the Google search
+            <code>search [query]</code> - This command returns a URL to the Google search
             results page for the given [query] word or words.
           </li>
           <li>
-            `server` - This command returns a message embed containing
+            <code>server</code> - This command returns a message embed containing
             information about the current server. The information includes the
             server name, creation date, the user's join date, the server owner,
             member information, channel information, and role information.
           </li>
           <li>
-            `space [?date (YYYY-MM-DD)]` - This command gets NASA's Space Photo
+            <code>space [?date (YYYY-MM-DD)]</code> - This command gets NASA's Space Photo
             of the day.
           </li>
           <li>
-            `star [@username] [?reason]` - This command sends a message embed to
+            <code>star [@username] [?reason]</code> - This command sends a message embed to
             the [@username]'s direct messages. The embed contains the command
             author's name, the [reason] if provided, and a shiny gold star!
           </li>
           <li>
-            `sus` - This command sends a message embed to the channel the user
+            <code>sus</code> - This command sends a message embed to the channel the user
             called the command in. The command will say that a certain color
             looks sus just like in Among Us Emergency Meetings.
           </li>
           <li>
-            `title` - This command will generate a random and often funny title
+            <code>title</code> - This command will generate a random and often funny title
             for the user who calls it.
           </li>
           <li>
-            `trivia` - This command fetches a trivia question and returns an
+            <code>trivia</code> - This command fetches a trivia question and returns an
             embed. The question is multiple choice, and the bot will listen for
             answers to the question. After 30 seconds, the bot will display the
             correct answer and announce any winners.
           </li>
           <li>
-            `unrestrict/unmute [@username] [?reason]` - This command requires
+            <code>unrestrict/unmute [@username] [?reason]</code> - This command requires
             that the user sending it has the "Kick Members" permission. If the
             permission is missing, the bot responds with a notice that the user
             lacks permission. Otherwise, the command will remove the
-            [@username]'s role provided in the `silence_role` option. If the
+            [@username]'s role provided in the <code>silence_role</code> option. If the
             role option is not set, the bot will send a message to notify the
-            user. If the `|config set channel logs [#channel]` option is set,
+            user. If the <code>|config set channel logs [#channel]</code> option is set,
             the bot will send an embed to that channel. The embed will contain
             the name of the user performing the command, the name of the
             unrestricted user, and the reason provided. If no reason was
             provided, the embed will state that.
           </li>
           <li>
-            `uptime` - This command returns the amount of time the bot has
+            <code>uptime</code> - This command returns the amount of time the bot has
             currently been awake.
           </li>
           <li>
-            `usage/commandusage [command]` - This command returns a message
+            <code>usage/commandusage [command]</code> - This command returns a message
             embed for the [command]. The embed will contain the number of times
             the command is called.
           </li>
           <li>
-            `user/userinfo/me` - This command returns a message embed about the
+            <code>user/userinfo/me</code> - This command returns a message embed about the
             message author. The embed contains their nickname, full username,
             account creation date, online status, date they joined the server,
             roles they have, and their avatar.
           </li>
           <li>
-            `warn [@username] [?reason]` - This command requires that the user
+            <code>warn [@username] [?reason]</code> - This command requires that the user
             sending it has the "Kick Members" permission. If the permission is
             missing, the bot responds with a notice that the user lacks
             permission. Otherwise, the command will send a direct message to
             [@username] informing them that the command author has warned them,
-            and providing the reason if given. If the `|config set channel logs
-            [#channel]` option is set, the bot will send an embed to that
+            and providing the reason if given. If the <code>|config set channel logs
+            [#channel]</code> option is set, the bot will send an embed to that
             channel. The embed will contain the name of the user performing the
             warning, the name of the warned user, and the reason provided. If no
             reason was provided, the embed will state that.
           </li>
           <li>
-            `wiki [query]` - This command returns a link to the wikipedia
+            <code>wiki [query]</code> - This command returns a link to the wikipedia
             article for [query]. If the article is not found, it returns the
             search page instead.
           </li>
           <li>
-            `xkcd [?number]` - This command returns an embed containing today's
+            <code>xkcd [?number]</code> - This command returns an embed containing today's
             XKCD comic. Optionally pass a comic [number] to get that specific
             comic instead.
           </li>
@@ -790,24 +798,24 @@
         </p>
         <ul>
           <li>
-            `Node CI` - A GitHub action will check for linter errors in the
+            <code>Node CI</code> - A GitHub action will check for linter errors in the
             code.
           </li>
           <li>
-            `LGTM` - LGTM will verify that there are no errors or security
+            <code>LGTM</code> - LGTM will verify that there are no errors or security
             concerns with the code.
           </li>
           <li>
-            `FOSSA` - FOSSA will verify that the GPL-3.0 license (under which
+            <code>FOSSA</code> - FOSSA will verify that the GPL-3.0 license (under which
             this bot is written) is compatible with all dependencies and
             external packages.
           </li>
         </ul>
         <p>
-          Additionally, the `husky` package will run the lint and tests prior to
-          each `git commit` command, which will help catch errors prior to the
-          opening of a PR. To run these checks manually, the `npm run lint`
-          command will lint the code, and the `npm run test` command will run
+          Additionally, the <code>husky</code> package will run the lint and tests prior to
+          each <code>git commit</code> command, which will help catch errors prior to the
+          opening of a PR. To run these checks manually, the <code>npm run lint</code>
+          command will lint the code, and the <code>npm run test</code> command will run
           the tests.
         </p>
       </section>
@@ -815,44 +823,45 @@
         <h1>How to create new commands</h1>
         <h2>Structure</h2>
         <p>
-          Every command uses the `CommandInt` interface on this you can find the
-          properties below:
+          Every command uses the <code>CommandInt</code> interface on which you can find
+          these properties:
         </p>
         <ul>
           <li>
-            `name` - This property is used to set the name of the command. If
-            you are using `names` don't use this.
+            <code>name</code> - This property is used to set the name of the command. If
+            you are using <code>names</code> don't use this.
           </li>
           <li>
-            `names` - This property is used to set multiple names to the
-            command. If you are using `name` don't use this.
+            <code>names</code> - This property is used to set multiple names to the
+            command. If you are using <code>name</code> don't use this.
           </li>
           <li>
-            `description` - This property is used to set the description of the
+            <code>description</code> - This property is used to set the description of the
             command, or describe what the command will do when its called. This
-            will show in the `help` command.
+            will show in the <code>help</code> command.
           </li>
           <li>
-            `parameters` - (Optional) - This property is used to define the
-            available parameters of the command. This will show in the `help`
+            <code>parameters</code> - (Optional) - This property is used to define the
+            available parameters of the command. This will show in the <code>help</code>
             command. To define an optional parameter use
-            `&lt;?name-of-parameter&gt;`, or use `&lt;name-of-parameter&gt;` if
+            <code>&lt;?name-of-parameter&gt;</code>, or use <code>&lt;name-of-parameter&gt;</code> if
             the parameter is required. When a parameter has specific values use
-            `&lt;action (action-1/action-2)&gt;`.
+            <code>&lt;action (action-1/action-2)&gt;</code>.
           </li>
           <li>
-            `run` - This property is the action the command takes. In this you
+            <code>run</code> - This property is the action the command takes. In this you
             set what the command will do when called.
           </li>
         </ul>
         <h2>Creating a message repeater command</h2>
         <ul>
           <li>
-            First, go to `./src/commands/general/` and create a new file called
-            `messageRepeater.ts` or as you wish.
+            First, go to <code>./src/commands/general/</code> and create a new file called
+            <code>messageRepeater.ts</code> or as you wish.
           </li>
           <li>
-            Then, add the basic structure of our command:<br />
+            Then, add the basic structure of our command. Note that all commands
+            should be wrapped in a try/catch block:
             <pre><code style="white-space: pre-wrap;">
               import CommandInt from "@Interfaces/CommandInt";
               const messageRepeater: CommandInt = {
@@ -860,37 +869,43 @@
                 description: "Send a message to the current channel using the bot.",
                 parameters: ["&lt;message&gt;: Message to send."],
                 run: async (message) => {
-                  console.log("Message repeater command called!");
+                  try {
+                    console.log("Message repeater command called!");
+                  } catch (error) {
+                    console.log(`${message.guild?.name} encountered the following error with the messageRepeater command:`);
+                    console.log(error);
+                    await message.reply('I am so sorry, but I cannot do that right now.')
+                  }
                 },
               };
               export default messageRepeater;
             </code></pre>
-            Save the file, start the bot (You can use `npm run dev` instead of
-            `npm run build && npm start`), then in the chat write
-            `{prefix}messageRepeater` and in the console you will see `Message
-            repeater command called!`.
+            Save the file, start the bot (You can use <code>npm run dev</code> instead of
+            <code>npm run build && npm start</code>), then in the chat write
+            <code>{prefix}messageRepeater</code> and in the console you will see <code>Message
+            repeater command called!</code>.
           </li>
           <li>
             So, to this moment you have created a simple command that shows you
             a message in the console, but it does not do what we want. First,
-            replace the `console.log` line with `const { channel,
-            commandArguments } = message;`. With this you will get the arguments
+            replace the <code>console.log</code> line with <code>const { channel,
+            commandArguments } = message;</code>. With this you will get the arguments
             of the command, or the content of the message split by whitespaces
             and ignoring the first element (The first element is the command
-            name), and the channel of the message. Now, add `const msg =
-            commandArguments.join(" ");` to join the arguments with whitespaces
+            name), and the channel of the message. Now, add <code>const msg =
+            commandArguments.join(" ");</code> to join the arguments with whitespaces
             to get the parameter that we require (Message).
           </li>
           <li>
             After you get the message, you need to send it back to the current
-            channel. To do this, add this line: `await channel.send(msg);`. Now
-            you can test the command! If you write `{prefix}messageRepeater
-            Hello` in the channel, the bot will send `Hello` back to the current
-            channel. But what will happen if you send `{prefix}messageRepeater`?
+            channel. To do this, add this line: <code>await channel.send(msg);</code>. Now
+            you can test the command! If you write <code>{prefix}messageRepeater
+            Hello</code> in the channel, the bot will send <code>Hello</code> back to the current
+            channel. But what will happen if you send <code>{prefix}messageRepeater</code>?
             You will get an error in the console because the bot cannot send an
-            empty message. So howdo you fix it? You need to verify the command
+            empty message. So how do you fix it? You need to verify the command
             arguments have a length before sending the message. Add these lines
-            below before the `await channel.send(msg);`:
+            below before the <code>await channel.send(msg);</code>:
             <pre><code style="white-space: pre-wrap;">
               if (!msg.length) {
                 await message.reply('Sorry, but you must enter a valid message.');
@@ -913,8 +928,8 @@
         <div class="trouble-container">
           <h2>My bot won't connect!</h2>
           <p>
-            Make sure you have properly set up the `.env` file to contain a
-            `DISCORD_TOKEN` variable set to your bot's token.
+            Make sure you have properly set up the <code>.env</code> file to contain a
+            <code>DISCORD_TOKEN</code> variable set to your bot's token.
           </p>
           <h2>I can't get my bot in my server</h2>
           <p>
