@@ -1,19 +1,25 @@
-# Discord Bot Documentation
+# BeccaBot Documentation
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-This repository contains the files for the documentation website for my Discord Bot.
+This repository contains the files for the documentation website for BeccaBot.
 
 ## Live Version
 
-This page is currently deployed. [View the live website.](https://www.nhcarrigan.com/discord-bot-documentation)
+This page is currently deployed. [View the live website.](https://www.nhcarrigan.com/BeccaBot-documentation)
 
-## Feedback, Bugs, and Contributions
+## Feedback and Bugs
 
-If you have feedback or a bug report, you can create a GitHub issue or [contact me directly](https://contact.nhcarrigan.com).
+If you have feedback or a bug report, please feel free to open a GitHub issue!
 
-If you would like to contribute to the project, you may create a Pull Request containing your proposed changes and I will review it as soon as I am able!
+## Contributing
+
+If you would like to contribute to the project, you may create a Pull Request containing your proposed changes and we will review it as soon as we are able! Please review our [contributing guidelines](CONTRIBUTING.md) first.
+
+## Code of Conduct
+
+Before interacting with our community, please read our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Contributors ✨
 
@@ -27,6 +33,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://www.nhcarrigan.com"><img src="https://avatars1.githubusercontent.com/u/63889819?v=4" width="100px;" alt=""/><br /><sub><b>Nicholas Carrigan (he/him)</b></sub></a><br /><a href="#projectManagement-nhcarrigan" title="Project Management">📆</a></td>
     <td align="center"><a href="http://catalactics.now.sh"><img src="https://avatars1.githubusercontent.com/u/45566099?v=4" width="100px;" alt=""/><br /><sub><b>Joshua Pelealu</b></sub></a><br /><a href="#design-JoshuaPelealu" title="Design">🎨</a></td>
     <td align="center"><a href="https://www.danielsolartech.com/"><img src="https://avatars2.githubusercontent.com/u/66956234?v=4" width="100px;" alt=""/><br /><sub><b>Daniel Solarte</b></sub></a><br /><a href="https://github.com/nhcarrigan/discord-bot-documentation/commits?author=danielsolartech" title="Code">💻</a></td>
+    <td align="center"><a href="http://landonlloyd.github.io"><img src="https://avatars0.githubusercontent.com/u/65516863?v=4" width="100px;" alt=""/><br /><sub><b>Landon Lloyd</b></sub></a><br /><a href="https://github.com/nhcarrigan/discord-bot-documentation/commits?author=LandonLloyd" title="Code">💻</a></td>
   </tr>
 </table>
 
