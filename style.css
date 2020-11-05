@@ -174,3 +174,9 @@ h2:hover .section-anchor::after {
 .trouble-container h2 {
   font-size: 1.45em;
 }
+
+#version-text {
+  margin-top: -10px;
+  margin-bottom: -10px;
+  font-style: italic;
+}

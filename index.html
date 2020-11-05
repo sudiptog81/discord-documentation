@@ -8,6 +8,7 @@
   <body>
     <nav>
       <h1><a href="#welcome">BeccaBot Documentation</a></h1>
+      <p id="version-text">Version 6.5.2</p>
       <hr />
 
       <p><a href="#set-up-a-local-instance">Local Instance</a></p>
@@ -80,7 +81,6 @@
           discrepancy between the two, feel free to let us know with an issue
           request on GitHub!
         </p>
-        <p>The bot's current version is 6.2.1</p>
       </section>
 
       <section id="local">
@@ -142,12 +142,10 @@
           to perform the installations:
         </p>
         <p>
-          <em>
             <code>npm install</code> - This will install all of the dependencies
             found in the <code>package.json</code> file automatically. If this
             does not work, you will need to go through each item listed in that
             file and run <code>npm install [packagename]</code>
-          </em>
         </p>
         <p>
           <code>npm run build</code> - This will build the TypeScript files into
@@ -303,6 +301,14 @@
         <p>
           <code>|config remove hearts [@user]</code>, this command removes the
           id of the user mentioned from the hearts list.
+        </p>
+        <p>
+          <code>|config toggle thanks</code>, this command will turn the thanks
+          listener on and off.
+        </p>
+        <p>
+          <code>|config toggle levels</code>, this command will turn the levels
+          listener on and off.
         </p>
         <p>
           NOTE: Config settings are set on a per-server basis. Only moderators
@@ -505,7 +511,9 @@
           </li>
           <li>
             <code>config</code> - This command lists the current bot
-            configuration, for logging channels etc.
+            configuration, for logging channels etc. For setting these values,
+            please view the
+            <a href="#configure-your-bot">Configure Your Bot</a> section.
           </li>
           <li>
             <code>contributors/contribs</code> - This command returns an embed
