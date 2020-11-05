@@ -8,7 +8,7 @@
   <body>
     <nav>
       <h1><a href="#welcome">BeccaBot Documentation</a></h1>
-      <p id="version-text">Version 6.5.2</p>
+      <p id="version-text">Version 6.6.0</p>
       <hr />
 
       <p><a href="#set-up-a-local-instance">Local Instance</a></p>
@@ -142,10 +142,10 @@
           to perform the installations:
         </p>
         <p>
-            <code>npm install</code> - This will install all of the dependencies
-            found in the <code>package.json</code> file automatically. If this
-            does not work, you will need to go through each item listed in that
-            file and run <code>npm install [packagename]</code>
+          <code>npm install</code> - This will install all of the dependencies
+          found in the <code>package.json</code> file automatically. If this
+          does not work, you will need to go through each item listed in that
+          file and run <code>npm install [packagename]</code>
         </p>
         <p>
           <code>npm run build</code> - This will build the TypeScript files into
@@ -630,16 +630,20 @@
             command came from. The message contains Kirby doing a little dance.
           </li>
           <li>
-            <code>leave [?server]</code> - This command has a hard-coded
+            <code>leave [server]</code> - This command has a hard-coded
             restriction to only respond to my account (if you configure your own
-            instance, you can change this). The command returns a list of
-            servers the bot is a member of, and the server IDs. If you pass the
-            ID as the parameter, the bot will leave that server.
+            instance, you can change this). Pass a server ID value for
+            <code>server</code>, and the bot will leave that server.
           </li>
           <li>
             <code>level [?user]</code> - This command sends an embed containing
             the [user]'s experience points and current level. If no parameter is
             passed, it will return the message author's level.
+          </li>
+          <li>
+            <code>list</code> - This command returns embed(s) containing a list
+            of the servers the bot is in, and the owner information for each
+            server.
           </li>
           <li>
             <code>listen/listeners</code> - This command returns an embed
