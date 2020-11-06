@@ -8,7 +8,7 @@
   <body>
     <nav>
       <h1><a href="#welcome">BeccaBot Documentation</a></h1>
-      <p id="version-text">Version 6.6.0</p>
+      <p id="version-text">Version 6.6.3</p>
       <hr />
 
       <p><a href="#set-up-a-local-instance">Local Instance</a></p>
@@ -309,6 +309,15 @@
         <p>
           <code>|config toggle levels</code>, this command will turn the levels
           listener on and off.
+        </p>
+        <p>
+          <code>|config set welcome-message [message]</code>: This command will
+          set a custom welcome message for your server. The value of [message]
+          can be a standard sentence, and supports Discord markup - but must be
+          kept under 1000 characters. Additionally, a couple of special strings
+          will be replaced: <code>{@username}</code> will be replaced with the
+          username of the new member, and <code>@{servername}</code> will be
+          replaced with your server's name.
         </p>
         <p>
           NOTE: Config settings are set on a per-server basis. Only moderators
