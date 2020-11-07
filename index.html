@@ -8,7 +8,7 @@
   <body>
     <nav>
       <h1><a href="#welcome">BeccaBot Documentation</a></h1>
-      <p id="version-text">Version 6.6.3</p>
+      <p id="version-text">Version 6.10.0</p>
       <hr />
 
       <p><a href="#set-up-a-local-instance">Local Instance</a></p>
@@ -36,6 +36,7 @@
       <p>
         <a href="#how-to-create-new-commands">How to create new commands</a>
       </p>
+      <p><a href="#deprecated-features">Deprecated Features</a></p>
       <p><a href="#known-issues">Known Issues</a></p>
       <hr />
       <p><a href="#privacy-policy">Privacy Policy</a></p>
@@ -245,7 +246,7 @@
           <li>
             <code>OWNER_ID</code> - (Optional) - This tells the bot which
             Discord account is the owner. The bot will respond just a little
-            differently to the owner.
+            differently to the owner. Leaving this blank WILL lock out some commands.
           </li>
           <li>
             <code>PRODDEV</code> - (Optional) - This tells the bot whether it is
@@ -444,6 +445,11 @@
             <code>BeccaBot Mentions</code> - The bot listens for mentions
             (without thanks) of its own username, and responds accordingly.
           </li>
+          <li>
+            <code>Blocked Users</code> - The bot verifies on each command call
+            that the calling user is not blocked. The bot will respond
+            accordingly if the user is blocked.
+          </li>
         </ul>
       </section>
 
@@ -489,6 +495,12 @@
             require confirmation before taking action.
           </li>
           <li>
+            <code>block [@username]</code> - This command will block the
+            mentioned user and prevent them from calling bot commands. This
+            command is locked to the Discord user associated with the
+            <code>process.env.OWNER_ID</code> value.
+          </li>
+          <li>
             <code>cat</code> - This command sends a random string of letters of
             a random length, to simulate a cat walking across your keyboard.
           </li>
@@ -522,7 +534,9 @@
             <code>config</code> - This command lists the current bot
             configuration, for logging channels etc. For setting these values,
             please view the
-            <a href="#configure-your-bot">Configure Your Bot</a> section.
+            <a href="#configure-your-bot">Configure Your Bot</a> section. This
+            command is locked to the Discord user associated with the
+            <code>process.env.OWNER_ID</code> value.
           </li>
           <li>
             <code>contributors/contribs</code> - This command returns an embed
@@ -642,7 +656,9 @@
             <code>leave [server]</code> - This command has a hard-coded
             restriction to only respond to my account (if you configure your own
             instance, you can change this). Pass a server ID value for
-            <code>server</code>, and the bot will leave that server.
+            <code>server</code>, and the bot will leave that server. This
+            command is locked to the Discord user associated with the
+            <code>process.env.OWNER_ID</code> value.
           </li>
           <li>
             <code>level [?user]</code> - This command sends an embed containing
@@ -696,6 +712,11 @@
             >) or enable it (<code>|optout add</code>).
           </li>
           <li>
+            <code>piglatin [string]</code> - This command takes a sentence as a
+            space-delimited [string] and returns an embed containing the
+            original sentence and the sentence translated into Pig Latin.
+          </li>
+          <li>
             <code>ping</code> - This command will generate the latency for the
             bot. The bot will send a response back with the communication time
             in milliseconds.
@@ -726,14 +747,6 @@
             Github, Twitter, LinkedIn, and Instagram. If an invalid website is
             sent, the bot will send a message notification stating the website
             is not available.
-          </li>
-          <li>
-            <code>purge/clear/clearmessages [number]</code> - This command will
-            delete [number] messages from the channel the command is sent to.
-            The bot will send a message to confirm deletion, then delete that
-            message as well. If the user tries to delete more than 100 messages
-            at once, the bot will refuse as Discord limitations currently
-            prevent bots from deleting more than 100 messages at a time.
           </li>
           <li>
             <code>restrict/mute [@username] [?reason]</code> This command
@@ -835,10 +848,12 @@
             of times the command is called.
           </li>
           <li>
-            <code>user/userinfo/me</code> - This command returns a message embed
-            about the message author. The embed contains their nickname, full
-            username, account creation date, online status, date they joined the
-            server, roles they have, and their avatar.
+            <code>user/userinfo/me [@username]</code> - This command returns a
+            message embed about the message author. The embed contains their
+            nickname, full username, account creation date, online status, date
+            they joined the server, roles they have, and their avatar.
+            Optionally pass a user mention as [@username] to retrieve an embed
+            containing that user's information instead.
           </li>
           <li>
             <code>warn [@username] [?reason]</code> - This command requires that
@@ -862,6 +877,16 @@
             <code>xkcd [?number]</code> - This command returns an embed
             containing today's XKCD comic. Optionally pass a comic [number] to
             get that specific comic instead.
+          </li>
+        </ul>
+      </section>
+      <section id="deprecated-features">
+        <h1>Deprecated Features</h1>
+        <ul>
+          <li>
+            <code>purge</code> command (<em>deprecated in 6.9.1</em>) - removed
+            due to Discord API limitations on the age at which messages could no
+            longer be bulk deleted.
           </li>
         </ul>
       </section>
