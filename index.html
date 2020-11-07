@@ -8,7 +8,7 @@
   <body>
     <nav>
       <h1><a href="#welcome">BeccaBot Documentation</a></h1>
-      <p id="version-text">Version 6.10.0</p>
+      <p id="version-text">Version 6.10.2</p>
       <hr />
 
       <p><a href="#set-up-a-local-instance">Local Instance</a></p>
@@ -246,7 +246,8 @@
           <li>
             <code>OWNER_ID</code> - (Optional) - This tells the bot which
             Discord account is the owner. The bot will respond just a little
-            differently to the owner. Leaving this blank WILL lock out some commands.
+            differently to the owner. Leaving this blank WILL lock out some
+            commands.
           </li>
           <li>
             <code>PRODDEV</code> - (Optional) - This tells the bot whether it is
@@ -619,14 +620,6 @@
             and returns a cat photo for the given [status].
           </li>
           <li>
-            <code>inulove</code> - This command returns a random pairing of
-            InuYasha characters to discuss.
-          </li>
-          <li>
-            <code>inuquote</code> - This command returns a random InuYasha
-            quote.
-          </li>
-          <li>
             <code>invite</code> - This command returns an embed containing the
             invitation of the bot.
           </li>
@@ -741,12 +734,14 @@
             bot's privacy policy.
           </li>
           <li>
-            <code>profile [website] [username]</code> - This command will return
-            a message embed containing a link to the profile for [username] on
-            the [website]. Currently supported websites are: Steam, Facebook,
-            Github, Twitter, LinkedIn, and Instagram. If an invalid website is
-            sent, the bot will send a message notification stating the website
-            is not available.
+            <code>profile [?website] [?url] [?@username]</code> - This command
+            uses the database to create and store social media profile cards for
+            a user. Calling the command with no parameters will return your
+            profile card. Calling the command with an [@username] mention will
+            return that user's profile card. Calling the command with a
+            [website] and [url] will add that link to your profile card under
+            that website name. Calling the command with [website] "remove" will
+            remove the [website] value from your profile card.
           </li>
           <li>
             <code>restrict/mute [@username] [?reason]</code> This command
@@ -887,6 +882,14 @@
             <code>purge</code> command (<em>deprecated in 6.9.1</em>) - removed
             due to Discord API limitations on the age at which messages could no
             longer be bulk deleted.
+          </li>
+          <li>
+            <code>inulove</code> (<em>deprecated in 6.10.2</em>) - removed as
+            incomplete, not used enough to warrant completion.
+          </li>
+          <li>
+            <code>inuquote</code> (<em>deprecated in 6.10.2</em>) - removed as
+            incomplete, not used enough to warrant completion. quote.
           </li>
         </ul>
       </section>
