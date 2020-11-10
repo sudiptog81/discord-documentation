@@ -36,6 +36,10 @@ nav {
   border-right: 5px solid #aea8d3;
   height: 100vh;
   word-wrap: break-word;
+  overflow-y: scroll;
+  -ms-overflow-style: none; 
+  scrollbar-width: none;  
+
 }
 
 nav p,
@@ -179,4 +183,7 @@ h2:hover .section-anchor::after {
   margin-top: -10px;
   margin-bottom: -10px;
   font-style: italic;
+}
+nav::-webkit-scrollbar {
+  width: 0px;
 }
