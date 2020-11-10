@@ -12,7 +12,6 @@ let createEl = document.createElement.bind(document);
 window.onload = () => {
   generateLink();
   anchors();
-  codePrefix();
 };
 
 // Main tag
