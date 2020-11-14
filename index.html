@@ -522,6 +522,10 @@
             <code>process.env.OWNER_ID</code> value.
           </li>
           <li>
+            <code>bugreport</code> - This command returns an embed containing a
+            link to the GitHub issue selection page.
+          </li>
+          <li>
             <code>cat</code> - This command sends a random string of letters of
             a random length, to simulate a cat walking across your keyboard.
           </li>
@@ -540,11 +544,11 @@
             pass <code>request</code> as the [action] with the new [id].
           </li>
           <li>
-            <code>close/close-channel</code> - This command requires the user to
-            have the "Kick Members" permission. If the permission is missing,
-            the bot responds with a notice that the user lacks permission to use
-            this command. Otherwise, the bot deletes the channel this command is
-            used in, and logs the deletion to the
+            <code>close</code> - This command requires the user to have the
+            "Kick Members" permission. If the permission is missing, the bot
+            responds with a notice that the user lacks permission to use this
+            command. Otherwise, the bot deletes the channel this command is used
+            in, and logs the deletion to the
             <code>|config set channel logs [#channel]</code> option.
           </li>
           <li>
@@ -560,9 +564,9 @@
             <code>process.env.OWNER_ID</code> value.
           </li>
           <li>
-            <code>contributors/contribs</code> - This command returns an embed
-            with a list of recongised contributors to the bot code. Thank you
-            all for your efforts to make BeccaBot great!
+            <code>contributors</code> - This command returns an embed with a
+            list of recongised contributors to the bot code. Thank you all for
+            your efforts to make BeccaBot great!
           </li>
           <li>
             <code>dnd</code> - This command generates an embed containing the
@@ -573,9 +577,8 @@
             containing information about the Dungeons and Dragons [class].
           </li>
           <li>
-            <code>dndmon/dndmonster [monster]</code> - This command generates an
-            embed containing information about the Dungeons and Dragons
-            [monster].
+            <code>dndmon [monster]</code> - This command generates an embed
+            containing information about the Dungeons and Dragons [monster].
           </li>
           <li>
             <code>dndrace [race]</code> - This command generates an embed
@@ -600,7 +603,7 @@
             fortune cookie quote from the list provided in the bot code.
           </li>
           <li>
-            <code>github/gh [user]</code> - This command returns an embed
+            <code>github [user]</code> - This command returns an embed
             containing profile information for the provided GitHub [user].
           </li>
           <li>
@@ -684,9 +687,9 @@
             server.
           </li>
           <li>
-            <code>listen/listeners</code> - This command returns an embed
-            containing information on the various <code>listener</code> type
-            features the bot offers.
+            <code>listeners</code> - This command returns an embed containing
+            information on the various <code>listener</code> type features the
+            bot offers.
           </li>
           <li>
             <code>magic [cardname]</code> - This command querys the Magic: The
@@ -735,19 +738,18 @@
             in milliseconds.
           </li>
           <li>
-            <code>pokename/pokemonname [name]</code> - This command querys the
-            Pokemon API. If the bot finds a Pokemon that matches the name
-            provided, it will send an embed containing the Pokemon's name,
-            number, and image. If the bot cannot find a Pokemon, it will send a
-            message notice.
+            <code>pokename[name]</code> - This command querys the Pokemon API.
+            If the bot finds a Pokemon that matches the name provided, it will
+            send an embed containing the Pokemon's name, number, and image. If
+            the bot cannot find a Pokemon, it will send a message notice.
           </li>
           <li>
-            <code>pokenum/pokemonnum [number]</code> - This command querys the
-            Pokemon API. If the bot finds a Pokemon that matches the number
-            provided, it will send an embed containing the Pokemon's name,
-            number, and image. If no Pokemon is found, the bot will send a
-            message notice. As an alternative, sending "random" instead of a
-            number will cause the bot to return a random Pokemon.
+            <code>pokenum [number]</code> - This command querys the Pokemon API.
+            If the bot finds a Pokemon that matches the number provided, it will
+            send an embed containing the Pokemon's name, number, and image. If
+            no Pokemon is found, the bot will send a message notice. As an
+            alternative, sending "random" instead of a number will cause the bot
+            to return a random Pokemon.
           </li>
           <li>
             <code>privacy</code> - This command provides information on the
@@ -764,11 +766,11 @@
             remove the [website] value from your profile card.
           </li>
           <li>
-            <code>restrict/mute [@username] [?reason]</code> This command
-            requires that the user sending it has the "Kick Members" permission.
-            If the permission is missing, the bot responds with a notice that
-            the user lacks permission. Otherwise, the command will set the
-            [@username]'s role provided in the
+            <code>restrict [@username] [?reason]</code> This command requires
+            that the user sending it has the "Kick Members" permission. If the
+            permission is missing, the bot responds with a notice that the user
+            lacks permission. Otherwise, the command will set the [@username]'s
+            role provided in the
             <code>|config set role restricted [@role]</code> option, and remove
             all other roles. If the role option is not set, the bot will send a
             message to notify the user. If the
@@ -840,7 +842,7 @@
             display the correct answer and announce any winners.
           </li>
           <li>
-            <code>unrestrict/unmute [@username] [?reason]</code> - This command
+            <code>unrestrict [@username] [?reason]</code> - This command
             requires that the user sending it has the "Kick Members" permission.
             If the permission is missing, the bot responds with a notice that
             the user lacks permission. Otherwise, the command will remove the
@@ -858,17 +860,17 @@
             bot has currently been awake.
           </li>
           <li>
-            <code>usage/commandusage [command]</code> - This command returns a
-            message embed for the [command]. The embed will contain the number
-            of times the command is called.
+            <code>usage [command]</code> - This command returns a message embed
+            for the [command]. The embed will contain the number of times the
+            command is called.
           </li>
           <li>
-            <code>user/userinfo/me [@username]</code> - This command returns a
-            message embed about the message author. The embed contains their
-            nickname, full username, account creation date, online status, date
-            they joined the server, roles they have, and their avatar.
-            Optionally pass a user mention as [@username] to retrieve an embed
-            containing that user's information instead.
+            <code>user [@username]</code> - This command returns a message embed
+            about the message author. The embed contains their nickname, full
+            username, account creation date, online status, date they joined the
+            server, roles they have, and their avatar. Optionally pass a user
+            mention as [@username] to retrieve an embed containing that user's
+            information instead.
           </li>
           <li>
             <code>warn [@username] [?reason]</code> - This command requires that
@@ -954,11 +956,7 @@
         <ul>
           <li>
             <code>name</code> - This property is used to set the name of the
-            command. If you are using <code>names</code> don't use this.
-          </li>
-          <li>
-            <code>names</code> - This property is used to set multiple names to
-            the command. If you are using <code>name</code> don't use this.
+            command.
           </li>
           <li>
             <code>description</code> - This property is used to set the
