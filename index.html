@@ -28,7 +28,7 @@
   <body>
     <nav>
       <h1><a href="#welcome">BeccaBot Documentation</a></h1>
-      <p id="version-text">Version 7.0.0</p>
+      <p id="version-text">Version 7.0.2</p>
       <hr />
 
       <p><a href="#set-up-a-local-instance">Local Instance</a></p>
@@ -318,15 +318,15 @@
         <p>
           <code>|config set hearts [@user]</code>, this command adds the id of
           the user mentioned to the hearts list, in other words, the bot
-          automatically add a heart react to the messages of that user.
+          automatically add a heart react to the messages of that user. If that user is already set to receive hearts, the bot will remove that user instead.
         </p>
         <p>
-          <code>|config set thanks ["on"/"off"]</code>, this command will turn the thanks
-          listener on and off.
+          <code>|config set thanks ["on"/"off"]</code>, this command will turn
+          the thanks listener on and off.
         </p>
         <p>
-          <code>|config set levels ["on"/"off"]</code>, this command will turn the levels
-          listener on and off.
+          <code>|config set levels ["on"/"off"]</code>, this command will turn
+          the levels listener on and off.
         </p>
         <p>
           <code>|config set custom_welcome [message]</code>: This command will
@@ -340,8 +340,6 @@
         <p>
           NOTE: Config settings are set on a per-server basis. Only moderators
           with the "Manage Server" permission can change the settings.
-          Additionally, nhcarrigan has full access specifically for development
-          and debugging purposes.
         </p>
       </section>
 
@@ -552,12 +550,15 @@
             up. Compliments obtained from freeCodeCamp.
           </li>
           <li>
-            <code>config</code> - This command lists the current bot
-            configuration, for logging channels etc. For setting these values,
-            please view the
+            <code>config [?set] [?key] [?value]</code> - This command lists the
+            current bot configuration, for logging channels etc. For setting
+            these values, please view the
             <a href="#configure-your-bot">Configure Your Bot</a> section. This
-            command is locked to the Discord user associated with the
-            <code>process.env.OWNER_ID</code> value.
+            command is locked to moderators with the
+            <code>Manage Server</code> permission. The Discord user associated
+            with the <code>process.env.OWNER_ID</code> can access this command
+            regardless of permissions, but should only do so for the sake of
+            development purposes.
           </li>
           <li>
             <code>contributors</code> - This command returns an embed with a
