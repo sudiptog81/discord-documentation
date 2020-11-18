@@ -28,7 +28,7 @@
   <body>
     <nav>
       <h1><a href="#welcome">BeccaBot Documentation</a></h1>
-      <p id="version-text">Version 6.10.2</p>
+      <p id="version-text">Version 7.0.0</p>
       <hr />
 
       <p><a href="#set-up-a-local-instance">Local Instance</a></p>
@@ -295,45 +295,41 @@
           symbol <code>|</code>, but you may change this to whatever you wish.
         </p>
         <p>
-          <code>|config set channel logs [#channel]</code>, this command
+          <code>|config set log_channel [#channel]</code>, this command
           determines the name of the channel where the bot should log things
           like deleted messages, and kick/ban instances.
         </p>
         <p>
-          <code>|config set channel welcomes [#channel]</code>, this command
+          <code>|config set welcome_channel [#channel]</code>, this command
           allows you to set the name of the channel for user welcome/depart
           messages.
         </p>
         <p>
-          <code>|config set role restricted [@role]</code>, this command sets
+          <code>|config set restricted_role [@role]</code>, this command sets
           the name of the Discord role your server uses to restrict a user's
           ability to send messages.
         </p>
         <p>
-          <code>|config set role moderator [@role]</code>, this command sets the
+          <code>|config set moderator_role [@role]</code>, this command sets the
           name of your server's moderation role. This should be your lowest
           moderation level, as all moderators will need this role to see the
           suspended channels.
         </p>
         <p>
-          <code>|config add hearts [@user]</code>, this command adds the id of
+          <code>|config set hearts [@user]</code>, this command adds the id of
           the user mentioned to the hearts list, in other words, the bot
           automatically add a heart react to the messages of that user.
         </p>
         <p>
-          <code>|config remove hearts [@user]</code>, this command removes the
-          id of the user mentioned from the hearts list.
-        </p>
-        <p>
-          <code>|config toggle thanks</code>, this command will turn the thanks
+          <code>|config set thanks ["on"/"off"]</code>, this command will turn the thanks
           listener on and off.
         </p>
         <p>
-          <code>|config toggle levels</code>, this command will turn the levels
+          <code>|config set levels ["on"/"off"]</code>, this command will turn the levels
           listener on and off.
         </p>
         <p>
-          <code>|config set welcome-message [message]</code>: This command will
+          <code>|config set custom_welcome [message]</code>: This command will
           set a custom welcome message for your server. The value of [message]
           can be a standard sentence, and supports Discord markup - but must be
           kept under 1000 characters. Additionally, a couple of special strings
