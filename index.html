@@ -28,7 +28,7 @@
   <body>
     <nav>
       <h1><a href="#welcome">BeccaBot Documentation</a></h1>
-      <p id="version-text">Version 7.0.5</p>
+      <p id="version-text">Version 7.0.8</p>
       <hr />
 
       <p><a href="#set-up-a-local-instance">Local Instance</a></p>
@@ -721,13 +721,6 @@
             to raise your spirits. Quotes are obtained from freeCodeCamp.
           </li>
           <li>
-            <code>optout [action (add/remove/status)]</code> - This command
-            shows your status when the bot collects information of the users
-            (<code>|optout status</code>). You can disable (<code
-              >|optout remove</code
-            >) or enable it (<code>|optout add</code>).
-          </li>
-          <li>
             <code>piglatin [string]</code> - This command takes a sentence as a
             space-delimited [string] and returns an embed containing the
             original sentence and the sentence translated into Pig Latin.
@@ -917,6 +910,10 @@
           <li>
             <code>inuquote</code> (<em>deprecated in 6.10.2</em>) - removed as
             incomplete, not used enough to warrant completion. quote.
+          </li>
+          <li>
+            <code>optout</code> (<em>deprecated in 7.0.8</em>) - Removed as
+            unused, unneeded for GDPR compliance.
           </li>
         </ul>
       </section>
@@ -1136,11 +1133,8 @@
           <p>
             At any time, you have the right to request to view the Data
             pertaining to your Discord account. You may submit a request through
-            a Discord message or email to @nhcarrigan. You have the right to
-            request the removal of relevant Data. You also have the right to
-            "opt out" of Data collection - please note that this will disable
-            specific features of the bot such as the level feature for your
-            account.
+            the Discord server. You have the right to request the removal of
+            relevant Data.
           </p>
           <h2 id="underage-users">Underage Users</h2>
           <p>
