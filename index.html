@@ -28,7 +28,7 @@
   <body>
     <nav>
       <h1><a href="#welcome">BeccaBot Documentation</a></h1>
-      <p id="version-text">Version 7.0.3</p>
+      <p id="version-text">Version 7.0.5</p>
       <hr />
 
       <p><a href="#set-up-a-local-instance">Local Instance</a></p>
@@ -291,8 +291,8 @@
         </p>
         <p>
           <code>|config set prefix [prefix]</code>, this command determines what
-          symbol the bot looks for to trigger a command. The default is the pipe
-          symbol <code>|</code>, but you may change this to whatever you wish.
+          symbol the bot looks for to trigger a command. The default is
+          <code>becca!</code>, but you may change this to whatever you wish.
         </p>
         <p>
           <code>|config set log_channel [#channel]</code>, this command
@@ -444,8 +444,9 @@
           </li>
           <li>
             <code>Command Usage Tracking</code> - The bot logs each command that
-            is called and keeps a record of the number of calls for each
-            command. The values are stored in a MongoDB database.
+            is called and keeps a record of the number of calls for each command
+            globally, and a record of calls on a per-server basis. The values
+            are stored in a MongoDB database.
           </li>
           <li>
             <code>Heart reactions</code> - The bot will check the ID of each
@@ -865,7 +866,8 @@
           <li>
             <code>usage [command]</code> - This command returns a message embed
             for the [command]. The embed will contain the number of times the
-            command is called.
+            command is called globally and for the server this command is called
+            in.
           </li>
           <li>
             <code>user [@username]</code> - This command returns a message embed
