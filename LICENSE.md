@@ -1,4 +1,4 @@
-BeccaBot Documentation Copyright 2020 Nicholas Carrigan(“Licensor”)
+Becca Lyria Documentation Copyright 2020 Nicholas Carrigan(“Licensor”)
 
 Hippocratic License Version Number: 2.1.
 
