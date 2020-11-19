@@ -28,7 +28,7 @@
   <body>
     <nav>
       <h1><a href="#welcome">BeccaBot Documentation</a></h1>
-      <p id="version-text">Version 7.0.8</p>
+      <p id="version-text">Version 7.1.0</p>
       <hr />
 
       <p><a href="#set-up-a-local-instance">Local Instance</a></p>
@@ -287,57 +287,63 @@
       <section id="bot_config">
         <h2>Configure your Bot</h2>
         <p>
-          You need to configure the bot using the <code>|config</code> command:
+          You need to configure the bot using the
+          <code>becca!config</code> command:
         </p>
         <p>
-          <code>|config set prefix [prefix]</code>, this command determines what
-          symbol the bot looks for to trigger a command. The default is
+          <code>becca!config set prefix [prefix]</code>: This command determines
+          what symbol the bot looks for to trigger a command. The default is
           <code>becca!</code>, but you may change this to whatever you wish.
         </p>
         <p>
-          <code>|config set log_channel [#channel]</code>, this command
+          <code>becca!config set log_channel [#channel]</code>: This command
           determines the name of the channel where the bot should log things
           like deleted messages, and kick/ban instances.
         </p>
         <p>
-          <code>|config set welcome_channel [#channel]</code>, this command
+          <code>becca!config set welcome_channel [#channel]</code>: This command
           allows you to set the name of the channel for user welcome/depart
           messages.
         </p>
         <p>
-          <code>|config set restricted_role [@role]</code>, this command sets
-          the name of the Discord role your server uses to restrict a user's
-          ability to send messages.
+          <code>becca!config set restricted_role [@role]</code>: This command
+          sets the name of the Discord role your server uses to restrict a
+          user's ability to send messages.
         </p>
         <p>
-          <code>|config set moderator_role [@role]</code>, this command sets the
-          name of your server's moderation role. This should be your lowest
-          moderation level, as all moderators will need this role to see the
-          suspended channels.
+          <code>becca!config set moderator_role [@role]</code>: This command
+          sets the name of your server's moderation role. This should be your
+          lowest moderation level, as all moderators will need this role to see
+          the suspended channels.
         </p>
         <p>
-          <code>|config set hearts [@user]</code>, this command adds the id of
-          the user mentioned to the hearts list, in other words, the bot
-          automatically add a heart react to the messages of that user. If that
-          user is already set to receive hearts, the bot will remove that user
-          instead.
+          <code>becca!config set hearts [@user]</code>: This command adds the id
+          of the user mentioned to the hearts list - the bot automatically add a
+          heart react to the messages of that user. If that user is already set
+          to receive hearts, the bot will remove that user instead.
         </p>
         <p>
-          <code>|config set thanks ["on"/"off"]</code>, this command will turn
-          the thanks listener on and off.
+          <code>becca!config set blocked [@user]</code>: This command adds the
+          id of the user mentioned to the blocked list. The bot will refuse
+          command access to users in the block list. If the user is already
+          present, the bot will remove them instead.
         </p>
         <p>
-          <code>|config set levels ["on"/"off"]</code>, this command will turn
-          the levels listener on and off.
+          <code>becca!config set thanks ["on"/"off"]</code>: This command will
+          turn the thanks listener on and off.
         </p>
         <p>
-          <code>|config set custom_welcome [message]</code>: This command will
-          set a custom welcome message for your server. The value of [message]
-          can be a standard sentence, and supports Discord markup - but must be
-          kept under 1000 characters. Additionally, a couple of special strings
-          will be replaced: <code>{@username}</code> will be replaced with the
-          username of the new member, and <code>@{servername}</code> will be
-          replaced with your server's name.
+          <code>becca!config set levels ["on"/"off"]</code>: This command will
+          turn the levels listener on and off.
+        </p>
+        <p>
+          <code>becca!config set custom_welcome [message]</code>: This command
+          will set a custom welcome message for your server. The value of
+          [message] can be a standard sentence, and supports Discord markup -
+          but must be kept under 1000 characters. Additionally, a couple of
+          special strings will be replaced: <code>{@username}</code> will be
+          replaced with the username of the new member, and
+          <code>@{servername}</code> will be replaced with your server's name.
         </p>
         <p>
           NOTE: Config settings are set on a per-server basis. Only moderators
@@ -402,8 +408,8 @@
           but most of them require the user to send a command word. The command
           words are listed below, but must be prefaced with the
           <code>prefix</code> symbol set with
-          <code>|config set prefix [prefix]</code> (By default is
-          <code>|</code>).
+          <code>becca!config set prefix [prefix]</code> (By default this is
+          <code>becca!</code>).
         </p>
       </section>
 
@@ -419,22 +425,24 @@
             directly to a new user in the form of an embed. This message details
             how to use the bot's command and what the command prefix is.
             Additionally, if a valid channel is provided for the
-            <code>|config set channel welcomes [#channel]</code> setting, the
-            bot will send a message to the channel inviting the user to
+            <code>becca!config set channel welcomes [#channel]</code> setting,
+            the bot will send a message to the channel inviting the user to
             introduce themselves.
           </li>
           <li>
             <code>Depart Messages</code> - If a valid channel is provided for
-            the <code>|config set channel welcomes [#channel]</code> setting,
+            the
+            <code>becca!config set channel welcomes [#channel]</code> setting,
             the bot will send a message to that channel notifying the server
             when a user has left.
           </li>
           <li>
             <code>Deleted Message Log</code> - If a valid channel is provided
-            for the <code>|config set channel logs [#channel]</code> setting,
-            the bot will send an embed message to that channel when someone
-            deletes a message. The embed will contain the deleted message's
-            author and content.
+            for the
+            <code>becca!config set channel logs [#channel]</code> setting, the
+            bot will send an embed message to that channel when someone deletes
+            a message. The embed will contain the deleted message's author and
+            content.
           </li>
           <li>
             <code>Levelling System</code> - The bot listens to each message and
@@ -451,8 +459,8 @@
           <li>
             <code>Heart reactions</code> - The bot will check the ID of each
             message's author. If the ID is in the array provided in the
-            <code>|config add/remove hearts [@user]</code> config setting, the
-            bot will add a random heart react to the message.
+            <code>becca!config add/remove hearts [@user]</code> config setting,
+            the bot will add a random heart react to the message.
           </li>
           <li>
             <code>Thank You Messages</code> - The bot checks for messages that
@@ -505,18 +513,12 @@
             permission is missing, the bot responds with a notice that the user
             lacks permission. Otherwise, the command bans [@username] from the
             server. If the
-            <code>|config set channel logs [#channel]</code> option is set, the
-            bot will send an embed to that channel. The embed will contain the
-            name of the user performing the ban, the name of the banned user,
-            and the reason provided. If no reason was provided, the embed will
-            state that. Because of the permanent nature of bans, the bot will
-            require confirmation before taking action.
-          </li>
-          <li>
-            <code>block [@username]</code> - This command will block the
-            mentioned user and prevent them from calling bot commands. This
-            command is locked to the Discord user associated with the
-            <code>process.env.OWNER_ID</code> value.
+            <code>becca!config set channel logs [#channel]</code> option is set,
+            the bot will send an embed to that channel. The embed will contain
+            the name of the user performing the ban, the name of the banned
+            user, and the reason provided. If no reason was provided, the embed
+            will state that. Because of the permanent nature of bans, the bot
+            will require confirmation before taking action.
           </li>
           <li>
             <code>bugreport</code> - This command returns an embed containing a
@@ -546,7 +548,7 @@
             responds with a notice that the user lacks permission to use this
             command. Otherwise, the bot deletes the channel this command is used
             in, and logs the deletion to the
-            <code>|config set channel logs [#channel]</code> option.
+            <code>becca!config set channel logs [#channel]</code> option.
           </li>
           <li>
             <code>compliment</code> - Provides a little compliment to cheer you
@@ -658,11 +660,11 @@
             permission is missing, the bot responds with a notice that the user
             lacks permission. Otherwise, the command kicks [@username] from the
             server. If the
-            <code>|config set channel logs [#channel]</code> option is set, the
-            bot will send an embed to that channel. The embed will contain the
-            name of the user performing the kick, the name of the kicked user,
-            and the reason provided. If no reason was provided, the embed will
-            state that.
+            <code>becca!config set channel logs [#channel]</code> option is set,
+            the bot will send an embed to that channel. The embed will contain
+            the name of the user performing the kick, the name of the kicked
+            user, and the reason provided. If no reason was provided, the embed
+            will state that.
           </li>
           <li>
             <code>kirby</code> - This command sends a message to the channel the
@@ -764,19 +766,19 @@
             permission is missing, the bot responds with a notice that the user
             lacks permission. Otherwise, the command will set the [@username]'s
             role provided in the
-            <code>|config set role restricted [@role]</code> option, and remove
-            all other roles. If the role option is not set, the bot will send a
-            message to notify the user. If the
-            <code>|config set channel logs [#channel]</code> option is not set,
-            the bot will send a message to notify the user. Otherwise, the bot
-            will send an embed to the log channel. The embed will contain the
-            name of the user performing the command, the name of the restricted
-            user, and the reason provided. If no reason was provided, the embed
-            will state that. The bot will then create a channel under the
-            <code>Appeals</code> category (if <code>Appeals</code> category does
-            not exists, the bot will create one with the correct permissions),
-            which only the channel moderators and the restricted user can
-            access.
+            <code>becca!config set role restricted [@role]</code> option, and
+            remove all other roles. If the role option is not set, the bot will
+            send a message to notify the user. If the
+            <code>becca!config set channel logs [#channel]</code> option is not
+            set, the bot will send a message to notify the user. Otherwise, the
+            bot will send an embed to the log channel. The embed will contain
+            the name of the user performing the command, the name of the
+            restricted user, and the reason provided. If no reason was provided,
+            the embed will state that. The bot will then create a channel under
+            the <code>Appeals</code> category (if <code>Appeals</code> category
+            does not exists, the bot will create one with the correct
+            permissions), which only the channel moderators and the restricted
+            user can access.
           </li>
           <li>
             <code>riddle [action (start/request/solve)] [?id] [?answer]</code> -
@@ -846,9 +848,9 @@
             [@username]'s role provided in the <code>silence_role</code> option.
             If the role option is not set, the bot will send a message to notify
             the user. If the
-            <code>|config set channel logs [#channel]</code> option is set, the
-            bot will send an embed to that channel. The embed will contain the
-            name of the user performing the command, the name of the
+            <code>becca!config set channel logs [#channel]</code> option is set,
+            the bot will send an embed to that channel. The embed will contain
+            the name of the user performing the command, the name of the
             unrestricted user, and the reason provided. If no reason was
             provided, the embed will state that.
           </li>
@@ -877,9 +879,9 @@
             lacks permission. Otherwise, the command will send a direct message
             to [@username] informing them that the command author has warned
             them, and providing the reason if given. If the
-            <code>|config set channel logs [#channel]</code> option is set, the
-            bot will send an embed to that channel. The embed will contain the
-            name of the user performing the warning, the name of the warned
+            <code>becca!config set channel logs [#channel]</code> option is set,
+            the bot will send an embed to that channel. The embed will contain
+            the name of the user performing the warning, the name of the warned
             user, and the reason provided. If no reason was provided, the embed
             will state that.
           </li>
@@ -914,6 +916,10 @@
           <li>
             <code>optout</code> (<em>deprecated in 7.0.8</em>) - Removed as
             unused, unneeded for GDPR compliance.
+          </li>
+          <li>
+            <code>block</code> (<em>deprecated in 7.1.0</em>) - Removed as
+            blocking users became server-specific.
           </li>
         </ul>
       </section>
