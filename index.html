@@ -28,7 +28,7 @@
   <body>
     <nav>
       <h1><a href="#welcome">Becca Lyria Documentation</a></h1>
-      <p id="version-text">Version 7.1.0</p>
+      <p id="version-text">Version 7.2.0</p>
       <hr />
 
       <p><a href="#set-up-a-local-instance">Local Instance</a></p>
@@ -84,8 +84,8 @@
       <section id="welcome">
         <h1>Welcome!</h1>
         <p>
-          This is the documentation for Becca Lyria. A live version of the bot can
-          be found in our
+          This is the documentation for Becca Lyria. A live version of the bot
+          can be found in our
           <a
             href="https://discord.gg/PHqDbkg"
             target="_blank"
@@ -344,6 +344,11 @@
           special strings will be replaced: <code>{@username}</code> will be
           replaced with the username of the new member, and
           <code>@{servername}</code> will be replaced with your server's name.
+        </p>
+        <p>
+          <code>becca!config set self_roles [@role]</code>: This command will
+          add or remove a role from the self-assignable list (for use with the
+          <code>role</code> command).
         </p>
         <p>
           NOTE: Config settings are set on a per-server basis. Only moderators
@@ -791,6 +796,11 @@
             incorrect, and an explanation. If correct, the bot provides the [id]
             for the next riddle. To get that challenge, pass
             <code>request</code> as the [action] with the new [id].
+          </li>
+          <li>
+            <code>role [@role]</code> - If the [@role] is in the server's
+            <code>self_roles</code> list, this command will add or remove the
+            role from the user.
           </li>
           <li>
             <code>roll d[number]</code> - This command returns a random number
