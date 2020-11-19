@@ -1,13 +1,13 @@
-# BeccaBot Documentation
+# Becca Lyria Documentation
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-This repository contains the files for the documentation website for BeccaBot.
+This repository contains the files for the documentation website for Becca Lyria.
 
 ## Live Version
 
-This page is currently deployed. [View the live website.](https://www.nhcarrigan.com/BeccaBot-documentation)
+This page is currently deployed. [View the live website.](https://www.nhcarrigan.com/Becca-Lyria-documentation)
 
 ## Feedback and Bugs
 
@@ -36,9 +36,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="http://www.nhcarrigan.com"><img src="https://avatars1.githubusercontent.com/u/63889819?v=4" width="100px;" alt=""/><br /><sub><b>Nicholas Carrigan (he/him)</b></sub></a><br /><a href="#projectManagement-nhcarrigan" title="Project Management">📆</a></td>
     <td align="center"><a href="http://catalactics.now.sh"><img src="https://avatars1.githubusercontent.com/u/45566099?v=4" width="100px;" alt=""/><br /><sub><b>Joshua Pelealu</b></sub></a><br /><a href="#design-JoshuaPelealu" title="Design">🎨</a></td>
-    <td align="center"><a href="https://www.danielsolartech.com/"><img src="https://avatars2.githubusercontent.com/u/66956234?v=4" width="100px;" alt=""/><br /><sub><b>Daniel Solarte</b></sub></a><br /><a href="https://github.com/nhcarrigan/BeccaBot-documentation/commits?author=danielsolartech" title="Code">💻</a></td>
-    <td align="center"><a href="http://landonlloyd.github.io"><img src="https://avatars0.githubusercontent.com/u/65516863?v=4" width="100px;" alt=""/><br /><sub><b>Landon Lloyd</b></sub></a><br /><a href="https://github.com/nhcarrigan/BeccaBot-documentation/commits?author=LandonLloyd" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/SKULLXL"><img src="https://avatars3.githubusercontent.com/u/68315325?v=4" width="100px;" alt=""/><br /><sub><b>Rayn Islam</b></sub></a><br /><a href="https://github.com/nhcarrigan/BeccaBot-documentation/issues?q=author%3ASKULLXL" title="Bug reports">🐛</a> <a href="#design-SKULLXL" title="Design">🎨</a></td>
+    <td align="center"><a href="https://www.danielsolartech.com/"><img src="https://avatars2.githubusercontent.com/u/66956234?v=4" width="100px;" alt=""/><br /><sub><b>Daniel Solarte</b></sub></a><br /><a href="https://github.com/nhcarrigan/Becca-Lyria-documentation/commits?author=danielsolartech" title="Code">💻</a></td>
+    <td align="center"><a href="http://landonlloyd.github.io"><img src="https://avatars0.githubusercontent.com/u/65516863?v=4" width="100px;" alt=""/><br /><sub><b>Landon Lloyd</b></sub></a><br /><a href="https://github.com/nhcarrigan/Becca-Lyria-documentation/commits?author=LandonLloyd" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/SKULLXL"><img src="https://avatars3.githubusercontent.com/u/68315325?v=4" width="100px;" alt=""/><br /><sub><b>Rayn Islam</b></sub></a><br /><a href="https://github.com/nhcarrigan/Becca-Lyria-documentation/issues?q=author%3ASKULLXL" title="Bug reports">🐛</a> <a href="#design-SKULLXL" title="Design">🎨</a></td>
   </tr>
 </table>
 
