@@ -7,7 +7,7 @@ This repository contains the files for the documentation website for Becca Lyria
 
 ## Live Version
 
-This page is currently deployed. [View the live website.](https://www.nhcarrigan.com/Becca-Lyria-documentation)
+This page is currently deployed. [View the live website.](https://beccalyria.nhcarrigan.com)
 
 ## Feedback and Bugs
 
