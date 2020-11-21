@@ -1,0 +1,100 @@
+<h1>
+  Creating Your Bot Application and Connecting it to Your Instance
+</h1>
+<p>
+  Now that you are able to run the code, you need to connect the code to
+  a Discord Bot application. If you have not created a Discord Bot
+  application, you will need to follow these steps:
+</p>
+<ul>
+  <li>
+    Log in to the
+    <a
+      href="https://discord.com/developers/applications"
+      target="_blank"
+      rel="noopener noreferrer"
+      >Discord Developer site</a
+    >
+  </li>
+  <li>
+    Create a new application by clicking on the "New Application"
+    button.
+  </li>
+  <li>On the left, select "Bot", then create a new bot.</li>
+</ul>
+<h2>Create a Webhook (Optional)</h2>
+<p>
+  The bot is configured to send an online notice, and updates on servers
+  it leaves or joins, through a Discord Webhook. In your server, create
+  a new Webhook and copy the URL. You will need the ID and Token from
+  that URL for the next step.
+</p>
+<h2>Link your Bot to the Code</h2>
+<p>
+  Now that you have a bot, you'll need to create a file called
+  <code>.env</code>. This file will contain the following variables:
+</p>
+<ul>
+  <li>
+    <code>DISCORD_TOKEN</code> - (Required) - The value of this variable
+    will be your Bot Token from the Discord developer page. It is VERY
+    important that you keep this token a secret - do not upload it to
+    GitHub or share it publically, as this will allow anyone to access
+    your discord bot.
+  </li>
+  <li>
+    <code>HABITICA_KEY</code> - (Optional for habitica command) - This
+    is your API key for
+    <a
+      href="https://habitica.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      >Habitica</a
+    >.
+  </li>
+  <li>
+    <code>HP_KEY</code> - (Optional for hp commands) - This is the API
+    key for the
+    <a
+      href="https://www.potterapi.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      >Harry Potter API.</a
+    >
+  </li>
+  <li>
+    <code>MONGODB</code> - (Required) - The value of this variable will
+    be your MongoDB authentication URI. Like the bot token, this needs
+    to be kept secret to prevent unauthorised access to and modification
+    of your database.
+  </li>
+  <li>
+    <code>NASA_API</code> - (Optional for space command) - This is the
+    API key for the
+    <a
+      href="https://api.nasa.gov/"
+      target="_blank"
+      rel="noopener noreferrer"
+      >NASA API.</a
+    >
+  </li>
+  <li>
+    <code>OWNER_ID</code> - (Optional) - This tells the bot which
+    Discord account is the owner. The bot will respond just a little
+    differently to the owner. Leaving this blank WILL lock out some
+    commands.
+  </li>
+  <li>
+    <code>PRODDEV</code> - (Optional) - This tells the bot whether it is
+    in a development state or production state - the webhook message
+    includes this value.
+  </li>
+  <li>
+    <code>WH_ID</code> - (Optional) - This is the ID for the Discord
+    webhook.
+  </li>
+  <li>
+    <code>WH_TOKEN</code> - (Optional) - This is the token for the
+    Discord webhook.
+  </li>
+</ul>
