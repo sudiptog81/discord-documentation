@@ -35,66 +35,7 @@
   <code>.env</code>. This file will contain the following variables:
 </p>
 <ul>
-  <li>
-    <code>DISCORD_TOKEN</code> - (Required) - The value of this variable
-    will be your Bot Token from the Discord developer page. It is VERY
-    important that you keep this token a secret - do not upload it to
-    GitHub or share it publically, as this will allow anyone to access
-    your discord bot.
-  </li>
-  <li>
-    <code>HABITICA_KEY</code> - (Optional for habitica command) - This
-    is your API key for
-    <a
-      href="https://habitica.com"
-      target="_blank"
-      rel="noopener noreferrer"
-      >Habitica</a
-    >.
-  </li>
-  <li>
-    <code>HP_KEY</code> - (Optional for hp commands) - This is the API
-    key for the
-    <a
-      href="https://www.potterapi.com/"
-      target="_blank"
-      rel="noopener noreferrer"
-      >Harry Potter API.</a
-    >
-  </li>
-  <li>
-    <code>MONGODB</code> - (Required) - The value of this variable will
-    be your MongoDB authentication URI. Like the bot token, this needs
-    to be kept secret to prevent unauthorised access to and modification
-    of your database.
-  </li>
-  <li>
-    <code>NASA_API</code> - (Optional for space command) - This is the
-    API key for the
-    <a
-      href="https://api.nasa.gov/"
-      target="_blank"
-      rel="noopener noreferrer"
-      >NASA API.</a
-    >
-  </li>
-  <li>
-    <code>OWNER_ID</code> - (Optional) - This tells the bot which
-    Discord account is the owner. The bot will respond just a little
-    differently to the owner. Leaving this blank WILL lock out some
-    commands.
-  </li>
-  <li>
-    <code>PRODDEV</code> - (Optional) - This tells the bot whether it is
-    in a development state or production state - the webhook message
-    includes this value.
-  </li>
-  <li>
-    <code>WH_ID</code> - (Optional) - This is the ID for the Discord
-    webhook.
-  </li>
-  <li>
-    <code>WH_TOKEN</code> - (Optional) - This is the token for the
-    Discord webhook.
+  <li *ngFor="let envVar of envVars">
+    <code>{{envVar.name}}</code> ({{envVar.optional}}) - {{envVar.description}}
   </li>
 </ul>

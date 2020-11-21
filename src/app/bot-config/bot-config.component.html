@@ -3,62 +3,8 @@
   You need to configure the bot using the
   <code>becca!config</code> command:
 </p>
-<p>
-  <code>becca!config set prefix [prefix]</code>: This command determines what
-  symbol the bot looks for to trigger a command. The default is
-  <code>becca!</code>, but you may change this to whatever you wish.
-</p>
-<p>
-  <code>becca!config set log_channel [#channel]</code>: This command determines
-  the name of the channel where the bot should log things like deleted messages,
-  and kick/ban instances.
-</p>
-<p>
-  <code>becca!config set welcome_channel [#channel]</code>: This command allows
-  you to set the name of the channel for user welcome/depart messages.
-</p>
-<p>
-  <code>becca!config set restricted_role [@role]</code>: This command sets the
-  name of the Discord role your server uses to restrict a user's ability to send
-  messages.
-</p>
-<p>
-  <code>becca!config set moderator_role [@role]</code>: This command sets the
-  name of your server's moderation role. This should be your lowest moderation
-  level, as all moderators will need this role to see the suspended channels.
-</p>
-<p>
-  <code>becca!config set hearts [@user]</code>: This command adds the id of the
-  user mentioned to the hearts list - the bot automatically add a heart react to
-  the messages of that user. If that user is already set to receive hearts, the
-  bot will remove that user instead.
-</p>
-<p>
-  <code>becca!config set blocked [@user]</code>: This command adds the id of the
-  user mentioned to the blocked list. The bot will refuse command access to
-  users in the block list. If the user is already present, the bot will remove
-  them instead.
-</p>
-<p>
-  <code>becca!config set thanks ["on"/"off"]</code>: This command will turn the
-  thanks listener on and off.
-</p>
-<p>
-  <code>becca!config set levels ["on"/"off"]</code>: This command will turn the
-  levels listener on and off.
-</p>
-<p>
-  <code>becca!config set custom_welcome [message]</code>: This command will set
-  a custom welcome message for your server. The value of [message] can be a
-  standard sentence, and supports Discord markup - but must be kept under 1000
-  characters. Additionally, a couple of special strings will be replaced:
-  <code>"{{'{'}}"@username"{{'{'}}"</code> will be replaced with the username of the new member,
-  and <code>"{{'{'}}"@servername"{{'{'}}"</code> will be replaced with your server's name.
-</p>
-<p>
-  <code>becca!config set self_roles [@role]</code>: This command will add or
-  remove a role from the self-assignable list (for use with the
-  <code>role</code> command).
+<p *ngFor="let call of configCalls">
+  <code>{{call.call}}</code>: {{call.result}}
 </p>
 <p>
   NOTE: Config settings are set on a per-server basis. Only moderators with the

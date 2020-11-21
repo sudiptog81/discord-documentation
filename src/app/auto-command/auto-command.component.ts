@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { autoCommandInt, autoCommands } from 'src/assets/data/automatic';
 
 @Component({
   selector: 'app-auto-command',
@@ -8,8 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class AutoCommandComponent implements OnInit {
 
   constructor() { }
-
+  commands: autoCommandInt[] = []
   ngOnInit(): void {
+    this.commands = autoCommands
   }
 
 }
