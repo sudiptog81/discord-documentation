@@ -1,0 +1,8 @@
+<h1>Deprecated Features</h1>
+<ul>
+  <li *ngFor="let dep of deprecated">
+    <code>{{dep.name}}</code> (<em>deprecated in {{dep.version}}</em>) - {{dep.reason}}
+  </li>
+</ul>
+<a class="page-btn" routerLink="/manual-cmd">Prev Page</a>
+<a class="page-btn" routerLink="/contribute">Next Page</a>

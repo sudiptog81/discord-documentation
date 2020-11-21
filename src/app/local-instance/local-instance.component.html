@@ -1,0 +1,63 @@
+<h1>Set up a Local Instance</h1>
+<p>
+  There are a few steps you will need in order to set up a local instance of the
+  bot. You will need some knowledge of JavaScript, TypeScript, node, and git. If
+  you are not comfortable with doing this, you can
+  <a href="#host-a-live-version-of-the-bot">use our live bot</a>.
+</p>
+<h2>Clone the GitHub Repository</h2>
+<p>
+  Before doing anything else, you have to make sure you have a GitHub Account.
+  If you do not have one, we recommend signing up for free
+  <a href="https://github.com/join">here</a>.
+</p>
+<p>
+  Once you have signed in to GitHub, navigate to our
+  <a
+    href="https://github.com/nhcarrigan/Becca-Lyria"
+    target="_blank"
+    rel="noopener noreferrer"
+    >GitHub repository</a
+  >
+  and either fork the repository into your own account or download the files to
+  your computer.
+</p>
+<h2>Install the Necessary Software</h2>
+<p>
+  Using your preferred development environment (if you do not have one, we
+  recommend either
+  <a href="https://code.visualstudio.com/">Visual Studio Code (VSCode)</a>
+  or
+  <a href="https://atom.io/" target="_blank" rel="noopener noreferrer">Atom</a
+  >), load the directory containing your copy of the bot files.
+</p>
+
+<p>
+  Before you do anything else, make sure that Node.js and npm are installed. If
+  you do not have Node.js and <code>npm</code> installed, you can do so from the
+  <a
+    href="https://nodejs.org/en/docs/"
+    target="_blank"
+    rel="noopener noreferrer"
+    >Node.js website</a
+  >. Open the terminal - you will now need to install some packages using
+  <code>npm</code>. Enter the following commands into the terminal to perform
+  the installations:
+</p>
+<p>
+  <code>npm install</code> - This will install all of the dependencies found in
+  the <code>package.json</code> file automatically. If this does not work, you
+  will need to go through each item listed in that file and run
+  <code>npm install [packagename]</code>
+</p>
+<p>
+  <code>npm run build</code> - This will build the TypeScript files into
+  runnable JavaScript files.
+</p>
+<p>
+  Congratulations! You are now ready to run the code locally - the start command
+  is <code>npm run start</code>. To connect the code to your Discord Bot
+  application, continue reading below.
+</p>
+<a class="page-btn" routerLink="/welcome">Prev Page</a>
+<a class="page-btn" routerLink="/setup">Next Page</a>

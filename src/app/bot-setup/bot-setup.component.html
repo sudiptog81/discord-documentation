@@ -1,0 +1,42 @@
+<h1>Creating Your Bot Application and Connecting it to Your Instance</h1>
+<p>
+  Once your environment is set up, you need to connect the code to a Discord Bot
+  application. If you have not created a Discord Bot application, you will need
+  to follow these steps:
+</p>
+<ul>
+  <li>
+    Log in to the
+    <a
+      href="https://discord.com/developers/applications"
+      target="_blank"
+      rel="noopener noreferrer"
+      >Discord Developer site</a
+    >
+  </li>
+  <li>Create a new application by clicking on the "New Application" button.</li>
+  <li>On the left, select "Bot", then create a new bot.</li>
+</ul>
+<h2>Create a Webhook (Optional)</h2>
+<p>
+  The bot is configured to send an online notice, and updates on servers it
+  leaves or joins, through a Discord Webhook. In your server, create a new
+  Webhook and copy the URL. You will need the ID and Token from that URL for the
+  next step. These values are obtained from the URL in the format:
+</p>
+<p><code>https://discordapp.com/api/webhooks/ID/TOKEN</code></p>
+<h2>Link your Bot to the Code</h2>
+<p>
+  Now that you have a bot, you'll need to create a file called
+  <code>.env</code>. You can either create the file manually, or copy the
+  <code>.env.example</code> file. This file will contain the following
+  variables:
+</p>
+<ul>
+  <li *ngFor="let envVar of envVars">
+    <code>{{ envVar.name }}</code> ({{ envVar.optional }}) -
+    <span [innerHTML]="envVar.description"></span>
+  </li>
+</ul>
+<a class="page-btn" routerLink="/local">Prev Page</a>
+<a class="page-btn" routerLink="/deploy">Next Page</a>

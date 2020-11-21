@@ -1,0 +1,14 @@
+<h1>Configure your Bot</h1>
+<p>
+  You need to configure the bot using the
+  <code>becca!config</code> command:
+</p>
+<p *ngFor="let call of configCalls">
+  <code>{{call.call}}</code>: {{call.result}}
+</p>
+<p>
+  NOTE: Config settings are set on a per-server basis. Only moderators with the
+  "Manage Server" permission can change the settings.
+</p>
+<a class="page-btn" routerLink="/deploy">Prev Page</a>
+<a class="page-btn" routerLink="/auto-cmd">Next Page</a>

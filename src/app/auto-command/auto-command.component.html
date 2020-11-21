@@ -1,0 +1,12 @@
+<h1>Automatic Commands</h1>
+<p>
+  There are a few messages that the bot will automatically send when
+  certain conditions are met.
+</p>
+<ul>
+  <li *ngFor="let command of commands">
+    <code>{{command.name}}</code> - {{command.description}}
+  </li>
+</ul>
+<a class="page-btn" routerLink="/config">Prev Page</a>
+<a class="page-btn" routerLink="/manual-cmd">Next Page</a>

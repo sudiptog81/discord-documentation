@@ -1,0 +1,34 @@
+<h1>Contributing to the Bot</h1>
+<p>
+  We are always happy to accept contributions, and are more than willing to help
+  new contributors navigate this process.
+</p>
+<h2>Creating a PR</h2>
+<p>
+  If you have an idea for a new feature or fix, you are more than welcome to
+  create a pull request on the GitHub repository. The GitHub repository runs a
+  couple of checks on all code submissions:
+</p>
+<ul>
+  <li>
+    <code>Node CI</code> - A GitHub action will check for linter errors in the
+    code.
+  </li>
+  <li>
+    <code>LGTM</code> - LGTM will verify that there are no errors or security
+    concerns with the code.
+  </li>
+  <li>
+    <code>CodeQL</code> - CodeQL will confirm that the code doesn't have any
+    quality concerns or errors.
+  </li>
+</ul>
+<p>
+  Additionally, the <code>husky</code> package will run the lint and tests prior
+  to each <code>git commit</code> command, which will help catch errors prior to
+  the opening of a PR. To run these checks manually, the
+  <code>npm run lint</code> command will lint the code, and the
+  <code>npm run test</code> command will run the tests.
+</p>
+<a class="page-btn" routerLink="/dep-cmd">Prev Page</a>
+<a class="page-btn" routerLink="/new-cmd">Next Page</a>

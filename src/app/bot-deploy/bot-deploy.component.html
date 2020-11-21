@@ -1,0 +1,45 @@
+<h1>Run the Bot</h1>
+<p>
+  The next step is to invite your bot application to your server. You can use
+  the Discord Developer portal to generate an invitation link, or you can use
+  the Client ID from your bot's application page to create a link yourself. If
+  you wish to manually create the link, the format is:
+</p>
+<p>
+  <code
+    >https://discord.com/oauth2/authorize?client_id=CLIENT_ID_HERE&scope=bot</code
+  >
+</p>
+<p>
+  Regardless of which method you choose, the link will open a new window
+  allowing you to choose which server you'd like to add your bot to.
+</p>
+<p>
+  Once you have added the bot to your server, switch back to your terminal and
+  run the command <code>npm start</code>. If you have set the
+  <code>WH_ID</code> and <code>WH_TOKEN</code> in your environment
+  appropriately, the bot should send a message indicating it is online.
+  Otherwise, you should see the text <code>Activate the Omega!</code> in your
+  terminal, indicating your bot is online! Now you can try some of the commands
+  to see if the bot is functioning correctly.
+</p>
+<h2>Host a Live Version of the Bot</h2>
+<p>
+  By now you should have a successfully running local instance of the bot.
+  Keeping this alive means you cannot shut down your computer. As an
+  alternative, you might want to use a hosting service to run a live instance of
+  your bot. We use Heroku for our version, but there are other options. Be sure
+  to read the documentation for your chosen platform! Heroku, for example, uses
+  a separate setting for the bot token instead of a <code>.env</code> file.
+</p>
+<p>
+  If you would like to add our live bot to your server, you are welcome to
+  <a
+    href="https://discord.com/oauth2/authorize?client_id=716707753090875473&scope=bot&permissions=268495990"
+    target="_blank"
+    rel="noopener noreferrer"
+    >invite the bot to your server</a
+  >.
+</p>
+<a class="page-btn" routerLink="/setup">Prev Page</a>
+<a class="page-btn" routerLink="/config">Next Page</a>

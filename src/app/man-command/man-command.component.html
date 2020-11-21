@@ -1,0 +1,16 @@
+<h1>Manual Commands</h1>
+<p>
+  These commands are run manually by sending the prefix and the associated
+  command keyword (listed below) and arguments.
+</p>
+<ul>
+  <li *ngFor="let command of commands">
+    <code
+      >{{ command.name
+      }}<span *ngIf="command.parameters"> {{ command.parameters }}</span></code
+    >
+    - <span [innerHTML]="command.description"></span>
+  </li>
+</ul>
+<a class="page-btn" routerLink="/auto-cmd">Prev Page</a>
+<a class="page-btn" routerLink="/dep-cmd">Next Page</a>
