@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "becca-lyria": {
+    "Becca-Lyria-documentation": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/becca-lyria",
+            "outputPath": "dist/Becca-Lyria-documentation",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -65,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "becca-lyria:build"
+            "browserTarget": "Becca-Lyria-documentation:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "becca-lyria:build:production"
+              "browserTarget": "Becca-Lyria-documentation:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "becca-lyria:build"
+            "browserTarget": "Becca-Lyria-documentation:build"
           }
         },
         "test": {
@@ -113,16 +113,20 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "becca-lyria:serve"
+            "devServerTarget": "Becca-Lyria-documentation:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "becca-lyria:serve:production"
+              "devServerTarget": "Becca-Lyria-documentation:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }
   },
-  "defaultProject": "becca-lyria"
+  "defaultProject": "Becca-Lyria-documentation"
 }
