@@ -272,7 +272,7 @@ export const manCommands: manCommandInt[] = [
   {
     name: 'role',
     description:
-      'This command accepts the name of a role as [role]. If that role exists and is in the server self_role list, the bot will add or remove the role from the user.',
+      'This command accepts the name of a role as [role]. If that role exists and is in the server self_role list, the bot will add or remove the role from the user. Optionally pass "listall" instead and receive a list of self-assignable roles for that server.',
     parameters: '[role]',
   },
   {

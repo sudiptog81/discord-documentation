@@ -137,3 +137,11 @@ pre code {
     margin-left: 0;
   }
 }
+
+ul {
+  list-style-type: "💜 ";
+}
+
+li {
+  margin-bottom: 10px;
+}
