@@ -9,7 +9,7 @@ export const envVariables: envVariableInterface[] = [
     name: 'DISCORD_TOKEN',
     optional: 'REQUIRED',
     description:
-      'The value of this variable will be your Bot Token from the Discord developer page. It is VERY important that you keep this token a secret - do not upload it to GitHub or share it publicluy, as this will allow anyone to access your discord bot.',
+      'The value of this variable will be your Bot Token from the Discord developer page. It is VERY important that you keep this token a secret - do not upload it to GitHub or share it publicly, as this will allow anyone to access your discord bot.',
   },
   {
     name: 'HABITICA_KEY',

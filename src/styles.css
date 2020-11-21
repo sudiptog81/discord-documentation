@@ -6,7 +6,6 @@ main p {
 body {
   color: #aea8d3;
   margin-left: 110px;
-  margin-right: 50px;
   padding: 20px;
 }
 
@@ -114,4 +113,27 @@ pre {
 
 pre code {
   padding-left: 0;
+}
+
+.page-btn {
+  padding: 10px 10px;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-transition: color 0.4s ease;
+  transition: color 0.4s ease;
+}
+
+.page-btn:hover {
+  background-color: black;
+  -webkit-transition: color 0.4s ease;
+  transition: color 0.4s ease;
+}
+
+@media (max-width: 500px) {
+  nav {
+    display: none;
+  }
+  body {
+    margin-left: 0;
+  }
 }
