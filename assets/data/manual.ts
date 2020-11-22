@@ -100,6 +100,11 @@ export const manCommands: manCommandInt[] = [
     parameters: '[spell]',
   },
   {
+    name: 'echo',
+    description: 'This command will look for the guild with the [guild] id and the channel in that guild with the [channel] id. If the guild and its channel are found, the command will send the [message] to that channel. This command is locked to the OWNER_ID account to prevent spam.',
+    parameters: '[guild] [channel] [message]'
+  },
+  {
     name: 'fact',
     description: 'This command generates an embed containing a fun fact!',
   },
