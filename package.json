@@ -1,6 +1,6 @@
 {
   "name": "becca-lyria",
-  "version": "7.2.3",
+  "version": "7.3.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
