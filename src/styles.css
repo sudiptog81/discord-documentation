@@ -7,6 +7,7 @@ body {
   color: #aea8d3;
   margin-left: 110px;
   padding: 20px;
+  border-radius: 25px;
 }
 
 body::before {
@@ -117,7 +118,7 @@ pre code {
 
 .page-btn {
   padding: 10px 10px;
-  background-color: white;
+  background-color: #3a3240;
   border-radius: 10px;
   -webkit-transition: color 0.4s ease;
   transition: color 0.4s ease;
@@ -125,6 +126,7 @@ pre code {
 
 .page-btn:hover {
   background-color: black;
+  border-radius: 10px;
   -webkit-transition: color 0.4s ease;
   transition: color 0.4s ease;
 }
