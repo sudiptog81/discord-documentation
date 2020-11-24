@@ -7,7 +7,7 @@ export const configCommands: configCommandInterface[] = [
   {
     call: 'becca!config set prefix [prefix]',
     result:
-      'This command determines what symbol the bot looks for to trigger a command. The default is becca!, but you may change this to whatever you wish.',
+      'This command determines what symbol the bot looks for to trigger a command. The default is becca!, but you may change this to whatever you wish. Note that uppercase characters will be stored as lowercase, to allow the bot to respond to either casing.',
   },
   {
     call: 'becca!config set log_channel [#channel]',
