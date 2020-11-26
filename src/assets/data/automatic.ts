@@ -12,7 +12,7 @@ export const autoCommands: autoCommandInt[] = [
   {
     name: 'Depart Messages',
     description:
-      'If a valid channel is provided for the becca!config set channel welcomes [#channel] setting, the bot will send a message to that channel notifying the server when a user has left.',
+      'If a valid channel is provided for the becca!config set channel welcomes [#channel] setting, the bot will send a message to that channel notifying the server when a user has left. The bot will also document the roles that user had, so server moderators can reassign the roles if the user returns.',
   },
   {
     name: 'Deleted Message Log',
