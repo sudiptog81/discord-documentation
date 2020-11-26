@@ -101,8 +101,9 @@ export const manCommands: manCommandInt[] = [
   },
   {
     name: 'echo',
-    description: 'This command will look for the guild with the [guild] id and the channel in that guild with the [channel] id. If the guild and its channel are found, the command will send the [message] to that channel. This command is locked to the OWNER_ID account to prevent spam.',
-    parameters: '[guild] [channel] [message]'
+    description:
+      'This command will look for the guild with the [guild] id and the channel in that guild with the [channel] id. If the guild and its channel are found, the command will send the [message] to that channel. This command is locked to the OWNER_ID account to prevent spam.',
+    parameters: '[guild] [channel] [message]',
   },
   {
     name: 'fact',
@@ -355,6 +356,12 @@ export const manCommands: manCommandInt[] = [
     description:
       "This command returns a message embed about the message author. The embed contains their nickname, full username, account creation date, date they joined the server, roles they have, and their avatar. Optionally pass a user mention as [@username] to retrieve an embed containing that user's information instead.",
     parameters: '[?@username]',
+  },
+  {
+    name: 'username',
+    description:
+      'This command generates a DigitalOcean themed username, courtesy of MattIPv4. Optionally pass a number for [length] to limit the length of the username (the default value is 30).',
+    parameters: '[?length]',
   },
   {
     name: 'warn',
