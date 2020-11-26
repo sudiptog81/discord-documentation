@@ -317,7 +317,7 @@ export const manCommands: manCommandInt[] = [
   {
     name: 'support',
     description:
-      'This command will return an embed with a link to the support server and documentation page.',
+      'This command will return an embed with a link to the Discord server and documentation page.',
   },
   {
     name: 'sus',
@@ -353,7 +353,7 @@ export const manCommands: manCommandInt[] = [
   {
     name: 'user',
     description:
-      "This command returns a message embed about the message author. The embed contains their nickname, full username, account creation date, online status, date they joined the server, roles they have, and their avatar. Optionally pass a user mention as [@username] to retrieve an embed containing that user's information instead.",
+      "This command returns a message embed about the message author. The embed contains their nickname, full username, account creation date, date they joined the server, roles they have, and their avatar. Optionally pass a user mention as [@username] to retrieve an embed containing that user's information instead.",
     parameters: '[?@username]',
   },
   {

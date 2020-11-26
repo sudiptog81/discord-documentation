@@ -49,12 +49,12 @@ export const envVariables: envVariableInterface[] = [
   },
   {
     name: 'WH_ID',
-    optional: 'OPTIONAL',
-    description: 'This is the ID for the Discord webhook.',
+    optional: 'RECOMMENDED',
+    description: 'This is the ID for the Discord webhook. The bot will log when it goes online, connects to the database, and any time a server has an error. This is not a required value, but highly recommended.',
   },
   {
     name: 'WH_TOKEN',
-    optional: 'OPTIONAL',
-    description: 'This is the token for the Discord webhook.',
+    optional: 'RECOMMENDED',
+    description: 'This is the token for the Discord webhook. The bot will log when it goes online, connects to the database, and any time a server has an error. This is not a required value, but highly recommended.',
   },
 ];
