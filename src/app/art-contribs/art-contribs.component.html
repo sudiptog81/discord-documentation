@@ -1,0 +1,39 @@
+<h1>Contributing Art for the Bot</h1>
+<p>
+  The bot's <code>art</code> command returns a random image of Becca provided by
+  a generous contributor. If you are interested in providing art, please follow
+  these instructions!
+</p>
+<p>
+  First, upload the image to Becca's code. The file should go in the `./img`
+  folder. Name your file <code>yourname#.ext</code>, where "yourname" is your
+  name or username (no spaces!), # is the number of art pieces you have
+  contributed (so if this is your first, use 1), and "ext" is the file
+  extension.
+</p>
+<p>
+  Then head to the bot's code and find the file located at
+  `./src/utils/commands/artList.ts`. This is where you will add your art to the
+  bot's command. At the bottom of the file, <em>just before</em> the closing
+  <code>]</code> symbol, add the following code:
+</p>
+<pre><code>
+{{ '{' }}
+  file_name: "The file name from above.",
+  artist: "Your name or username.",
+  artist_url: "Your homepage link.",
+{{ '}' }},
+</code></pre>
+<p>
+  Be sure to replace the values with the correct information. Once this is done,
+  you should submit a pull request as documented in
+  <a routerLink="/contribute">the contributing instructions</a>.
+</p>
+<p>
+  If you have questions, get stuck, or would rather just send the art directly,
+  you may contact us at our
+  <a href="http://chat.nhcarrigan.com" target="_blank" rel="noopener noreferrer"
+    >Discord Server</a
+  >
+  and we will be more than happy to assist!
+</p>
