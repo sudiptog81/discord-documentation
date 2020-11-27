@@ -7,12 +7,12 @@ export const configCommands: configCommandInterface[] = [
   {
     call: 'becca!config set prefix [prefix]',
     result:
-      'This command determines what symbol the bot looks for to trigger a command. The default is becca!, but you may change this to whatever you wish. Note that uppercase characters will be stored as lowercase, to allow the bot to respond to either casing.',
+      'This command determines what symbol Becca looks for to trigger a command. The default is becca!, but you may change this to whatever you wish. Note that uppercase characters will be stored as lowercase, to allow Becca to respond to either casing.',
   },
   {
     call: 'becca!config set log_channel [#channel]',
     result:
-      'This command determines the name of the channel where the bot should log things like deleted messages, and kick/ban instances.',
+      'This command determines the name of the channel where Becca should log things like deleted messages, and kick/ban instances.',
   },
   {
     call: 'becca!config set welcome_channel [#channel]',
@@ -32,12 +32,12 @@ export const configCommands: configCommandInterface[] = [
   {
     call: 'becca!config set hearts [@user]',
     result:
-      'This command adds the id of the user mentioned to the hearts list - the bot automatically add a heart react to the messages of that user. If that user is already set to receive hearts, the bot will remove that user instead.',
+      'This command adds the id of the user mentioned to the hearts list - Becca automatically adds a heart react to the messages of that user. If that user is already set to receive hearts, she will remove that user instead.',
   },
   {
     call: 'becca!config set blocked [@user]',
     result:
-      'This command adds the id of the user mentioned to the blocked list. The bot will refuse command access to users in the block list. If the user is already present, the bot will remove them instead.',
+      'This command adds the id of the user mentioned to the blocked list. Becca will refuse command access to users in the block list. If the user is already present, she will remove them instead.',
   },
   {
     call: 'becca!config set thanks ["on"/"off"]',
