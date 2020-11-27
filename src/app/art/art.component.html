@@ -1,0 +1,17 @@
+<h1>Becca's Art!</h1>
+<div class="grid-container">
+  <div class="grid-box" *ngFor="let art of artList">
+    <a href="../../assets/img/art/{{ art.file_name }}" target="_blank"
+      ><img class="grid-image" src="../../assets/img/art/{{ art.file_name }}"
+    /></a>
+    <hr />
+    <p>
+      <a
+        href="{{ art.artist_url }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        >{{ art.artist }}</a
+      >
+    </p>
+  </div>
+</div>

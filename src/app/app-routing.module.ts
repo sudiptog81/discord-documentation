@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ArtContribsComponent } from './art-contribs/art-contribs.component';
+import { ArtComponent } from './art/art.component';
 import { AutoCommandComponent } from './auto-command/auto-command.component';
 import { BotConfigComponent } from './bot-config/bot-config.component';
 import { BotDeployComponent } from './bot-deploy/bot-deploy.component';
@@ -27,6 +29,8 @@ const routes: Routes = [
   { path: 'new-cmd', component: NewCommandComponent },
   { path: 'trouble', component: TroubleComponent },
   { path: 'privacy', component: PrivacyComponent },
+  { path: 'art-contribs', component: ArtContribsComponent },
+  { path: 'art', component: ArtComponent },
 ];
 
 @NgModule({

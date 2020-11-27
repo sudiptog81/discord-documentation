@@ -16,6 +16,8 @@ import { ContributeComponent } from './contribute/contribute.component';
 import { NewCommandComponent } from './new-command/new-command.component';
 import { TroubleComponent } from './trouble/trouble.component';
 import { PrivacyComponent } from './privacy/privacy.component';
+import { ArtContribsComponent } from './art-contribs/art-contribs.component';
+import { ArtComponent } from './art/art.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { PrivacyComponent } from './privacy/privacy.component';
     NewCommandComponent,
     TroubleComponent,
     PrivacyComponent,
+    ArtContribsComponent,
+    ArtComponent,
   ],
   imports: [
     BrowserModule,
