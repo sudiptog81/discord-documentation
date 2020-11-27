@@ -8,7 +8,7 @@ export const manCommands: manCommandInt[] = [
   {
     name: 'about',
     description:
-      "This command generates an embed message that provides a link to the bot source code, the date the bot was created, the number of commands the bot can perform, and the bot's favourite colour. The embed is sent to the channel the command message came from.",
+      "This command generates an embed message that provides a link to Becca's source code, the date she was created, the number of commands she can perform, and her favourite colour. The embed is sent to the channel the command message came from.",
   },
   {
     name: 'adventure',
@@ -24,7 +24,7 @@ export const manCommands: manCommandInt[] = [
   {
     name: 'ban',
     description:
-      'This command requires that the user sending it has the "Ban Members" permission. If the permission is missing, the bot responds with a notice that the user lacks permission. Otherwise, the command bans [@username] from the server. If the becca!config set logs_channel [#channel] option is set, the bot will send an embed to that channel. The embed will contain the name of the user performing the ban, the name of the banned user, and the reason provided. If no reason was provided, the embed will state that. Because of the permanent nature of bans, the bot will require confirmation before taking action.',
+      'This command requires that the user sending it has the "Ban Members" permission. If the permission is missing, Becca responds with a notice that the user lacks permission. Otherwise, the command bans [@username] from the server. If the becca!config set logs_channel [#channel] option is set, Becca will send an embed to that channel. The embed will contain the name of the user performing the ban, the name of the banned user, and the reason provided. If no reason was provided, the embed will state that. Because of the permanent nature of bans, she will require confirmation before taking action.',
     parameters: '[@username] [?reason]',
   },
   {
@@ -40,13 +40,13 @@ export const manCommands: manCommandInt[] = [
   {
     name: 'challenge',
     description:
-      'This command walks the user through a series of programming based challenge questions. To begin a new challenge, pass start as the [action]. The bot will return a challenge embed, which includes the question and challenge id. To solve the challenge, pass solve as the [action], with the challenge [id] and the [answer]. The bot will respond with either correct or incorrect, and an explanation. If correct, the bot provides the [id] for the next challenge. To get that challenge, pass request as the [action] with the new [id].',
+      'This command walks the user through a series of programming based challenge questions. To begin a new challenge, pass start as the [action]. Becca will return a challenge embed, which includes the question and challenge id. To solve the challenge, pass solve as the [action], with the challenge [id] and the [answer]. She will respond with either correct or incorrect, and an explanation. If correct, she provides the [id] for the next challenge. To get that challenge, pass request as the [action] with the new [id].',
     parameters: '[action (start/request/solve)] [?id] [?answer]',
   },
   {
     name: 'close',
     description:
-      'This command requires the user to have the "Kick Members" permission. If the permission is missing, the bot responds with a notice that the user lacks permission to use this command. Otherwise, the bot deletes the channel this command is used in, and logs the deletion to the becca!config set channel logs [#channel] option.',
+      'This command requires the user to have the "Kick Members" permission. If the permission is missing, Becca responds with a notice that the user lacks permission to use this command. Otherwise, she deletes the channel this command is used in, and logs the deletion to the becca!config set channel logs [#channel] option.',
   },
   {
     name: 'compliment',
@@ -56,13 +56,13 @@ export const manCommands: manCommandInt[] = [
   {
     name: 'config',
     description:
-      'This command lists the current bot configuration, for logging channels etc. For setting these values, please view the <a routerLink="/config">Configure Your Bot</a> section. This command is locked to moderators with the Manage Server permission. The Discord user associated with the process.env.OWNER_ID can access this command regardless of permissions, but should only do so for the sake of development purposes.',
+      'This command lists the current server configuration, for logging channels etc. For setting these values, please view the <a routerLink="/config">Configure Your Server</a> section. This command is locked to moderators with the Manage Server permission. The Discord user associated with the process.env.OWNER_ID can access this command regardless of permissions, but should only do so for the sake of development purposes.',
     parameters: '[?set] [?key] [?value]',
   },
   {
     name: 'contributors',
     description:
-      'This command returns an embed with a list of recongised contributors to the bot code. Thank you all for your efforts to make Becca Lyria great!',
+      "This command returns an embed with a list of recognised contributors to Becca's code. Thank you all for your efforts to make Becca Lyria great!",
   },
   {
     name: 'dnd',
@@ -112,7 +112,7 @@ export const manCommands: manCommandInt[] = [
   {
     name: 'fortune',
     description:
-      'This command will send a message to the channel the command came from. The message will contain a random fortune cookie quote from the list provided in the bot code.',
+      'This command will send a message to the channel the command came from. The message will contain a random fortune cookie quote from the list provided in Becca\'s code.',
   },
   {
     name: 'github',
@@ -123,7 +123,7 @@ export const manCommands: manCommandInt[] = [
   {
     name: 'guess',
     description:
-      'This command starts a game of Guess the Number. The bot will generate a number between 1 and 1000. Players have ten seconds to submit guesses, then the bot will announce the winner based on the closest guess.',
+      'This command starts a game of Guess the Number. Becca will generate a number between 1 and 1000. Players have ten seconds to submit guesses, then she will announce the winner based on the closest guess.',
   },
   {
     name: 'habitica',
@@ -134,7 +134,7 @@ export const manCommands: manCommandInt[] = [
   {
     name: 'help',
     description:
-      'This command returns an embed containing a list of available commands. If the optional [command] parameter is passed, the bot will return the description for that command (or an error, if that command does not exist).',
+      'This command returns an embed containing a list of available commands. If the optional [command] parameter is passed, Becca will return the description for that command (or an error, if that command does not exist).',
     parameters: '[?command]',
   },
   {
@@ -163,7 +163,7 @@ export const manCommands: manCommandInt[] = [
   {
     name: 'invite',
     description:
-      'This command returns an embed containing the link to invite the bot to a Discord server.',
+      'This command returns an embed containing the link to invite Becca to a Discord server.',
   },
   {
     name: 'jobs',
@@ -178,7 +178,7 @@ export const manCommands: manCommandInt[] = [
   {
     name: 'kick',
     description:
-      'This command requires that the user sending it has the "Kick Members" permission. If the permission is missing, the bot responds with a notice that the user lacks permission. Otherwise, the command kicks [@username] from the server. If the becca!config set channel logs [#channel] option is set, the bot will send an embed to that channel. The embed will contain the name of the user performing the kick, the name of the kicked user, and the reason provided. If no reason was provided, the embed will state that.',
+      'This command requires that the user sending it has the "Kick Members" permission. If the permission is missing, Becca responds with a notice that the user lacks permission. Otherwise, the command kicks [@username] from the server. If the becca!config set channel logs [#channel] option is set, she will send an embed to that channel. The embed will contain the name of the user performing the kick, the name of the kicked user, and the reason provided. If no reason was provided, the embed will state that.',
     parameters: '[@username] [?reason]',
   },
   {
@@ -189,7 +189,7 @@ export const manCommands: manCommandInt[] = [
   {
     name: 'leave',
     description:
-      'Pass a server ID value for server, and the bot will leave that server. This command is locked to the Discord user associated with the process.env.OWNER_ID value.',
+      'Pass a server ID value for server, and Becca will leave that server. This command is locked to the Discord user associated with the process.env.OWNER_ID value.',
     parameters: '[server]',
   },
   {
@@ -201,29 +201,29 @@ export const manCommands: manCommandInt[] = [
   {
     name: 'list',
     description:
-      'This command returns embed(s) containing a list of the servers the bot is in, and the owner information for each server.',
+      'This command returns embed(s) containing a list of the servers Becca is in, and the owner information for each server.',
   },
   {
     name: 'listeners',
     description:
-      'This command returns an embed containing information on the various listener type features the bot offers.',
+      'This command returns an embed containing information on the various listener type features Becca offers.',
   },
   {
     name: 'magic',
     description:
-      'This command querys the Magic: The Gathering API for cards that match [cardname]. The bot will send a message to the channel the message contains to confirm the command was received and the search was started. For each card it finds, the bot sends an embed containing the card information. The bot sends a notification after 30 seconds, when the search is complete. NOTE: The API can be slow to respond so this command may take some time.',
+      'This command querys the Magic: The Gathering API for cards that match [cardname]. Becca will send a message to the channel the message contains to confirm the command was received and the search was started. For each card she finds, Becca sends an embed containing the card information. She sends a notification after 30 seconds, when the search is complete. NOTE: The API can be slow to respond so this command may take some time.',
     parameters: '[cardname]',
   },
   {
     name: 'maths',
     description:
-      'This command takes the [problem] and evaluates it, returning the calculated result. If the expression is invalid, the bot will return an error.',
+      'This command takes the [problem] and evaluates it, returning the calculated result. If the expression is invalid, Becca will return an error.',
     parameters: '[problem]',
   },
   {
     name: 'maze',
     description:
-      'This command walks the user through a series of programming based challenge questions. To get a maze, pass request as the [action]. The bot will return a maze embed, which includes information about the maze and its id. To solve the maze, pass solve as the [action], with the maze [id] and the [answer]. The [answer] should be a null-space string of cardinal directions ("NEEESSWN"). The bot will respond with either correct or incorrect, and an explanation.',
+      'This command walks the user through a series of programming based challenge questions. To get a maze, pass request as the [action]. Becca will return a maze embed, which includes information about the maze and its id. To solve the maze, pass solve as the [action], with the maze [id] and the [answer]. The [answer] should be a null-space string of cardinal directions ("NEEESSWN"). Becca will respond with either correct or incorrect, and an explanation.',
     parameters: '[action request/solve] [?id] [?direction]',
   },
   {
@@ -240,24 +240,24 @@ export const manCommands: manCommandInt[] = [
   {
     name: 'ping',
     description:
-      'This command will generate the latency for the bot. The bot will send a response back with the communication time in milliseconds.',
+      'This command will generate the latency for Becca. She will send a response back with the communication time in milliseconds.',
   },
   {
     name: 'pokename',
     description:
-      "This command querys the Pokemon API. If the bot finds a Pokemon that matches the name provided, it will send an embed containing the Pokemon's name, number, and image. If the bot cannot find a Pokemon, it will send a message notice.",
+      "This command querys the Pokemon API. If Becca finds a Pokemon that matches the name provided, she will send an embed containing the Pokemon's name, number, and image. If she cannot find a Pokemon, she will send a message notice.",
     parameters: '[name]',
   },
   {
     name: 'pokenum',
     description:
-      'This command querys the Pokemon API. If the bot finds a Pokemon that matches the number provided, it will send an embed containing the Pokemons name, number, and image. If no Pokemon is found, the bot will send a message notice. As an alternative, sending "random" instead of a number will cause the bot to return a random Pokemon.',
+      'This command querys the Pokemon API. If Becca finds a Pokemon that matches the number provided, she will send an embed containing the Pokemon\'s name, number, and image. If no Pokemon is found, she will send a message notice. As an alternative, sending "random" instead of a number will cause Becca to return a random Pokemon.',
     parameters: '[number]',
   },
   {
     name: 'privacy',
     description:
-      "This command provides information on the bot's privacy policy.",
+      "This command provides information on Becca's privacy policy.",
   },
   {
     name: 'profile',
@@ -266,19 +266,19 @@ export const manCommands: manCommandInt[] = [
   },
   {
     name: 'restrict',
-    description: `This command requires that the user sending it has the "Kick Members" permission. If the permission is missing, the bot responds with a notice that the user lacks permission. Otherwise, the command will set the [@username]'s role provided in the becca!config set role restricted [@role] option, and remove all other roles. If the role option is not set, the bot will send a message to notify the user. If the becca!config set channel logs [#channel] option is not set, the bot will send a message to notify the user. Otherwise, the bot will send an embed to the log channel. The embed will contain the name of the user performing the command, the name of the restricted user, and the reason provided. If no reason was provided, the embed will state that. The bot will then create a channel under the Appeals category (if Appeals category does not exists, the bot will create one with the correct permissions), which only the channel moderators and the restricted user can access.`,
+    description: `This command requires that the user sending it has the "Kick Members" permission. If the permission is missing, Becca responds with a notice that the user lacks permission. Otherwise, the command will set the [@username]'s role provided in the becca!config set role restricted [@role] option, and remove all other roles. If the role option is not set, Becca will send a message to notify the user. If the becca!config set channel logs [#channel] option is not set, Becca will send a message to notify the user. Otherwise, she will send an embed to the log channel. The embed will contain the name of the user performing the command, the name of the restricted user, and the reason provided. If no reason was provided, the embed will state that. Becca will then create a channel under the Appeals category (if Appeals category does not exists, Becca will create one with the correct permissions), which only the channel moderators and the restricted user can access.`,
     parameters: '[@username] [?reason]',
   },
   {
     name: 'riddle',
     description:
-      'This command walks the user through a series of programming based challenge questions. To begin a new challenge, pass start as the [action]. The bot will return a riddle embed, which includes the question and riddle id. To solve the riddle, pass solve as the [action], with the riddle [id] and the [answer]. The bot will respond with either correct or incorrect, and an explanation. If correct, the bot provides the [id] for the next riddle. To get that challenge, pass request as the [action] with the new [id].',
+      'This command walks the user through a series of programming based challenge questions. To begin a new challenge, pass start as the [action]. Becca will return a riddle embed, which includes the question and riddle id. To solve the riddle, pass solve as the [action], with the riddle [id] and the [answer]. Becca will respond with either correct or incorrect, and an explanation. If correct, she provides the [id] for the next riddle. To get that challenge, pass request as the [action] with the new [id].',
     parameters: '[action (start/request/solve)] [?id] [?answer]',
   },
   {
     name: 'role',
     description:
-      'This command accepts the name of a role as [role]. If that role exists and is in the server self_role list, the bot will add or remove the role from the user. Optionally pass "listall" instead and receive a list of self-assignable roles for that server.',
+      'This command accepts the name of a role as [role]. If that role exists and is in the server self_role list, Becca will add or remove the role from the user. Optionally pass "listall" instead and receive a list of self-assignable roles for that server.',
     parameters: '[role]',
   },
   {
@@ -333,17 +333,17 @@ export const manCommands: manCommandInt[] = [
   {
     name: 'trivia',
     description:
-      'This command fetches a trivia question and returns an embed. The question is multiple choice, and the bot will listen for answers to the question. After 30 seconds, the bot will display the correct answer and announce any winners.',
+      'This command fetches a trivia question and returns an embed. The question is multiple choice, and Becca will listen for answers to the question. After 30 seconds, she will display the correct answer and announce any winners.',
   },
   {
     name: 'unrestrict',
-    description: `This command requires that the user sending it has the "Kick Members" permission. If the permission is missing, the bot responds with a notice that the user lacks permission. Otherwise, the command will remove the [@username]'s role provided in the silence_role option. If the role option is not set, the bot will send a message to notify the user. If the becca!config set channel logs [#channel] option is set, the bot will send an embed to that channel. The embed will contain the name of the user performing the command, the name of the unrestricted user, and the reason provided. If no reason was provided, the embed will state that.`,
+    description: `This command requires that the user sending it has the "Kick Members" permission. If the permission is missing, Becca responds with a notice that the user lacks permission. Otherwise, the command will remove the [@username]'s role provided in the silence_role option. If the role option is not set, Becca will send a message to notify the user. If the becca!config set channel logs [#channel] option is set, Becca will send an embed to that channel. The embed will contain the name of the user performing the command, the name of the unrestricted user, and the reason provided. If no reason was provided, the embed will state that.`,
     parameters: '[@username] [?reason]',
   },
   {
     name: 'uptime',
     description:
-      'This command returns the amount of time the bot has currently been awake.',
+      'This command returns the amount of time Becca has currently been awake.',
   },
   {
     name: 'usage',
@@ -365,7 +365,7 @@ export const manCommands: manCommandInt[] = [
   },
   {
     name: 'warn',
-    description: `This command requires that the user sending it has the "Kick Members" permission. If the permission is missing, the bot responds with a notice that the user lacks permission. Otherwise, the command will send a direct message to [@username] informing them that the command author has warned them, and providing the reason if given. If the becca!config set channel logs [#channel] option is set, the bot will send an embed to that channel. The embed will contain the name of the user performing the warning, the name of the warned user, and the reason provided. If no reason was provided, the embed will state that.`,
+    description: `This command requires that the user sending it has the "Kick Members" permission. If the permission is missing, Becca responds with a notice that the user lacks permission. Otherwise, the command will send a direct message to [@username] informing them that the command author has warned them, and providing the reason if given. If the becca!config set channel logs [#channel] option is set, Becca will send an embed to that channel. The embed will contain the name of the user performing the warning, the name of the warned user, and the reason provided. If no reason was provided, the embed will state that.`,
     parameters: '[@username] [?reason]',
   },
   {

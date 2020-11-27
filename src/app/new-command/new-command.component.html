@@ -40,7 +40,7 @@
       import CommandInt from "@Interfaces/CommandInt";
       const messageRepeater: CommandInt = {{'{'}}
         name: "messageRepeater",
-        description: "Send a message to the current channel using the bot.",
+        description: "Send a message to the current channel using Becca.",
         parameters: ["&lt;message&gt;: Message to send."],
         run: async (message) => {{'{'}}
           try {{'{'}}
@@ -54,20 +54,20 @@
       {{'}'}};
       export default messageRepeater;
     </code></pre>
-    Save the file, start the bot (You can use
+    Save the file, start Becca (You can use
     <code>npm run dev</code> instead of
     <code>npm run build && npm start</code>), then in the chat write
-    <code>{{'{'}}prefix{{'}'}}messageRepeater</code> and in the console you will see
-    <code>Message repeater command called!</code>.
+    <code>{{ "{" }}prefix{{ "}" }}messageRepeater</code> and in the console you
+    will see <code>Message repeater command called!</code>.
   </li>
   <li>
     So, to this moment you have created a simple command that shows you a
     message in the console, but it does not do what we want. First, replace the
     <code>console.log</code> line with
-    <code>const {{'{'}} channel, commandArguments {{'}'}} = message;</code>. With this you
-    will get the arguments of the command, or the content of the message split
-    by whitespaces and ignoring the first element (The first element is the
-    command name), and the channel of the message. Now, add
+    <code>const {{ "{" }} channel, commandArguments {{ "}" }} = message;</code>.
+    With this you will get the arguments of the command, or the content of the
+    message split by whitespaces and ignoring the first element (The first
+    element is the command name), and the channel of the message. Now, add
     <code>const msg = commandArguments.join(" ");</code> to join the arguments
     with whitespaces to get the parameter that we require (Message).
   </li>
@@ -75,11 +75,12 @@
     After you get the message, you need to send it back to the current channel.
     To do this, add this line:
     <code>await channel.send(msg);</code>. Now you can test the command! If you
-    write <code>{{'{'}}prefix{{'}'}}messageRepeater Hello</code> in the channel, the bot
-    will send <code>Hello</code> back to the current channel. But what will
-    happen if you send <code>{{'{'}}prefix{{'}'}}messageRepeater</code>? You will get an
-    error in the console because the bot cannot send an empty message. So how do
-    you fix it? You need to verify the command arguments have a length before
+    write <code>{{ "{" }}prefix{{ "}" }}messageRepeater Hello</code> in the
+    channel, Becca will send <code>Hello</code> back to the current channel.
+    But what will happen if you send
+    <code>{{ "{" }}prefix{{ "}" }}messageRepeater</code>? You will get an error
+    in the console because Becca cannot send an empty message. So how do you
+    fix it? You need to verify the command arguments have a length before
     sending the message. Add these lines below before the
     <code>await channel.send(msg);</code>:
     <pre><code style="white-space: pre-wrap;">
@@ -88,11 +89,11 @@
         return;
       {{'}'}}
     </code></pre>
-    Now when you call the command with an empty message the bot will respond
+    Now when you call the command with an empty message Becca will respond
     with a message saying you need to enter a message.
   </li>
   <li>
-    Congratulations! You have written your first command for the bot. We hope
+    Congratulations! You have written your first command for Becca. We hope
     you are motivated to contribute to the project with more commands or fixes.
   </li>
 </ul>
