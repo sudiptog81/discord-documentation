@@ -17,7 +17,7 @@ export const autoCommands: autoCommandInt[] = [
   {
     name: 'Deleted Message Log',
     description:
-      "If a valid channel is provided for the becca!config set channel logs [#channel] setting, the bot will send an embed message to that channel when someone deletes a message. The embed will contain the deleted message's author and content.",
+      "If a valid channel is provided for the becca!config set channel logs [#channel] setting, the bot will send an embed message to that channel when someone deletes a message. The embed will contain the deleted message's author and content. The bot will also log deleted message embeds or attachments.",
   },
   {
     name: 'Levelling System',
