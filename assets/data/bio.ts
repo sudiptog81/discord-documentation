@@ -7,7 +7,7 @@ export const BioData: BioInt[] = [
   {
     category: 'Introduction',
     data:
-      "Becca Lyria is a young female wizard. Fuelled primarily by the pursuit of knowledge, Becca travels the multiverse always searching for new things to learn. She's known for being friendly to those she meets, but always keeping them at a distance. Aside from Rosalia, Becca has no close, trusted companions. She has been seen travelling with others, but only when the situation calls for it.",
+      "Becca Lyria is a young female wizard. Fuelled primarily by the pursuit of knowledge, Becca travels the multiverse always searching for new things to learn. She's known for being friendly to those she meets, but always keeping them at a distance. Aside from Rosalia, Becca has no close, trusted companions. She has been seen travelling with others, but only when the situation calls for it. Becca's true age is unknown, but her physical age remains 21.",
   },
   {
     category: 'History',
