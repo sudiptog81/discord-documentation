@@ -28,6 +28,11 @@ export const manCommands: manCommandInt[] = [
     parameters: '[@username] [?reason]',
   },
   {
+    name: 'becca',
+    description:
+      "This command returns an embed containing information on Becca's character.",
+  },
+  {
     name: 'bugreport',
     description:
       'This command returns an embed containing a link to the GitHub issue selection page.',
@@ -112,7 +117,7 @@ export const manCommands: manCommandInt[] = [
   {
     name: 'fortune',
     description:
-      'This command will send a message to the channel the command came from. The message will contain a random fortune cookie quote from the list provided in Becca\'s code.',
+      "This command will send a message to the channel the command came from. The message will contain a random fortune cookie quote from the list provided in Becca's code.",
   },
   {
     name: 'github',
@@ -256,8 +261,7 @@ export const manCommands: manCommandInt[] = [
   },
   {
     name: 'privacy',
-    description:
-      "This command provides information on Becca's privacy policy.",
+    description: "This command provides information on Becca's privacy policy.",
   },
   {
     name: 'profile',
