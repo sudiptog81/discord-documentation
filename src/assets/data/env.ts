@@ -57,4 +57,22 @@ export const envVariables: envVariableInterface[] = [
     optional: 'RECOMMENDED',
     description: 'This is the token for the Discord webhook. Becca will log when it goes online, connects to the database, and any time a server has an error. This is not a required value, but highly recommended.',
   },
+  {
+    name: 'BECCA_YES',
+    optional: 'OPTIONAL',
+    description: 'This is the ID or Unicode character for the emoji Becca will react with on successful command calls.'
+  }, {
+    name: 'BECCA_NO',
+    optional: 'OPTIONAL',
+    description: 'This is the ID or Unicode character for the emoji Becca will react with on failed/errored command calls.'
+  }, {
+    name: 'BECCA_LOVE',
+    optional: 'OPTIONAL',
+    description: 'This is the ID or Unicode character for the emoji Becca will use for the hearts listener.'
+  },
+  {
+    name: 'BECCA_THINK',
+    optional: 'OPTIONAL',
+    description: 'This is the ID or Unicode character for the emoji Becca will react with when she is @mentioned.'
+  }
 ];

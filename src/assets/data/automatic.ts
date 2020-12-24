@@ -32,7 +32,7 @@ export const autoCommands: autoCommandInt[] = [
   {
     name: 'Heart Reactions',
     description:
-      "Becca will check the ID of each message's author. If the ID is in the array provided in the becca!config add/remove hearts [@user] config setting, she will add a random heart react to the message.",
+      "Becca will check the ID of each message's author. If the ID is in the array provided in the becca!config add/remove hearts [@user] config setting, she will add the BECCA_LOVE react to the message.",
   },
   {
     name: 'Thank You Messages',
