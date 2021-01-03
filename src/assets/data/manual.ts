@@ -264,11 +264,6 @@ export const manCommands: manCommandInt[] = [
     description: "This command provides information on Becca's privacy policy.",
   },
   {
-    name: 'profile',
-    description: `This command uses the database to create and store social media profile cards for a user. Calling the command with no parameters will return your profile card. Calling the command with an [@username] mention will return that user's profile card. Calling the command with a [website] and [url] will add that link to your profile card under that website name. Calling the command with [website] "remove" will remove the [website] value from your profile card.`,
-    parameters: '[?website] [?url] [?@username]',
-  },
-  {
     name: 'restrict',
     description: `This command requires that the user sending it has the "Kick Members" permission. If the permission is missing, Becca responds with a notice that the user lacks permission. Otherwise, the command will set the [@username]'s role provided in the becca!config set role restricted [@role] option, and remove all other roles. If the role option is not set, Becca will send a message to notify the user. If the becca!config set channel logs [#channel] option is not set, Becca will send a message to notify the user. Otherwise, she will send an embed to the log channel. The embed will contain the name of the user performing the command, the name of the restricted user, and the reason provided. If no reason was provided, the embed will state that. Becca will then create a channel under the Appeals category (if Appeals category does not exists, Becca will create one with the correct permissions), which only the channel moderators and the restricted user can access.`,
     parameters: '[@username] [?reason]',
@@ -316,7 +311,7 @@ export const manCommands: manCommandInt[] = [
   {
     name: 'star',
     description:
-      "This command sends a message embed to the [@username]'s direct messages. The embed contains the command author's name, the [reason] if provided, and a shiny gold star!",
+      "This command sends a message embed to channel. The embed contains the command author's name, the [reason] if provided, and a shiny gold star!",
     parameters: '[@username] [?reason]',
   },
   {
