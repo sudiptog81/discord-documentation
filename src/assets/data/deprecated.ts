@@ -31,4 +31,9 @@ export const depCommands: depCommandInt[] = [
     version: '7.1.0',
     reason: 'removed as blocking users became server-specific',
   },
+  {
+    name: 'profile',
+    version: '9.0.3',
+    reason: 'Type definition conflicts with mongoose, and lack of usage.'
+  }
 ];
