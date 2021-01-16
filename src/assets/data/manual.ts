@@ -149,23 +149,6 @@ export const manCommands: manCommandInt[] = [
     parameters: '[?command]',
   },
   {
-    name: 'hpchar',
-    description:
-      'This command returns an embed containing information on the [name] Harry Potter character.',
-    parameters: '[name]',
-  },
-  {
-    name: 'hpsort',
-    description:
-      'This command randomly sorts you into a Hogwarts house and returns an embed containing information on that house.',
-  },
-  {
-    name: 'hpspell',
-    description:
-      'This command returns an embed containing information on the [name] Harry Potter spell. Alternatively, pass "random" as the value for [name] to get a random spell.',
-    parameters: '[name]',
-  },
-  {
     name: 'http',
     description:
       'This command accesses the HTTP Cat API and returns a cat photo for the given [status].',
