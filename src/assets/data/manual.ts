@@ -38,6 +38,12 @@ export const manCommands: manCommandInt[] = [
       'This command returns an embed containing a link to the GitHub issue selection page.',
   },
   {
+    name: 'caniuse',
+    description:
+      'This command returns an embed containing the "caniuse" data on the specific programming <feature>.',
+    parameters: '[feature]',
+  },
+  {
     name: 'cat',
     description:
       'This command sends a random string of letters of a random length, to simulate a cat walking across your keyboard.',
