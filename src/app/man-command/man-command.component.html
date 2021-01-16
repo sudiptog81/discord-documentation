@@ -17,6 +17,17 @@
     - <span [innerHTML]="command.description"></span>
   </li>
 </ul>
+<h2>Emote Commands</h2>
+<p>These commands are used for emote embeds.</p>
+<ul>
+  <li *ngFor="let command of emoteCommands">
+    <code
+      >{{ command.name
+      }}<span *ngIf="command.parameters"> {{ command.parameters }}</span></code
+    >
+    - <span [innerHTML]="command.description"></span>
+  </li>
+</ul>
 <h2>Game Commands</h2>
 <p>These commands are related to games of some sort, or are just playful commands.</p>
 <ul>

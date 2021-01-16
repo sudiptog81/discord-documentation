@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { botCommands } from 'src/assets/data/manual-commands/botCommands';
+import { emoteCommands } from 'src/assets/data/manual-commands/emoteCommands';
 import { gameCommands } from 'src/assets/data/manual-commands/gameCommands';
 import { generalCommands } from 'src/assets/data/manual-commands/generalCommands';
 import { moderationCommands } from 'src/assets/data/manual-commands/moderationCommands';
@@ -13,12 +14,14 @@ import { CommandInt } from 'src/assets/interfaces/CommandInt';
 export class ManCommandComponent implements OnInit {
   constructor() {}
   botCommands: CommandInt[] = [];
+  emoteCommands: CommandInt[] = [];
   gameCommands: CommandInt[] = [];
   generalCommands: CommandInt[] = [];
   moderationCommands: CommandInt[] = [];
   serverCommands: CommandInt[] = [];
   ngOnInit(): void {
     this.botCommands = botCommands;
+    this.emoteCommands = emoteCommands;
     this.gameCommands = gameCommands;
     this.generalCommands = generalCommands;
     this.moderationCommands = moderationCommands;
