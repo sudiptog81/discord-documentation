@@ -34,6 +34,21 @@ export const depCommands: depCommandInt[] = [
   {
     name: 'profile',
     version: '9.0.3',
-    reason: 'Type definition conflicts with mongoose, and lack of usage.'
-  }
+    reason: 'Type definition conflicts with mongoose, and lack of usage.',
+  },
+  {
+    name: 'hpchar',
+    version: '9.2.0',
+    reason: 'API no longer available.',
+  },
+  {
+    name: 'hpsort',
+    version: '9.2.0',
+    reason: 'API no longer available.',
+  },
+  {
+    name: 'hpspell',
+    version: '9.2.0',
+    reason: 'API no longer available.',
+  },
 ];
