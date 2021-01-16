@@ -23,6 +23,10 @@
     <code>&lt;action (action-1/action-2)&gt;</code>.
   </li>
   <li>
+    <code>category</code> - This property sets the category for the command.
+    Available options are "bot", "game", "general", "mod", and "server".
+  </li>
+  <li>
     <code>run</code> - This property is the action the command takes. In this
     you set what the command will do when called.
   </li>
@@ -42,6 +46,7 @@
         name: "messageRepeater",
         description: "Send a message to the current channel using Becca.",
         parameters: ["&lt;message&gt;: Message to send."],
+        category: "general",
         run: async (message) => {{'{'}}
           try {{'{'}}
             console.log("Message repeater command called!");
@@ -76,12 +81,12 @@
     To do this, add this line:
     <code>await channel.send(msg);</code>. Now you can test the command! If you
     write <code>{{ "{" }}prefix{{ "}" }}messageRepeater Hello</code> in the
-    channel, Becca will send <code>Hello</code> back to the current channel.
-    But what will happen if you send
+    channel, Becca will send <code>Hello</code> back to the current channel. But
+    what will happen if you send
     <code>{{ "{" }}prefix{{ "}" }}messageRepeater</code>? You will get an error
-    in the console because Becca cannot send an empty message. So how do you
-    fix it? You need to verify the command arguments have a length before
-    sending the message. Add these lines below before the
+    in the console because Becca cannot send an empty message. So how do you fix
+    it? You need to verify the command arguments have a length before sending
+    the message. Add these lines below before the
     <code>await channel.send(msg);</code>:
     <pre><code style="white-space: pre-wrap;">
       if (!msg.length) {{'{'}}
@@ -89,12 +94,12 @@
         return;
       {{'}'}}
     </code></pre>
-    Now when you call the command with an empty message Becca will respond
-    with a message saying you need to enter a message.
+    Now when you call the command with an empty message Becca will respond with
+    a message saying you need to enter a message.
   </li>
   <li>
-    Congratulations! You have written your first command for Becca. We hope
-    you are motivated to contribute to the project with more commands or fixes.
+    Congratulations! You have written your first command for Becca. We hope you
+    are motivated to contribute to the project with more commands or fixes.
   </li>
 </ul>
 <a class="page-btn" routerLink="/contribute">Prev Page</a>
