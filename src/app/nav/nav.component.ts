@@ -7,8 +7,8 @@ import { version } from '../../../package.json';
   styleUrls: ['./nav.component.css'],
 })
 export class NavComponent implements OnInit {
+  version = '0.0.0';
   constructor() {}
-  version: string = '0.0.0';
   ngOnInit(): void {
     this.version = version;
   }

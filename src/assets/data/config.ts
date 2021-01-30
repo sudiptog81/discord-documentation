@@ -1,9 +1,10 @@
-export interface configCommandInterface {
-  call: String;
-  result: String;
+/* eslint-disable max-len */
+export interface ConfigCommandInterface {
+  call: string;
+  result: string;
 }
 
-export const configCommands: configCommandInterface[] = [
+export const configCommands: ConfigCommandInterface[] = [
   {
     call: 'becca!config set prefix [prefix]',
     result:
@@ -21,13 +22,11 @@ export const configCommands: configCommandInterface[] = [
   },
   {
     call: 'becca!config set restricted_role [@role]',
-    result:
-      "This command sets the name of the Discord role your server uses to restrict a user's ability to send messages.",
+    result: `This command sets the name of the Discord role your server uses to restrict a user's ability to send messages.`,
   },
   {
     call: 'becca!config set moderator_role [@role]',
-    result:
-      "This command sets the name of your server's moderation role. This should be your lowest moderation level, as all moderators will need this role to see the suspended channels.",
+    result: `This command sets the name of your server's moderation role. This should be your lowest moderation level, as all moderators will need this role to see the suspended channels.`,
   },
   {
     call: 'becca!config set hearts [@user]',
@@ -40,17 +39,16 @@ export const configCommands: configCommandInterface[] = [
       'This command adds the id of the user mentioned to the blocked list. Becca will refuse command access to users in the block list. If the user is already present, she will remove them instead.',
   },
   {
-    call: 'becca!config set thanks ["on"/"off"]',
+    call: 'becca!config set thanks [`on`/`off`]',
     result: 'This command will turn the thanks listener on and off.',
   },
   {
-    call: 'becca!config set levels ["on"/"off"]',
+    call: 'becca!config set levels [`on`/`off`]',
     result: 'This command will turn the levels listener on and off.',
   },
   {
     call: 'becca!config set custom_welcome [message]',
-    result:
-      "This command will set a custom welcome message for your server. The value of [message] can be a standard sentence, and supports Discord markup - but must be kept under 1000 characters. Additionally, a couple of special strings will be replaced: {@username} will be replaced with the username of the new member, and {@servername} will be replaced with your server's name.",
+    result: `This command will set a custom welcome message for your server. The value of [message] can be a standard sentence, and supports Discord markup - but must be kept under 1000 characters. Additionally, a couple of special strings will be replaced: {@username} will be replaced with the username of the new member, and {@servername} will be replaced with your server's name.`,
   },
   {
     call: 'becca!config set self_roles [@role]',

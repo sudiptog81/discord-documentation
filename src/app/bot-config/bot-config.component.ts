@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { configCommandInterface, configCommands } from 'src/assets/data/config';
+import { ConfigCommandInterface, configCommands } from 'src/assets/data/config';
 
 @Component({
   selector: 'app-bot-config',
@@ -7,8 +7,8 @@ import { configCommandInterface, configCommands } from 'src/assets/data/config';
   styleUrls: ['./bot-config.component.css'],
 })
 export class BotConfigComponent implements OnInit {
+  configCalls: ConfigCommandInterface[] = [];
   constructor() {}
-  configCalls: configCommandInterface[] = [];
   ngOnInit(): void {
     this.configCalls = configCommands;
   }
