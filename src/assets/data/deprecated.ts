@@ -1,10 +1,10 @@
-export interface depCommandInt {
-  name: String;
-  version: String;
-  reason: String;
+export interface DepCommandInt {
+  name: string;
+  version: string;
+  reason: string;
 }
 
-export const depCommands: depCommandInt[] = [
+export const depCommands: DepCommandInt[] = [
   {
     name: 'purge',
     version: '6.9.1',

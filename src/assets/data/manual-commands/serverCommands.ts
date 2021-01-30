@@ -1,10 +1,11 @@
+/* eslint-disable max-len */
 import { CommandInt } from 'src/assets/interfaces/CommandInt';
 
 export const serverCommands: CommandInt[] = [
   {
     name: 'config',
     description:
-      'This command lists the current server configuration, for logging channels etc. For setting these values, please view the <a routerLink="/config">Configure Your Server</a> section. This command is locked to moderators with the Manage Server permission. The Discord user associated with the process.env.OWNER_ID can access this command regardless of permissions, but should only do so for the sake of development purposes.',
+      'This command lists the current server configuration, for logging channels etc. For setting these values, please view the <a routerLink=`/config`>Configure Your Server</a> section. This command is locked to moderators with the Manage Server permission. The Discord user associated with the process.env.OWNER_ID can access this command regardless of permissions, but should only do so for the sake of development purposes.',
     parameters: '[?set] [?key] [?value]',
   },
   {
@@ -15,8 +16,7 @@ export const serverCommands: CommandInt[] = [
   },
   {
     name: 'level',
-    description:
-      "This command sends an embed containing the [user]'s experience points and current level. If no parameter is passed, it will return the message author's level.",
+    description: `This command sends an embed containing the [user]'s experience points and current level. If no parameter is passed, it will return the message author's level.`,
     parameters: '[?user]',
   },
   {
@@ -32,13 +32,12 @@ export const serverCommands: CommandInt[] = [
   {
     name: 'role',
     description:
-      'This command accepts the name of a role as [role]. If that role exists and is in the server self_role list, Becca will add or remove the role from the user. Optionally pass "listall" instead and receive a list of self-assignable roles for that server.',
+      'This command accepts the name of a role as [role]. If that role exists and is in the server self_role list, Becca will add or remove the role from the user. Optionally pass `listall` instead and receive a list of self-assignable roles for that server.',
     parameters: '[role]',
   },
   {
     name: 'server',
-    description:
-      "This command returns a message embed containing information about the current server. The information includes the server name, creation date, the user's join date, the server owner, member information, channel information, and role information.",
+    description: `This command returns a message embed containing information about the current server. The information includes the server name, creation date, the user's join date, the server owner, member information, channel information, and role information.`,
   },
   {
     name: 'usage',

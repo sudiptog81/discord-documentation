@@ -12,13 +12,13 @@ import { CommandInt } from 'src/assets/interfaces/CommandInt';
   styleUrls: ['./man-command.component.css'],
 })
 export class ManCommandComponent implements OnInit {
-  constructor() {}
   botCommands: CommandInt[] = [];
   emoteCommands: CommandInt[] = [];
   gameCommands: CommandInt[] = [];
   generalCommands: CommandInt[] = [];
   moderationCommands: CommandInt[] = [];
   serverCommands: CommandInt[] = [];
+  constructor() {}
   ngOnInit(): void {
     this.botCommands = botCommands;
     this.emoteCommands = emoteCommands;

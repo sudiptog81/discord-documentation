@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { artInt, artList } from 'src/assets/data/artList';
+import { ArtInt, artList } from 'src/assets/data/artList';
 
 @Component({
   selector: 'app-art',
@@ -7,8 +7,8 @@ import { artInt, artList } from 'src/assets/data/artList';
   styleUrls: ['./art.component.css'],
 })
 export class ArtComponent implements OnInit {
+  artList: ArtInt[] = [];
   constructor() {}
-  artList: artInt[] = [];
   ngOnInit(): void {
     this.artList = artList;
   }

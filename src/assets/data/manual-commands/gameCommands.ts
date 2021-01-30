@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { CommandInt } from 'src/assets/interfaces/CommandInt';
 
 export const gameCommands: CommandInt[] = [
@@ -59,8 +60,7 @@ export const gameCommands: CommandInt[] = [
   },
   {
     name: 'fortune',
-    description:
-      "This command will send a message to the channel the command came from. The message will contain a random fortune cookie quote from the list provided in Becca's code.",
+    description: `This command will send a message to the channel the command came from. The message will contain a random fortune cookie quote from the list provided in Becca's code.`,
   },
   {
     name: 'guess',
@@ -91,7 +91,7 @@ export const gameCommands: CommandInt[] = [
   {
     name: 'maze',
     description:
-      'This command walks the user through a series of programming based challenge questions. To get a maze, pass request as the [action]. Becca will return a maze embed, which includes information about the maze and its id. To solve the maze, pass solve as the [action], with the maze [id] and the [answer]. The [answer] should be a null-space string of cardinal directions ("NEEESSWN"). Becca will respond with either correct or incorrect, and an explanation.',
+      'This command walks the user through a series of programming based challenge questions. To get a maze, pass request as the [action]. Becca will return a maze embed, which includes information about the maze and its id. To solve the maze, pass solve as the [action], with the maze [id] and the [answer]. The [answer] should be a null-space string of cardinal directions (`NEEESSWN`). Becca will respond with either correct or incorrect, and an explanation.',
     parameters: '[action request/solve] [?id] [?direction]',
   },
   {
@@ -102,14 +102,12 @@ export const gameCommands: CommandInt[] = [
   },
   {
     name: 'pokename',
-    description:
-      "This command querys the Pokemon API. If Becca finds a Pokemon that matches the name provided, she will send an embed containing the Pokemon's name, number, and image. If she cannot find a Pokemon, she will send a message notice.",
+    description: `This command querys the Pokemon API. If Becca finds a Pokemon that matches the name provided, she will send an embed containing the Pokemon's name, number, and image. If she cannot find a Pokemon, she will send a message notice.`,
     parameters: '[name]',
   },
   {
     name: 'pokenum',
-    description:
-      'This command querys the Pokemon API. If Becca finds a Pokemon that matches the number provided, she will send an embed containing the Pokemon\'s name, number, and image. If no Pokemon is found, she will send a message notice. As an alternative, sending "random" instead of a number will cause Becca to return a random Pokemon.',
+    description: `This command querys the Pokemon API. If Becca finds a Pokemon that matches the number provided, she will send an embed containing the Pokemon's name, number, and image. If no Pokemon is found, she will send a message notice. As an alternative, sending random instead of a number will cause Becca to return a random Pokemon.`,
     parameters: '[number]',
   },
   {
@@ -147,8 +145,7 @@ export const gameCommands: CommandInt[] = [
   },
   {
     name: 'xkcd',
-    description:
-      "This command returns an embed containing today's XKCD comic. Optionally pass a comic [number] to get that specific comic instead.",
+    description: `This command returns an embed containing today's XKCD comic. Optionally pass a comic [number] to get that specific comic instead.`,
     parameters: '[?number]',
   },
 ];

@@ -1,13 +1,13 @@
-export interface autoCommandInt {
-  name: String;
-  description: String;
+/* eslint-disable max-len */
+export interface AutoCommandInt {
+  name: string;
+  description: string;
 }
 
-export const autoCommands: autoCommandInt[] = [
+export const autoCommands: AutoCommandInt[] = [
   {
     name: 'Welcome Messages',
-    description:
-      "Becca will send a welcome message directly to a new user in the form of an embed. This message details how to use Becca's command and what the command prefix is. Additionally, if a valid channel is provided for the becca!config set channel welcomes [#channel] setting, she will send a message to the channel inviting the user to introduce themselves.",
+    description: `Becca will send a welcome message directly to a new user in the form of an embed. This message details how to use Becca's command and what the command prefix is. Additionally, if a valid channel is provided for the becca!config set channel welcomes [#channel] setting, she will send a message to the channel inviting the user to introduce themselves.`,
   },
   {
     name: 'Depart Messages',
@@ -16,8 +16,7 @@ export const autoCommands: autoCommandInt[] = [
   },
   {
     name: 'Deleted Message Log',
-    description:
-      "If a valid channel is provided for the becca!config set channel logs [#channel] setting, Becca will send an embed message to that channel when someone deletes a message. The embed will contain the deleted message's author and content. She will also log deleted message embeds or attachments.",
+    description: `If a valid channel is provided for the becca!config set channel logs [#channel] setting, Becca will send an embed message to that channel when someone deletes a message. The embed will contain the deleted message's author and content. She will also log deleted message embeds or attachments.`,
   },
   {
     name: 'Levelling System',
@@ -31,8 +30,7 @@ export const autoCommands: autoCommandInt[] = [
   },
   {
     name: 'Heart Reactions',
-    description:
-      "Becca will check the ID of each message's author. If the ID is in the array provided in the becca!config add/remove hearts [@user] config setting, she will add the BECCA_LOVE react to the message.",
+    description: `Becca will check the ID of each message's author. If the ID is in the array provided in the becca!config add/remove hearts [@user] config setting, she will add the BECCA_LOVE react to the message.`,
   },
   {
     name: 'Thank You Messages',

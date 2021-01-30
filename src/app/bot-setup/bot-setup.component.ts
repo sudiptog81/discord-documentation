@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { envVariableInterface, envVariables } from 'src/assets/data/env';
+import { EnvVariableInterface, envVariables } from 'src/assets/data/env';
 
 @Component({
   selector: 'app-bot-setup',
@@ -7,8 +7,8 @@ import { envVariableInterface, envVariables } from 'src/assets/data/env';
   styleUrls: ['./bot-setup.component.css'],
 })
 export class BotSetupComponent implements OnInit {
+  envVars: EnvVariableInterface[] = [];
   constructor() {}
-  envVars: envVariableInterface[] = [];
   ngOnInit(): void {
     this.envVars = envVariables;
   }
