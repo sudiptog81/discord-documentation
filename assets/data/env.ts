@@ -1,10 +1,11 @@
-export interface envVariableInterface {
-  name: String;
-  optional: String;
-  description: String;
+/* eslint-disable max-len */
+export interface EnvVariableInterface {
+  name: string;
+  optional: string;
+  description: string;
 }
 
-export const envVariables: envVariableInterface[] = [
+export const envVariables: EnvVariableInterface[] = [
   {
     name: 'DISCORD_TOKEN',
     optional: 'REQUIRED',
@@ -50,29 +51,37 @@ export const envVariables: envVariableInterface[] = [
   {
     name: 'WH_ID',
     optional: 'RECOMMENDED',
-    description: 'This is the ID for the Discord webhook. Becca will log when it goes online, connects to the database, and any time a server has an error. This is not a required value, but highly recommended.',
+    description:
+      'This is the ID for the Discord webhook. Becca will log when it goes online, connects to the database, and any time a server has an error. This is not a required value, but highly recommended.',
   },
   {
     name: 'WH_TOKEN',
     optional: 'RECOMMENDED',
-    description: 'This is the token for the Discord webhook. Becca will log when it goes online, connects to the database, and any time a server has an error. This is not a required value, but highly recommended.',
+    description:
+      'This is the token for the Discord webhook. Becca will log when it goes online, connects to the database, and any time a server has an error. This is not a required value, but highly recommended.',
   },
   {
     name: 'BECCA_YES',
     optional: 'OPTIONAL',
-    description: 'This is the ID or Unicode character for the emoji Becca will react with on successful command calls.'
-  }, {
+    description:
+      'This is the ID or Unicode character for the emoji Becca will react with on successful command calls.',
+  },
+  {
     name: 'BECCA_NO',
     optional: 'OPTIONAL',
-    description: 'This is the ID or Unicode character for the emoji Becca will react with on failed/errored command calls.'
-  }, {
+    description:
+      'This is the ID or Unicode character for the emoji Becca will react with on failed/errored command calls.',
+  },
+  {
     name: 'BECCA_LOVE',
     optional: 'OPTIONAL',
-    description: 'This is the ID or Unicode character for the emoji Becca will use for the hearts listener.'
+    description:
+      'This is the ID or Unicode character for the emoji Becca will use for the hearts listener.',
   },
   {
     name: 'BECCA_THINK',
     optional: 'OPTIONAL',
-    description: 'This is the ID or Unicode character for the emoji Becca will react with when she is @mentioned.'
-  }
+    description:
+      'This is the ID or Unicode character for the emoji Becca will react with when she is @mentioned.',
+  },
 ];

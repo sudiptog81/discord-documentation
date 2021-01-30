@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { CommandInt } from 'src/assets/interfaces/CommandInt';
 
 export const moderationCommands: CommandInt[] = [

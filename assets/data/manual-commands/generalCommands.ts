@@ -1,15 +1,15 @@
+/* eslint-disable max-len */
 import { CommandInt } from 'src/assets/interfaces/CommandInt';
 
 export const generalCommands: CommandInt[] = [
   {
     name: 'becca',
-    description:
-      "This command returns an embed containing information on Becca's character.",
+    description: `This command returns an embed containing information on Becca's character.`,
   },
   {
     name: 'caniuse',
     description:
-      'This command returns an embed containing the "caniuse" data on the specific programming <feature>.',
+      'This command returns an embed containing the `caniuse` data on the specific programming <feature>.',
     parameters: '[feature]',
   },
   {
@@ -60,20 +60,17 @@ export const generalCommands: CommandInt[] = [
   },
   {
     name: 'space',
-    description:
-      "his command gets NASA's Space Photo of the day. Optionally pass a [date] to get the photo for that day instead.",
+    description: `his command gets NASA's Space Photo of the day. Optionally pass a [date] to get the photo for that day instead.`,
     parameters: '[?date (YYYY-MM-DD)',
   },
   {
     name: 'star',
-    description:
-      "This command sends a message embed to channel. The embed contains the command author's name, the [reason] if provided, and a shiny gold star!",
+    description: `This command sends a message embed to channel. The embed contains the command author's name, the [reason] if provided, and a shiny gold star!`,
     parameters: '[@username] [?reason]',
   },
   {
     name: 'user',
-    description:
-      "This command returns a message embed about the message author. The embed contains their nickname, full username, account creation date, date they joined the server, roles they have, and their avatar. Optionally pass a user mention as [@username] to retrieve an embed containing that user's information instead.",
+    description: `This command returns a message embed about the message author. The embed contains their nickname, full username, account creation date, date they joined the server, roles they have, and their avatar. Optionally pass a user mention as [@username] to retrieve an embed containing that user's information instead.`,
     parameters: '[?@username]',
   },
   {

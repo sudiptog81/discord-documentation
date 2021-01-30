@@ -1,10 +1,10 @@
+/* eslint-disable max-len */
 import { CommandInt } from 'src/assets/interfaces/CommandInt';
 
 export const botCommands: CommandInt[] = [
   {
     name: 'about',
-    description:
-      "This command generates an embed message that provides a link to Becca's source code, the date she was created, the number of commands she can perform, and her favourite colour. The embed is sent to the channel the command message came from.",
+    description: `This command generates an embed message that provides a link to Becca's source code, the date she was created, the number of commands she can perform, and her favourite colour. The embed is sent to the channel the command message came from.`,
   },
   {
     name: 'art',
@@ -18,8 +18,7 @@ export const botCommands: CommandInt[] = [
   },
   {
     name: 'contributors',
-    description:
-      "This command returns an embed with a list of recognised contributors to Becca's code. Thank you all for your efforts to make Becca Lyria great!",
+    description: `This command returns an embed with a list of recognised contributors to Becca's code. Thank you all for your efforts to make Becca Lyria great!`,
   },
   {
     name: 'help',
@@ -39,7 +38,7 @@ export const botCommands: CommandInt[] = [
   },
   {
     name: 'privacy',
-    description: "This command provides information on Becca's privacy policy.",
+    description: `This command provides information on Becca's privacy policy.`,
   },
   {
     name: 'sponsor',
