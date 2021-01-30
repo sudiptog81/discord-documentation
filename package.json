@@ -9,8 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "predeploy": "ng build --prod --base-href \"https://beccalyria.nhcarrigan.com\"",
-    "deploy": "angular-cli-ghpages --dir=dist/Becca-Lyria-documentation --cname=beccalyria.nhcarrigan.com"
+    "deploy": "ng deploy"
   },
   "private": true,
   "dependencies": {
@@ -39,7 +38,7 @@
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "4.3.0",
     "@typescript-eslint/parser": "4.3.0",
-    "angular-cli-ghpages": "^0.6.2",
+    "angular-cli-ghpages": "^1.0.0-rc.1",
     "codelyzer": "^6.0.0",
     "eslint": "^7.6.0",
     "eslint-plugin-import": "2.22.1",
