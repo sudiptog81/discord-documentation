@@ -9,7 +9,7 @@
   functionality.
 </p>
 <ul>
-  <li *ngFor="let command of botCommands">
+  <li class="bot-command" *ngFor="let command of botCommands">
     <code
       >{{ command.name
       }}<span *ngIf="command.parameters"> {{ command.parameters }}</span></code
@@ -20,7 +20,7 @@
 <h2>Emote Commands</h2>
 <p>These commands are used for emote embeds.</p>
 <ul>
-  <li *ngFor="let command of emoteCommands">
+  <li class="emote-command" *ngFor="let command of emoteCommands">
     <code
       >{{ command.name
       }}<span *ngIf="command.parameters"> {{ command.parameters }}</span></code
@@ -31,7 +31,7 @@
 <h2>Game Commands</h2>
 <p>These commands are related to games of some sort, or are just playful commands.</p>
 <ul>
-  <li *ngFor="let command of gameCommands">
+  <li class="game-command" *ngFor="let command of gameCommands">
     <code
       >{{ command.name
       }}<span *ngIf="command.parameters"> {{ command.parameters }}</span></code
@@ -42,7 +42,7 @@
 <h2>General Commands</h2>
 <p>These are Becca's general purpose commands.</p>
 <ul>
-  <li *ngFor="let command of generalCommands">
+  <li class="general-command" *ngFor="let command of generalCommands">
     <code
       >{{ command.name
       }}<span *ngIf="command.parameters"> {{ command.parameters }}</span></code
@@ -53,7 +53,7 @@
 <h2>Moderation Commands</h2>
 <p>These are Becca's moderation commands.</p>
 <ul>
-  <li *ngFor="let command of moderationCommands">
+  <li class="moderation-command" *ngFor="let command of moderationCommands">
     <code
       >{{ command.name
       }}<span *ngIf="command.parameters"> {{ command.parameters }}</span></code
@@ -64,7 +64,7 @@
 <h2>Server Commands</h2>
 <p>These commands are related to server information or data.</p>
 <ul>
-  <li *ngFor="let command of serverCommands">
+  <li class="server-command" *ngFor="let command of serverCommands">
     <code
       >{{ command.name
       }}<span *ngIf="command.parameters"> {{ command.parameters }}</span></code

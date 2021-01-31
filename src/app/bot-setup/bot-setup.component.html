@@ -33,7 +33,7 @@
   variables:
 </p>
 <ul>
-  <li *ngFor="let envVar of envVars">
+  <li class='envVar' *ngFor="let envVar of envVars">
     <code>{{ envVar.name }}</code> ({{ envVar.optional }}) -
     <span [innerHTML]="envVar.description"></span>
   </li>

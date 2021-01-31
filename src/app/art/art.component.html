@@ -2,15 +2,16 @@
 <div class="grid-container">
   <div class="grid-box" *ngFor="let art of artList">
     <a href="../../assets/img/art/{{ art.fileName }}" target="_blank"
-      ><img class="grid-image" src="../../assets/img/art/{{ art.fileName }}"
+      ><img class="grid-image art-image" src="../../assets/img/art/{{ art.fileName }}"
     /></a>
     <hr />
     <p>
-      <em>{{ art.artName }}</em> by
+      <em class="art-name">{{ art.artName }}</em> by
       <a
         href="{{ art.artistUrl }}"
         target="_blank"
         rel="noopener noreferrer"
+        class="artist-link"
         >{{ art.artist }}</a
       >
     </p>
