@@ -5,7 +5,7 @@ export const serverCommands: CommandInt[] = [
   {
     name: 'config',
     description:
-      'This command lists the current server configuration, for logging channels etc. For setting these values, please view the <a routerLink=`/config`>Configure Your Server</a> section. This command is locked to moderators with the Manage Server permission. The Discord user associated with the process.env.OWNER_ID can access this command regardless of permissions, but should only do so for the sake of development purposes.',
+      'This command lists the current server configuration, for logging channels etc. This command is locked to moderators with the Manage Server permission. The Discord user associated with the process.env.OWNER_ID can access this command regardless of permissions, but should only do so for the sake of development purposes.',
     parameters: '[?set] [?key] [?value]',
   },
   {
