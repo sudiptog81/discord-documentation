@@ -5,7 +5,7 @@ export interface ArtInt {
   artistUrl: string;
 }
 
-export const artList: ArtInt[] = [
+export const comissionedList: ArtInt[] = [
   {
     fileName: 'Moonlight 1.png',
     artName: 'Becca Lyria',
@@ -36,6 +36,9 @@ export const artList: ArtInt[] = [
     artist: 'Moonlight',
     artistUrl: 'https://www.instagram.com/moonlightkcreations/',
   },
+];
+
+export const generatedList: ArtInt[] = [
   {
     fileName: 'picrew1.png',
     artName: 'Playful',

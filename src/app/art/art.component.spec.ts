@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { artList } from 'src/assets/data/artList';
+import { comissionedList, generatedList } from 'src/assets/data/artList';
 
 import { ArtComponent } from './art.component';
 
@@ -26,10 +26,19 @@ describe('ArtComponent', () => {
   });
 
   it('should have the correct properties', () => {
-    expect(component.artList).toBeTruthy('missing property artList');
-    expect(component.artList.length).toEqual(
-      artList.length,
-      'art component missing values in art list'
+    expect(component.comissionedList).toBeTruthy(
+      'missing property comissionedList'
+    );
+    expect(component.comissionedList.length).toEqual(
+      comissionedList.length,
+      'missing values in comissionedList'
+    );
+    expect(component.generatedList).toBeTruthy(
+      'missing property generatedList'
+    );
+    expect(component.generatedList.length).toEqual(
+      generatedList.length,
+      'missing values in generatedList'
     );
   });
 
@@ -42,7 +51,7 @@ describe('ArtComponent', () => {
 
   it('should display an art item correctly', () => {
     const artComponent = compiled.querySelector('.grid-box');
-    const artData = component.artList[0];
+    const artData = component.comissionedList[0];
     expect(artComponent.querySelector('.art-name').textContent).toBe(
       artData.artName,
       'does not render art name'
