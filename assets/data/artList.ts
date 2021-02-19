@@ -36,6 +36,12 @@ export const comissionedList: ArtInt[] = [
     artist: 'Moonlight',
     artistUrl: 'https://www.instagram.com/moonlightkcreations/',
   },
+  {
+    fileName: 'Starfazers.png',
+    artName: 'Untitled',
+    artist: 'Starfazers',
+    artistUrl: 'https://instagram.com/starfazers',
+  },
 ];
 
 export const generatedList: ArtInt[] = [
