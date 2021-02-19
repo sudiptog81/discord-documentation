@@ -84,4 +84,16 @@ export const envVariables: EnvVariableInterface[] = [
     description:
       'This is the ID or Unicode character for the emoji Becca will react with when she is @mentioned.',
   },
+  {
+    name: 'ENCRYPTION_KEY',
+    optional: 'REQUIRED',
+    description:
+      'This is a 32-Byte Base64 string used to encrypt database entries. Generate this with <code>openssl rand -base64 32</code>.',
+  },
+  {
+    name: 'SIGINING_KEY',
+    optional: 'REQUIRED',
+    description:
+      'This is a 64-Byte Base64 string used to authenticate database entries. Generate this with <code>openssl rand -base64 64</code>.',
+  },
 ];

@@ -51,4 +51,9 @@ export const depCommands: DepCommandInt[] = [
     version: '9.2.0',
     reason: 'API no longer available.',
   },
+  {
+    name: 'usage',
+    version: '10.2.1',
+    reason: 'Unused, and caused extraneous database calls.',
+  },
 ];

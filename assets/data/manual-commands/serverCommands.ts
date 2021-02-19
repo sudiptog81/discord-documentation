@@ -39,10 +39,4 @@ export const serverCommands: CommandInt[] = [
     name: 'server',
     description: `This command returns a message embed containing information about the current server. The information includes the server name, creation date, the user's join date, the server owner, member information, channel information, and role information.`,
   },
-  {
-    name: 'usage',
-    description:
-      'This command returns a message embed for the [command]. The embed will contain the number of times the command is called globally and for the server this command is called in.',
-    parameters: '[command]',
-  },
 ];
