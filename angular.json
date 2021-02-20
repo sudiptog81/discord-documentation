@@ -103,7 +103,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "https://www.beccalyria.com/discord-documentation",
+            "baseHref": "https://www.beccalyria.com/discord-documentation/",
             "name": "Nicholas Carrigan",
             "email": "nhcarrigan@gmail.com"
           }
