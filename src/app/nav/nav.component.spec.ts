@@ -16,7 +16,7 @@ const navLinkText = [
   'Create a New Command',
   'Troubleshooting',
   'Privacy Policy',
-  '© 2020 - Nicholas Carrigan',
+  '© 2021 - Nicholas Carrigan',
   'Webpage art by Moonlight',
   'About Becca Lyria',
   `View Becca's Art`,
@@ -55,8 +55,15 @@ describe('NavComponent', () => {
 
   it('should render the title', () => {
     expect(compiled.querySelector('h1').textContent).toBe(
-      'Becca Lyria Documentation',
+      'Becca Lyria',
       'does not render title'
+    );
+  });
+
+  it('should render the subtitle', () => {
+    expect(compiled.querySelector('h2').textContent).toBe(
+      'Discord Bot documentation',
+      'does not render subtitle'
     );
   });
 
