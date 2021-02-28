@@ -17,10 +17,6 @@ export const botCommands: CommandInt[] = [
       'This command returns an embed containing a link to the GitHub issue selection page.',
   },
   {
-    name: 'contributors',
-    description: `This command returns an embed with a list of recognised contributors to Becca's code. Thank you all for your efforts to make Becca Lyria great!`,
-  },
-  {
     name: 'help',
     description:
       'This command returns an embed containing a list of available commands. If the optional [command] parameter is passed, Becca will return the description for that command (or an error, if that command does not exist).',
