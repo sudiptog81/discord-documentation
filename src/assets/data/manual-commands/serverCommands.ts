@@ -30,6 +30,10 @@ export const serverCommands: CommandInt[] = [
       'This command will generate the latency for Becca. She will send a response back with the communication time in milliseconds.',
   },
   {
+    name: 'resetlevel',
+    description: 'This command resets the level data for the server. The command requires the <code>MANAGE_SERVER</code> permission. Becca will clear all level data and set every user back to 0 points.'
+  },
+  {
     name: 'role',
     description:
       'This command accepts the name of a role as [role]. If that role exists and is in the server self_role list, Becca will add or remove the role from the user. Optionally pass `listall` instead and receive a list of self-assignable roles for that server.',
