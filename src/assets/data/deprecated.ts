@@ -56,4 +56,9 @@ export const depCommands: DepCommandInt[] = [
     version: '10.2.1',
     reason: 'Unused, and caused extraneous database calls.',
   },
+  {
+    name: 'contributors',
+    version: '10.2.5',
+    reason: 'Removal of all-contributors integration, issues with http request.'
+  }
 ];
