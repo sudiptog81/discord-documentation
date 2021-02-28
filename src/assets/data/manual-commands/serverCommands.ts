@@ -15,6 +15,10 @@ export const serverCommands: CommandInt[] = [
     parameters: '[server]',
   },
   {
+    name: 'leaderboard',
+    description: 'Generates an embed containing the top ten users (by points) in the server, and the level + rank of the user who called the command.'
+  },
+  {
     name: 'level',
     description: `This command sends an embed containing the [user]'s experience points and current level. If no parameter is passed, it will return the message author's level.`,
     parameters: '[?user]',
@@ -28,6 +32,10 @@ export const serverCommands: CommandInt[] = [
     name: 'ping',
     description:
       'This command will generate the latency for Becca. She will send a response back with the communication time in milliseconds.',
+  },
+  {
+    name: 'resetlevel',
+    description: 'This command resets the level data for the server. The command requires the <code>MANAGE_SERVER</code> permission. Becca will clear all level data and set every user back to 0 points.'
   },
   {
     name: 'role',
