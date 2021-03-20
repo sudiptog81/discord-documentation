@@ -43,7 +43,7 @@ export const envVariables: EnvVariableInterface[] = [
       'This tells Becca which Discord account is her owner. She will respond just a little differently to the owner. Leaving this blank WILL lock out some commands.',
   },
   {
-    name: 'PRODDEV',
+    name: 'NODE_ENV',
     optional: 'OPTIONAL',
     description:
       'This tells Becca whether she is in a development state or production state - the webhook message includes this value.',
