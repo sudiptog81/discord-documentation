@@ -47,4 +47,9 @@ export const serverCommands: CommandInt[] = [
     name: 'server',
     description: `This command returns a message embed containing information about the current server. The information includes the server name, creation date, the user's join date, the server owner, member information, channel information, and role information.`,
   },
+  {
+    name: 'suggest',
+    description: 'Sends your suggestion to the server suggestions channel. If one is not configured, rejects the command. No special formatting is required for the suggestion parameter - Becca will use all of the text following the command itself.',
+    parameters: '[suggestion]'
+  }
 ];
