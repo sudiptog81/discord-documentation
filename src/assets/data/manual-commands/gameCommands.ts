@@ -3,21 +3,9 @@ import { CommandInt } from 'src/assets/interfaces/CommandInt';
 
 export const gameCommands: CommandInt[] = [
   {
-    name: 'adventure',
-    description:
-      'This command will generate a text based adventure dungeon. To begin a new dungeon, pass start as the [action]. The dungeon take you room by room, with each room having a [room] id value and directions to move. Move to the next room by passing move as the [action], the [room] id provided, and the cardinal [direction] you want to move. Each room embed includes a prefilled move command to copy-paste.',
-    parameters: '[action (start/move)] [?room] [?direction]',
-  },
-  {
     name: 'cat',
     description:
       'This command sends a random string of letters of a random length, to simulate a cat walking across your keyboard.',
-  },
-  {
-    name: 'challenge',
-    description:
-      'This command walks the user through a series of programming based challenge questions. To begin a new challenge, pass start as the [action]. Becca will return a challenge embed, which includes the question and challenge id. To solve the challenge, pass solve as the [action], with the challenge [id] and the [answer]. She will respond with either correct or incorrect, and an explanation. If correct, she provides the [id] for the next challenge. To get that challenge, pass request as the [action] with the new [id].',
-    parameters: '[action (start/request/solve)] [?id] [?answer]',
   },
   {
     name: 'dnd',
@@ -89,12 +77,6 @@ export const gameCommands: CommandInt[] = [
     parameters: '[cardname]',
   },
   {
-    name: 'maze',
-    description:
-      'This command walks the user through a series of programming based challenge questions. To get a maze, pass request as the [action]. Becca will return a maze embed, which includes information about the maze and its id. To solve the maze, pass solve as the [action], with the maze [id] and the [answer]. The [answer] should be a null-space string of cardinal directions (`NEEESSWN`). Becca will respond with either correct or incorrect, and an explanation.',
-    parameters: '[action request/solve] [?id] [?direction]',
-  },
-  {
     name: 'piglatin',
     description:
       'This command takes a sentence as a space-delimited [string] and returns an embed containing the original sentence and the sentence translated into Pig Latin.',
@@ -111,12 +93,6 @@ export const gameCommands: CommandInt[] = [
     parameters: '[number]',
   },
   {
-    name: 'riddle',
-    description:
-      'This command walks the user through a series of programming based challenge questions. To begin a new challenge, pass start as the [action]. Becca will return a riddle embed, which includes the question and riddle id. To solve the riddle, pass solve as the [action], with the riddle [id] and the [answer]. Becca will respond with either correct or incorrect, and an explanation. If correct, she provides the [id] for the next riddle. To get that challenge, pass request as the [action] with the new [id].',
-    parameters: '[action (start/request/solve)] [?id] [?answer]',
-  },
-  {
     name: 'roll',
     description:
       'This command returns a random number between 1 and [number], as if it was a dice roll.',
@@ -126,11 +102,6 @@ export const gameCommands: CommandInt[] = [
     name: 'sus',
     description:
       'This command sends a message embed to the channel the user called the command in. The command will say that a certain color looks sus just like in Among Us Emergency Meetings.',
-  },
-  {
-    name: 'title',
-    description:
-      'This command will generate a random and often funny title for the user who calls it.',
   },
   {
     name: 'trivia',

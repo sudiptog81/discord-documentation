@@ -60,5 +60,30 @@ export const depCommands: DepCommandInt[] = [
     name: 'contributors',
     version: '10.2.5',
     reason: 'Removal of all-contributors integration, issues with http request.'
+  },
+  {
+    name: 'adventure',
+    version: '11.4.0',
+    reason: 'Removed due to noops API outages and unreliability.'
+  },
+  {
+    name: 'challenge',
+    version: '11.4.0',
+    reason: 'Removed due to noops API outages and unreliability.'
+  },
+  {
+    name: 'maze',
+    version: '11.4.0',
+    reason: 'Removed due to noops API outages and unreliability.'
+  },
+  {
+    name: 'riddle',
+    version: '11.4.0',
+    reason: 'Removed due to noops API outages and unreliability.'
+  },
+  {
+    name: 'title',
+    version: '11.4.0',
+    reason: 'Removed due to noops API outages and unreliability.'
   }
 ];
