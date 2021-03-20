@@ -21,6 +21,11 @@ export const configCommands: ConfigCommandInterface[] = [
       'This command allows you to set the name of the channel for user welcome/depart messages.',
   },
   {
+    call: 'becca!config set suggestion_channel [#channel]',
+    result:
+      'This is the channel where Becca will send suggestions to. Using reactions she adds, users can then upvote/downvote suggestions.',
+  },
+  {
     call: 'becca!config set restricted_role [@role]',
     result: `This command sets the name of the Discord role your server uses to restrict a user's ability to send messages.`,
   },
