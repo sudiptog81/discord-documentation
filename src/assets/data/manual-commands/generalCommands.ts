@@ -65,8 +65,12 @@ export const generalCommands: CommandInt[] = [
   },
   {
     name: 'star',
-    description: `This command sends a message embed to channel. The embed contains the command author's name, the [reason] if provided, and a shiny gold star!`,
+    description: `This command sends a message embed to channel. The embed contains the command author's name, the [reason] if provided, and a shiny gold star! Becca will track the number of stars a user receives in the server.`,
     parameters: '[@username] [?reason]',
+  },
+  {
+    name: 'starcount',
+    description: `This command sends an embed to the channel. contains the top ten (or less) users in the server, sorted by the number of stars they have been given. The command also includes the caller's rank.`
   },
   {
     name: 'user',
